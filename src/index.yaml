@@ -1,0 +1,5 @@
+ProjectTitle: smart-life
+
+PageList:
+- file: page.html
+  ready: 50
