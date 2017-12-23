@@ -1,0 +1,74 @@
+.home
+  background-image: linear-gradient(149deg, #86c6af, #f3efdf)
+  &__comp
+    width: 1100px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    img
+      width: 100%
+  &__block
+    margin-left: 30px
+    text-align: left
+    position: relative
+    z-index: 10
+  p
+    font-size: 24px
+    font-weight: 600
+    line-height: 1.5
+    letter-spacing: 1.8px
+    text-transform: uppercase
+    color: $dark-grey-blue
+    margin-bottom: 50px
+  a
+    font-size: 18px
+    font-weight: 600
+    color: $greeny-blue
+    display: block
+    cursor: pointer
+    letter-spacing: 1.8px
+    text-transform: uppercase
+    position: relative
+    transition: all 0.3s
+    span
+      position: absolute
+      top: -15px
+      left: -100px
+      width: 75px
+      height: 75px
+      border-radius: 50%
+      padding: 5px
+      background-image: linear-gradient(to right, $greeny-blue 37%, #29413b)
+      transition: all 0.3s
+      background-size: 200% 200%
+      animation: Gradient 5s ease infinite
+  .swiper-container, .swiper-wrapper, .swiper-slide
+    width: 100%
+    height: 100%
+  .swiper-pagination
+    text-align: left
+    position: relative
+    margin-bottom: 50px
+    &-bullet
+      border: solid 1px $white
+      width: 40px
+      height: 10px
+      display: inline-block
+      margin-right: 15px
+      border-radius: 0
+      background: transparent
+      opacity: 1
+      &-active
+        background: #fff
+
+
+@keyframes Gradient
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%

@@ -1,0 +1,15 @@
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.6 45.6">
+    <style>
+        .st0{fill:#e7e7e7;stroke:url(#SVGID_1_);stroke-miterlimit:10}.st1{fill:url(#SVGID_2_)}
+    </style>
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1.827" y1="22.8" x2="43.773" y2="22.8">
+        <stop offset=".231" stop-color="#5ab29f"/>
+        <stop offset="1" stop-color="#283f3a"/>
+    </linearGradient>
+    <circle class="st0" cx="22.8" cy="22.8" r="20.5"/>
+    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="10.695" y1="22.8" x2="34.905" y2="22.8">
+        <stop offset=".231" stop-color="#5ab29f"/>
+        <stop offset="1" stop-color="#283f3a"/>
+    </linearGradient>
+    <path class="st1" d="M22.8 15.5L10.7 27.6l2.5 2.5 9.6-9.7 9.6 9.7 2.5-2.5z"/>
+</svg>

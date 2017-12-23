@@ -1,3 +1,3 @@
-import sayHello from './lib/sayHello.js';
-
-sayHello();
+import './import/fullpage.js';
+import './import/slider.js';
+import './import/chart.js';

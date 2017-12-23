@@ -1,0 +1,134 @@
+.afc
+	background: #e8e8e8
+	position: relative
+	&__slider
+		position: relative
+		bottom: 40px
+		&--img
+			width: 400px
+			z-index: 10
+			position: relative
+			img
+				width: 100%
+		&--line
+			position: absolute
+			top: -25px
+			right: -140px
+			width: 265px
+			img
+				width: 100%
+		&--active
+			position: absolute
+			top: 49.5%
+			transform: translateY(-50%)
+			right: -4px
+			width: 13px
+			height: 13px
+			border-radius: 50%
+			background-image: linear-gradient(to right, #29413b, #38c9c9)
+			&:before
+				content: ''
+				width: 23px
+				height: 23px
+				display: block
+				border-radius: 50%
+				border: 1px solid #2f6a66
+				top: -5px
+				left: -5px
+				position: absolute
+		&--prev, &--next
+			position: absolute
+			width: 40px
+			background: transparent
+			margin-top: 0
+			height: inherit
+		&--prev
+			top: 29%
+			right: -1px
+			left: inherit
+			transform: rotate(-20deg)
+		&--next
+			top: 63%
+			right: -1px
+			transform: rotate(200deg)
+	&-slider
+		margin-left: 0
+		height: 300px
+		width: 500px
+		transition: all 1s
+	.swiper-slide
+		font-style: italic
+		font-size: 16px
+		color: $warm-grey
+		transform: translateX(40px)
+		transition: all 1s
+		&-prev, &-active
+			transition: all 1s
+		&-active
+			transform: translateX(70px)
+			color: $dark-grey-blue
+			transition: all 1s
+		p
+			height: 100%
+			display: flex
+			align-items: center
+	h2
+		font-size: 24px
+		font-weight: 600
+		letter-spacing: 1.8px
+		text-transform: uppercase
+		margin-left: 40px
+		span
+			margin-top: 10px
+			font-size: 16px
+			text-transform: none
+			display: block
+			letter-spacing: 1.2px
+	&__info
+		width: 390px
+		margin-bottom: 50px
+		img
+			width: 100%
+	&__price
+		display: flex
+		&__block
+			margin-right: 15px
+			p
+				font-size: 14px
+				color: $black-two
+			h3
+				color: $dark-grey-blue-two
+				font-size: 16px
+				font-weight: 500
+				span
+					font-size: 36px
+					margin-left: 2px
+				.icon
+					display: inline-block
+					fill: $dark-grey-blue-two
+					width: 20px
+					height: 23px
+					margin-left: 5px
+	&__bottom
+		position: absolute
+		bottom: 0
+		width: 100%
+		background: url('/img/afc/afc-bottom.svg') no-repeat
+		height: 110px
+		background-size: cover
+		box-sizing: border-box
+		&__block
+			position: relative
+			top: 60px
+			p
+				font-size: 14px
+				font-weight: 600
+				letter-spacing: 0.7px
+				color: $black
+				text-transform: uppercase
+				display: inline-block
+				margin-right: 50px
+				span
+					color: #ffffff
+					padding-left: 5px
+
