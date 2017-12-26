@@ -1,3 +1,35 @@
 section.section.contact
+  img(src="img/contact.png", alt="")
   .container
-    .row
+    .row.middle-xs
+      .col-md-offset-2.col-md-10
+        h2 Контакты
+        .contact__block
+          .row
+            .col-md-6
+              .contact__block__info
+                h3 Телефон:
+                span 8(900) - 000- 00 - 00
+                h3 E-mail:
+                span info@gmail.com
+                h3 Вы можете связаться с нами любым<br>удобным для Вас способом:
+              .contact__block__social
+                .contact__block__social__block
+                  a(href="#")
+                    +icon('telegram')
+                  p Telegram
+                .contact__block__social__block
+                  a(href="#")
+                    +icon('whatsapp')
+                  p WhatsApp
+                .contact__block__social__block
+                  a(href="#")
+                    +icon('viber')
+                  p Viber
+            .col-md-6
+              form
+                h3 Обратная связь
+                input(type="text" placeholder="Имя" required)
+                input(type="tel" placeholder="Ваш телефон" required)
+                input(type="text" placeholder="Ваш комментарий")
+                input(type="submit" value="отправить")

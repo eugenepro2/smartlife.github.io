@@ -3,36 +3,36 @@ title: SmartLife
 ---
 extends layouts/_layout
 block content
+  #fullpage
+    include ./partials/_sidebar
 
-  include ./partials/_sidebar
+    //BEGIN Главный экран
+    include sections/home
+    //END Главный экран
+    
+    //BEGIN  AFC
+    include sections/afc
+    //END AFC
 
-  //BEGIN Главный экран
-  include sections/home
-  //END Главный экран
-  
-  //BEGIN  AFC
-  include sections/afc
-  //END AFC
+    //BEGIN  IBC
+    include sections/ibc
+    //END IBC
 
-  //BEGIN  IBC
-  include sections/ibc
-  //END IBC
+    //BEGIN  Review
+    include sections/review
+    //END Review
 
-  //BEGIN  Review
-  include sections/review
-  //END Review
+    //BEGIN  Study
+    include sections/study
+    //END Study
 
-  //BEGIN  Study
-  include sections/study
-  //END Study
+    //BEGIN  Photos
+    include sections/photos
+    //END Photos
 
-  //BEGIN  Photos
-  include sections/photos
-  //END Photos
-
-  //BEGIN  Contact
-  include sections/contact
-  //END Contact
+    //BEGIN  Contact
+    include sections/contact
+    //END Contact
 
 
 

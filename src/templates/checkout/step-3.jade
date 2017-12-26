@@ -1,0 +1,42 @@
+.step-3#step-3.checkout__step(style="display: none")
+  .container
+    .row
+      .col-md-offset-2.col-md-10
+        .step__delivery
+          h2 Способ доставки
+          input#delivery-1(type="radio" name="delivery")
+          label(for="delivery-1")
+            +icon('delivery-1')
+            p Курьером<br>по Москве и МО 
+          input#delivery-2(type="radio" name="delivery")
+          label(for="delivery-2")
+            +icon('delivery-2')
+            p Почтой России 
+        .step__payment
+          h2 Способ оплаты
+          .step__payment__block
+            input.checkbox#payment-1(type="radio" name="payment" checked)
+            label.label(for="payment-1")
+            label.label-for(for="payment-1")
+              h3 Банковской картой курьеру при получении
+              p Оплатите покупку курьеру при получении.<br>Оплата осуществляется через мобильный терминал PayMe, без комисии. 
+          .step__payment__block
+            input.checkbox#payment-2(type="radio" name="payment")
+            label.label(for="payment-2")
+            label.label-for(for="payment-2")
+              h3 Наличными курьеру при получении
+          .step__payment__block
+            input.checkbox#payment-3(type="radio" name="payment")
+            label.label(for="payment-3")
+            label.label-for(for="payment-3")
+              h3 Онлайн-оплата банковской картой на сайте
+              img(src="img/checkout/mastercard.svg", alt="")
+              img(src="img/checkout/visa.svg", alt="")
+  .step__bottom.flex.center-xs
+    .step__bottom__block  
+      p 
+        b ШАГ 3.
+        | Cпособ доставки и оплаты:
+        span 5890
+        +icon('ruble')
+      a.btn.next(href="checkout-thank.html") Оформить

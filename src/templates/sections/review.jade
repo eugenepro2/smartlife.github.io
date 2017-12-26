@@ -1,3 +1,48 @@
 section.section.review
   .container
-    .row
+    .row.middle-xs
+      .col-md-offset-2.col-md-10
+        h2 Отзывы
+        .review__slide
+          .row
+            .col-md-4
+              .review__slide__photo
+                img(src="img/review/review-1.png", alt="")
+            .col-md-8
+              .review__slide__block
+                h3 Виктор
+                i Мастер спорта по пауэрлифтингу
+                p Были проблемы со сном, знакомые посоветовали попробовать AFC, но сразу сказали, чтобы почувствовать эффект, нужно минимум 14 дней, решил попробовать. Очень доволен результатом,увеличились показатели в спорте, начал легко просыпаться по утрам. Рекомендую.
+                a(href="#") Смотреть<br>видео-отзыв
+                  span
+                    img(src="img/play.svg", alt="")
+        .review__s
+          .swiper-container.review-slider
+            .swiper-wrapper
+              .swiper-slide
+                img(src="img/review/review-1.png", alt="")
+                h3 Виктор
+                i Мастер спорта по пауэрлифтингу
+                p Были проблемы со сном, знакомые посоветовали попробовать AFC, но сразу сказали, чтобы почувствовать эффект, нужно минимум 14 дней, решил попробовать. Очень доволен результатом,увеличились показатели в спорте, начал легко просыпаться по утрам. Рекомендую.
+              .swiper-slide
+                img(src="img/review/review-2.png", alt="")
+                h3 Андрей
+                i Профессиональный<br>боец Муай Тай
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis ab ipsum dolorem culpa. Blanditiis, facere alias voluptates illum veniam aliquam perferendis impedit! Maxime nisi voluptas laboriosam minus, fugit molestiae nihil!
+              .swiper-slide
+                img(src="img/review/review-2.png", alt="")
+                h3 Юрий
+                i Мастер спорта<br>международного<br>класса по тайскому<br>боксу
+              .swiper-slide
+                img(src="img/review/review-2.png", alt="")
+                h3 Екатерина
+                i Мама двух<br>малышек
+              .swiper-slide
+                img(src="img/review/review-2.png", alt="")
+                h3 Андрей
+                i Триатлон
+          .swiper-button-prev
+            +icon('review-arrow')
+          .swiper-button-next
+            +icon('review-arrow')
+          

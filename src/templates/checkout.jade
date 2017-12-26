@@ -1,0 +1,19 @@
+---
+title: SmartLife Checkout
+---
+extends layouts/_layout
+block content
+
+  include ./partials/_sidebar-checkout
+
+  //BEGIN Первый шаг
+  include checkout/step-1.jade
+  //END Первый шаг
+
+  //BEGIN Второй шаг
+  include checkout/step-2.jade
+  //END Второй шаг
+
+  //BEGIN Третий шаг
+  include checkout/step-3.jade
+  //END Третий шаг

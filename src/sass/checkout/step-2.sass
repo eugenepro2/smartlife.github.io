@@ -1,0 +1,86 @@
+.step-2
+	margin-top: 100px
+	.step
+		&__contact
+			display: flex
+			flex-wrap: wrap
+			h2
+				width: 100%
+				margin-bottom: 40px
+			i
+				width: 100%
+				color: $warm-grey
+				font-size: 16px
+			input
+				width: 350px
+				margin-right: 50px
+		&__address
+			margin-top: 70px
+			display: flex
+			flex-wrap: wrap
+			h2
+				width: 100%
+				margin-bottom: 40px
+			input
+				margin-right: 20px
+			.form-element:nth-of-type(1)
+				input
+					width: 260px
+			.form-element:nth-of-type(2)
+				input
+					width: 275px
+			.form-element:nth-of-type(3)
+				input
+					width: 140px
+			.form-element:nth-of-type(4)
+				input
+					width: 115px
+
+				
+
+	.form-element
+		position: relative
+		margin-bottom: 25px
+		input
+			border: solid 1px $pinkish-grey
+			height: 50px
+			color: $dark-grey-blue-two
+			font-size: 16px
+			padding: 25px 25px 15px 25px
+			box-sizing: border-box
+			display: inline-block
+			+ label
+				display: inline-block
+				position: absolute
+				font-size: 16px
+				font-weight: 500
+				color: $warm-grey
+				left: 25px
+				top: 50%
+				transition: all .3s ease-in-out
+				transform: translateY(-50%)
+			&:focus, &:active
+				+ label
+					transform: translateY(-20px)
+					font-size: 11px
+			&:valid
+				+ label
+					transform: translateY(-20px)
+					font-size: 11px
+	textarea
+		font-family: 'Proxima Nova'
+		border: solid 1px $pinkish-grey
+		height: 100px
+		width: 850px
+		font-size: 16px
+		color: $warm-grey
+		padding: 20px 25px
+		resize: none
+		margin-bottom: 25px
+	::placeholder
+		color: $warm-grey
+	
+
+
+
+

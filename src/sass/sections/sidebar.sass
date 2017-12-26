@@ -5,6 +5,7 @@
   width: 100%
   height: 0px
   left: 50%
+  z-index: 10
   transform: translateX(-50%)
   &__logo
     width: 130px
@@ -55,3 +56,42 @@
           top: 23px
           z-index: -1
           transition: all 0.3s
+  &__checkout
+    margin-top: 70px
+    width: 200px
+    &__back
+      font-size: 12px
+      font-weight: 600
+      letter-spacing: 0.9px
+      text-transform: uppercase
+      color: $black-two
+      text-decoration: none
+      position: relative
+      cursor: pointer
+      svg
+        margin-right: 5px
+        transform: rotate(180deg) translateY(-2px)
+    nav
+      margin-top: 30px
+      ul
+        li
+          display: inline-block
+          position: relative
+          &:hover .icon
+            fill: #cccccc
+          &.active .icon
+            fill: #cccccc
+          a
+            position: absolute
+            right: 50%
+            top: 50%
+            text-decoration: none
+            color: $dark-grey-blue-two
+            text-transform: uppercase
+            transform: translate(50%, -50%) 
+      .icon
+        width: 130px
+        height: 55px
+        fill: #e5e5e5
+        transition: fill 0.3s
+        cursor: pointer

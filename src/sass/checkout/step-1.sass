@@ -1,0 +1,302 @@
+.step-1
+	margin-top: 100px
+	.step
+		border: 1px dashed transparent
+		&__delete
+			position: absolute
+			right: 0
+			&__block	
+				width: 35px
+				height: 35px
+				background: #e8e8e8
+				display: flex
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				transition: all 0.3s
+				span
+					color: #f64869
+					transform: rotate(90deg)
+					text-transform: uppercase
+					font-size: 10px
+					display: inline-block
+					font-weight: 300
+					position: absolute
+					transition: all 0.3s
+					opacity: 0
+				.icon
+					fill: $brownish-grey
+					width: 15px
+					height: 15px
+					transition: all 0.3s
+				&:hover 
+					.icon
+						fill: #f64869
+					span
+						opacity: 1
+						transform: rotate(90deg) translateX(50px)
+		&__add
+			display: none
+			background: #f64869
+			padding: 15px
+			width: 270px
+			font-size: 16px
+			font-weight: 600
+			letter-spacing: 1.6px
+			padding-left: 45px
+			position: absolute
+			cursor: pointer
+			z-index: 10
+			top: 40px
+			left: -30px
+			span 
+				color: #ffffff !important
+			&:before
+				content: '+'
+				font-size: 30px
+				font-weight: 600
+				position: absolute
+				left: 18px
+				top: 50%
+				color: #ffffff !important
+				transform: translateY(-50%)
+		&__afc
+			display: flex
+			flex-wrap: wrap
+			position: relative
+			padding: 50px 0
+			&__left
+				width: 45%
+			&__right
+				width: 55%
+			&__add
+				display: none
+		&__photo
+			width: 310px
+			height: 310px
+			left: 20px
+			position: relative
+			img
+				width: 100%
+		&__short-desc
+			position: absolute
+			top: 63%
+			transform: translateY(-50%)
+			right: -35px
+			p
+				font-size: 10px
+				font-weight: 500
+				letter-spacing: 1px
+				font-style: italic
+				color: $dark-grey-blue-two
+			img
+				width: 155px
+				position: absolute
+				top: -40px
+				left: 20px
+		&__set
+			margin-top: 30px
+			p
+				font-size: 16px
+				color: $black-two
+				display: inline-block
+				margin-right: 30px
+		&__smack
+			margin-top: 30px
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			p
+				font-size: 16px
+				color: $black-two
+				margin-right: 30px
+				width: 100%
+				margin-bottom: 20px
+			&__block:nth-of-type(1)
+				.icon
+					fill: #f64869
+					width: 48px
+					height: 40px
+				span  
+					color: #f64869
+			&__block:nth-of-type(2)
+				.icon
+					fill: #7ac1b0
+				span  
+					color: #7ac1b0
+			&__block:nth-of-type(3)
+				.icon
+					fill: #554142
+				span  
+					color: #554142
+			&__block:nth-of-type(4)
+				.icon
+					fill: #842819
+				span  
+					color: #842819
+			&__block
+				width: 120px
+				&__icon
+					border: solid 1px $pinkish-grey
+					width: 120px
+					height: 85px
+					box-sizing: border-box
+					display: flex
+					justify-content: center
+					flex-direction: column
+					align-items: center
+					margin-bottom: 7px
+					.icon
+						width: 40px
+						height: 40px
+					span
+						margin-top: 5px
+						display: block
+						font-size: 10.7px
+						font-weight: 600
+						letter-spacing: 1.1px
+				&__calc
+					display: flex
+					flex-wrap: wrap
+					justify-content: space-between
+					div
+						background-color: #e8e8e8
+						width: 35px
+						height: 35px
+						text-align: center
+						font-size: 22.9px
+						font-weight: 600
+						line-height: 0.8
+						letter-spacing: 2.3px
+						color: $dark-grey-blue-two
+						cursor: pointer
+						&:hover
+							background: $dark-grey-blue-two
+							color: #ffffff
+					.substract
+						line-height: 0.8
+						&:before
+							content: '_'
+							position: relative
+							left: 1px
+						&:hover
+					input
+						width: 35px
+						height: 35px
+						margin: 0 7px
+						border: 1px solid  $pinkish-grey
+						font-size: 12.2px
+						font-weight: 600
+						text-align: center
+						-webkit-appearance: none
+						letter-spacing: 1.2px
+					.add
+						line-height: 1.6
+						&:before
+							content: '+'
+							position: relative
+							left: 1px
+		&__ibc
+			margin-top: 80px
+			margin-bottom: 140px
+			position: relative
+			&__photo
+				width: 440px
+				position: relative
+				&__white
+					background: rgba(255, 255, 255, 0.5)
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+				img
+					width: 100%
+			h2
+				margin-top: 50px
+			&__count
+				margin-top: 30px
+				margin-bottom: 30px
+				p
+					font-size: 16px
+					color: $black-two
+					display: inline-block
+					margin-right: 30px
+			&__smack
+				&__icon
+					margin-top: 20px
+					border: solid 1px $pinkish-grey
+					width: 120px
+					height: 85px
+					box-sizing: border-box
+					display: flex
+					justify-content: center
+					flex-direction: column
+					align-items: center
+					margin-bottom: 7px
+					.icon
+						width: 48px
+						height: 40px
+						fill: #f64869
+					span
+						margin-top: 5px
+						display: block
+						font-size: 10.7px
+						font-weight: 600
+						letter-spacing: 1.1px
+						color: #f64869
+
+
+
+
+.no-active
+	h2, p, a, svg, span, div
+		color: $warm-grey !important
+		fill: $warm-grey !important
+		pointer-events: none
+	&.step
+		border: 1px dashed $pinkish-grey
+	.step
+		&__delete
+			display: none
+		&__add
+			display: block
+			pointer-events: inherit
+
+
+.step__bottom
+	background: url('/img/checkout/checkout-bottom.svg') no-repeat
+	background-size: cover
+	margin-left: -4px
+	position: fixed
+	width: 110%
+	height: 100px
+	bottom: 0
+	z-index: 20
+	&__block
+		position: relative
+		top: 40px
+		p
+			display: inline-block
+			color: #ffffff
+			font-weight: 300
+			text-transform: uppercase
+			letter-spacing: 0.9px
+			margin-right: 50px
+			b
+				padding-right: 7px
+				font-weight: 600
+			span
+				margin-left: 10px
+				font-size: 30px
+				display: inline-block
+				margin-right: 6px
+			.icon
+				width: 17px
+				height: 20px
+				fill: #ffffff
+				
+
+
+
+			

@@ -1,60 +1,149 @@
 @import helpers/colors
 
 body
-  font-family: 'Proxima Nova'
+	font-family: 'Proxima Nova'
 
 .container
-  max-width: 1200px
-  width: 100%
-  position: relative
-  height: 100%
+	max-width: 1200px
+	width: 100%
+	position: relative
+	height: 100%
 
 .row
-  height: 100%
+	height: 100%
 
+
+h2
+	font-size: 24px
+	font-weight: 600
+	letter-spacing: 1.8px
+	color: $black-two
+	text-transform: uppercase
 
 .btn
-  text-decoration: none
-  border: 1px solid #ffffff
-  background: transparent
-  color: #ffffff
-  padding: 15px 40px
-  height: 100%
-  letter-spacing: 1.6px
-  font-weight: 600
-  text-align: center
-  cursor: pointer
-  transition: all 0.3s
-  text-transform: lowercase
-  &:hover
-    background: #ffffff
-    color: $dark-grey-blue-two
-  &--white
-    background: #ffffff
-    width: 170px
-    color: $dark-grey-blue-two
-    margin-right: 15px
-    &:hover
-      background: $dark-grey-blue-two
-      color: #ffffff
-      border-color: $dark-grey-blue-two
-    
+	text-decoration: none
+	border: 1px solid #ffffff
+	background: transparent
+	color: #ffffff
+	padding: 15px 40px
+	height: 100%
+	letter-spacing: 1.6px
+	font-weight: 600
+	text-align: center
+	cursor: pointer
+	transition: all 0.3s
+	text-transform: lowercase
+	&:hover
+		background: #ffffff
+		color: $dark-grey-blue-two
+	&--white
+		background: #ffffff
+		width: 170px
+		color: $dark-grey-blue-two
+		margin-right: 15px
+		&:hover
+			background: $dark-grey-blue-two
+			color: #ffffff
+			border-color: $dark-grey-blue-two
+		
 
 
 .social
-  position: fixed
-  max-width: 1200px
-  width: 100%
-  left: 50%
-  transform: translateX(-50%)
-  bottom: 70px
-  display: flex
-  z-index: 10
-  svg
-    width: 32px
-    height: 32px
-    fill: #fff
-    margin-right: 10px
-    transition: fill 0.3s
-    &:hover
-      fill: #54c3aa
+	position: fixed
+	max-width: 1200px
+	width: 100%
+	left: 50%
+	transform: translateX(-50%)
+	bottom: 70px
+	display: flex
+	z-index: 10
+	svg
+		width: 32px
+		height: 32px
+		fill: #fff
+		margin-right: 10px
+		transition: fill 0.3s
+		&:hover
+			fill: #54c3aa
+
+
+@keyframes Gradient
+	0%
+		background-position: 0% 50%
+
+	50%
+		background-position: 100% 50%
+
+	100%
+		background-position: 0% 50%
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	display: none
+	-webkit-appearance: none
+	margin: 0
+
+
+.checkbox
+	vertical-align: top
+	width: 25px
+	height: 25px
+	margin-bottom: 175px
+	+ .label
+		cursor: pointer
+	&:not(checked)
+		position: absolute
+		opacity: 0
+		+ .label
+			position: relative
+			padding: 0 0 0 40px
+			&:before
+				content: ''
+				position: absolute
+				top: -4px
+				left: 0
+				width: 25px
+				height: 25px
+				border-radius: 50%
+				background: transparent
+				border: 1px solid $dark-grey-blue-two
+			&:after
+				content: ''
+				position: absolute
+				top: 2px
+				left: 6px
+				width: 14px
+				height: 9px
+				border: 3px solid #fcfff4
+				border-top: none
+				border-right: none
+				transform: rotate(-45deg)
+				transition: all .2s
+				opacity: 0
+	&:checked 
+		+ .label
+			&:before
+				background: $dark-grey-blue-two
+			&:after
+				opacity: 1
+			+ .label-for
+					h3, p
+						color: $dark-grey-blue-two
+.label
+	color: $dark-grey-blue-three
+	font-size: 16px
+	a
+		color: $dark-grey-blue-three
+.label-for
+	display: inline-block
+	cursor: pointer
+	h3
+		font-size: 18px
+		font-weight: 600
+		margin-bottom: 10px
+	img
+		width: 45px
+		margin-right: 15px	

@@ -1,0 +1,22 @@
+//BEGIN sidebar
+aside.sidebar
+  a(href="index.html").sidebar__logo.green
+    img(src="img/logo/logo-white.svg", alt="Логотип")
+  .sidebar__checkout
+    a(href="#").sidebar__checkout__back
+      +icon('checkout-back')
+      | На главную
+      
+    nav
+      ul
+        li.active
+          +icon('step-1')
+          a(href="#step-1") Шаг 1
+        li
+          +icon('step-2')
+          a(href="#step-2") Шаг 2
+        li
+          +icon('step-3')
+          a(href="#step-3") Шаг 3
+
+//END sidebar

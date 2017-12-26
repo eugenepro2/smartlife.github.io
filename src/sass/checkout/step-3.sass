@@ -1,0 +1,49 @@
+.step-3
+	margin-top: 100px
+	.step
+		&__delivery
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 70px
+			h2
+				width: 100%
+				margin-bottom: 40px
+			label
+				border: 1px dashed $dark-grey-blue-two
+				width: 350px
+				height: 125px
+				display: flex
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				margin-right: 30px
+				font-weight: 600
+				font-size: 14px
+				.icon
+					width: 100px
+					height: 75px
+					margin-right: 30px
+			label:nth-of-type(2)
+				.icon
+					width: 70px
+					height: 70px
+					margin-right: 40px
+			input
+				display: none
+				&:checked + label
+					p
+						color: $dark-grey-blue-two
+					.icon
+						fill: $dark-grey-blue-two
+		&__payment
+			margin-bottom: 150px
+			h2
+				margin-bottom: 50px
+			&__block
+				display: flex
+				margin-bottom: 50px
+				&:nth-of-type(2)
+					margin-bottom: 30px
+			.label
+				top: 2px
+						

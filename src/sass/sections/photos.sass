@@ -1,0 +1,45 @@
+.photos
+  background: #e8e8e8
+  h2
+    display: inline-block
+    margin-bottom: 50px
+  &__inst
+    text-decoration: none
+    color: $dark-grey-blue-two
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: 1.6px
+    float: right
+  .icon
+    fill: $dark-grey-blue-two
+    position: relative
+    top: 3px
+    left: 5px
+#instafeed
+  display: flex
+  flex-wrap: wrap
+  a
+    width: 250px
+    height: 250px
+    display: block
+    margin-left: 10px
+    margin-bottom: 10px
+    transition: box-shadow 0.3s
+    position: relative
+    img
+      width: 100%
+    .black
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0
+      background: rgba(0, 0, 0, 0.3)
+      transition: opacity 0.3s
+    &:hover
+      box-shadow: -12.3px 4.2px 59px 0 rgba(0, 0, 0, 0.48)
+      position: relative
+      z-index: 10
+      .black
+        opacity: 1

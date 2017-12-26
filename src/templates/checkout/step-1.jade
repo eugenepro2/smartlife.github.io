@@ -1,0 +1,96 @@
+.step-1#step-1.checkout__step
+  .container
+    .row
+      .col-md-offset-2.col-md-10
+        .step__afc.step
+          .step__add
+            span Добавить IBC к заказу
+          .step__delete
+            .step__delete__block
+              +icon('checkout-delete')
+              span Удалить
+          .step__afc__left
+            .step__photo
+              img(src="img/checkout/afc.png", alt="")
+              .step__short-desc
+                p Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора
+                img(src="img/checkout/line.svg", alt="")
+          .step__afc__right
+            h2 AFC - Концентрат Повышающий<br>Работоспособность
+            .step__set
+              p Выберете набор
+              select.select
+                option Набор 10 шт / 4990
+            .step__smack
+              p Выберите вкус:
+              .step__smack__block
+                .step__smack__block__icon
+                  +icon('strawberry')
+                  span Клубника
+                .step__smack__block__calc
+                  .substract
+                  input(type="number")
+                  .add
+              .step__smack__block
+                .step__smack__block__icon
+                  +icon('mint')
+                  span Мята
+                .step__smack__block__calc
+                  .substract
+                  input(type="number")
+                  .add
+              .step__smack__block
+                .step__smack__block__icon
+                  +icon('chocolate')
+                  span Шоколад
+                .step__smack__block__calc
+                  .substract
+                  input(type="number")
+                  .add
+              .step__smack__block
+                .step__smack__block__icon
+                  +icon('cherry')
+                  span Вишня
+                .step__smack__block__calc
+                  .substract
+                  input(type="number")
+                  .add
+      .col-md-offset-2.col-md-10
+        .step__ibc.step.no-active
+          .step__add
+            span Добавить IBC к заказу
+          .step__delete
+            .step__delete__block
+              +icon('checkout-delete')
+              span удалить 
+          .row
+            .col-md-6
+              .step__ibc__photo.step__ibc__photo--grey
+                .step__ibc__photo__white
+                img(src="img/checkout/ibc-gray.png", alt="")
+            .col-md-6
+              h2 IBC - очищение и<br>восстановление организма
+              .step__ibc__count
+                p Выберите количество:
+                select
+                  option 1 шт / 890 
+              .step__ibc__smack
+                p Выберите вкус: 
+                .step__ibc__smack__icon
+                  +icon('strawberry')
+                  span Клубника
+  .step__bottom.flex.center-xs
+    .step__bottom__block  
+      p 
+        b ШАГ 1.
+        | Состав заказа / общая сумма:   
+        span 5890
+        +icon('ruble')
+      a.btn.next(href="#step2") Далее
+
+
+
+        
+
+
+        
