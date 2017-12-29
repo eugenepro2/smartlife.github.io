@@ -1,5 +1,6 @@
 .step-2
 	margin-top: 100px
+	padding-bottom: 150px
 	.step
 		&__contact
 			display: flex
@@ -32,9 +33,13 @@
 			.form-element:nth-of-type(3)
 				input
 					width: 140px
+					+ label
+						left: 20px
 			.form-element:nth-of-type(4)
 				input
 					width: 115px
+					+ label
+						left: 23px
 
 				
 
@@ -49,6 +54,9 @@
 			padding: 25px 25px 15px 25px
 			box-sizing: border-box
 			display: inline-block
+			transition: all 0.3s
+			&.invalid
+				border: 1px solid red
 			+ label
 				display: inline-block
 				position: absolute

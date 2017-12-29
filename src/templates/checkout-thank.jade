@@ -1,0 +1,83 @@
+---
+title: SmartLife Checkout Thank
+---
+extends layouts/_layout
+block content
+
+  include ./partials/_sidebar-only-logo
+
+  .thank
+    .thank__1
+      .container
+        .row
+          .col-md-offset-2.col-md-10
+            h2 Иван иванов, спасибо за ваш заказ в smartlifebio
+            p В ближайшее время с Вами свяжется менеджер для подтверждения заказа,<br>а пока проверьте, пожалуйста, его состав, дату и адрес доставки:
+            .thank__order
+              .thank__order__number Заказ №201032
+              .row.thank__order__block
+                .col-md-8
+                  h3 AFC (концентрат повышающий работоспособность) 
+                .col-md-2
+                  p 20 шт 
+                .col-md-2.end-xs
+                  .thank__order__block__sum
+                    span 4990 ₽
+                .col-xs-12
+                  hr
+              .row.thank__order__block.thank__order__block__delivery
+                .col-md-8
+                  h3 Доставка курьером 
+                .col-md-2
+                  p -
+                .col-md-2.end-xs
+                  .thank__order__block__sum
+                    span 300 ₽
+                .col-xs-12
+                  hr
+              .row.thank__order__block.thank__order__block__total
+                .col-md-8
+                  h3 Итого:
+                .col-md-2
+                .col-md-2.end-xs
+                  .thank__order__block__sum
+                    span 5290 ₽
+    .thank__2
+      .container
+        .row
+          .col-md-offset-2.col-md-10
+            .row.thank__order__info
+              .col-md-6
+                h3 Адрес:
+              .col-md-6
+                p г. Москва, ул. Полянка, д. 37
+              .col-xs-12
+                hr
+              .col-md-6
+                h3 Дата приезда курьера:
+              .col-md-6
+                p 19.12.2017
+              .col-xs-12
+                hr
+              .col-md-6
+                h3 Способ оплаты:
+              .col-md-6
+                p Наличными курьеру при получении
+              .col-xs-12
+                hr
+              .col-md-6
+                h3 Телефон:
+              .col-md-6
+                p +7(900) 000-00-00
+              .col-xs-12
+                hr
+              .col-md-6
+                h3 E-mail:
+              .col-md-6
+                p info@mail.ru
+              .col-xs-12
+                hr
+    .container
+      .row
+        .col-xs-12.center-xs
+          a(href="#").btn.btn--thank Перейти на главную

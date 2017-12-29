@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>SmartLife Checkout Thank</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="svg-wrapper"><svg height="150" width="150" xmlns="http://www.w3.org/2000/svg"><rect height="150" width="150" class="animate"></rect></svg>
+        <div class="text"><img src="img/logo/logo-preloader.svg" alt=""><img src="img/logo/logo-preloader-text.svg" alt=""></div>
+      </div>
+    </div>
+    <script>
+      var p = document.querySelector('.animate'),
+        offset = 0;
+      var offsetMe = function()
+      {
+        if (offset < 0)
+        {
+          offset = 600;
+        }
+        p.style.strokeDashoffset = offset;
+        offset = offset - 5;
+        requestAnimationFrame(offsetMe);
+      };
+      offsetMe();
+
+    </script>
+    <!--BEGIN sidebar-->
+    <aside class="sidebar"><a href="index.html" class="sidebar__logo green"><img src="img/logo/logo-white.svg" alt="Логотип"></a>
+      <div class="sidebar__checkout"><a href="#" class="sidebar__checkout__back"></a></div>
+    </aside>
+    <!--END sidebar-->
+    <div class="thank">
+      <div class="thank__1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+              <h2>Иван иванов, спасибо за ваш заказ в smartlifebio</h2>
+              <p>В ближайшее время с Вами свяжется менеджер для подтверждения заказа,<br>а пока проверьте, пожалуйста, его состав, дату и адрес доставки:</p>
+              <div class="thank__order">
+                <div class="thank__order__number">Заказ №201032</div>
+                <div class="row thank__order__block">
+                  <div class="col-md-8">
+                    <h3>AFC (концентрат повышающий работоспособность) </h3>
+                  </div>
+                  <div class="col-md-2">
+                    <p>20 шт </p>
+                  </div>
+                  <div class="col-md-2 end-xs">
+                    <div class="thank__order__block__sum"><span>4990 ₽</span></div>
+                  </div>
+                  <div class="col-xs-12">
+                    <hr>
+                  </div>
+                </div>
+                <div class="row thank__order__block thank__order__block__delivery">
+                  <div class="col-md-8">
+                    <h3>Доставка курьером </h3>
+                  </div>
+                  <div class="col-md-2">
+                    <p>-</p>
+                  </div>
+                  <div class="col-md-2 end-xs">
+                    <div class="thank__order__block__sum"><span>300 ₽</span></div>
+                  </div>
+                  <div class="col-xs-12">
+                    <hr>
+                  </div>
+                </div>
+                <div class="row thank__order__block thank__order__block__total">
+                  <div class="col-md-8">
+                    <h3>Итого:</h3>
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-2 end-xs">
+                    <div class="thank__order__block__sum"><span>5290 ₽</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="thank__2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+              <div class="row thank__order__info">
+                <div class="col-md-6">
+                  <h3>Адрес:</h3>
+                </div>
+                <div class="col-md-6">
+                  <p>г. Москва, ул. Полянка, д. 37</p>
+                </div>
+                <div class="col-xs-12">
+                  <hr>
+                </div>
+                <div class="col-md-6">
+                  <h3>Дата приезда курьера:</h3>
+                </div>
+                <div class="col-md-6">
+                  <p>19.12.2017</p>
+                </div>
+                <div class="col-xs-12">
+                  <hr>
+                </div>
+                <div class="col-md-6">
+                  <h3>Способ оплаты:</h3>
+                </div>
+                <div class="col-md-6">
+                  <p>Наличными курьеру при получении</p>
+                </div>
+                <div class="col-xs-12">
+                  <hr>
+                </div>
+                <div class="col-md-6">
+                  <h3>Телефон:</h3>
+                </div>
+                <div class="col-md-6">
+                  <p>+7(900) 000-00-00</p>
+                </div>
+                <div class="col-xs-12">
+                  <hr>
+                </div>
+                <div class="col-md-6">
+                  <h3>E-mail:</h3>
+                </div>
+                <div class="col-md-6">
+                  <p>info@mail.ru</p>
+                </div>
+                <div class="col-xs-12">
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 center-xs"><a href="#" class="btn btn--thank">Перейти на главную</a></div>
+        </div>
+      </div>
+    </div>
+    <!--LOAD SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+
+</html>

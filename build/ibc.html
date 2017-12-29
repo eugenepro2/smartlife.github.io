@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>SmartLife</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="svg-wrapper"><svg height="150" width="150" xmlns="http://www.w3.org/2000/svg"><rect height="150" width="150" class="animate"></rect></svg>
+        <div class="text"><img src="img/logo/logo-preloader.svg" alt=""><img src="img/logo/logo-preloader-text.svg" alt=""></div>
+      </div>
+    </div>
+    <script>
+      var p = document.querySelector('.animate'),
+        offset = 0;
+      var offsetMe = function()
+      {
+        if (offset < 0)
+        {
+          offset = 600;
+        }
+        p.style.strokeDashoffset = offset;
+        offset = offset - 5;
+        requestAnimationFrame(offsetMe);
+      };
+      offsetMe();
+
+    </script>
+    <div class="content-ibc">
+      <!--BEGIN Главный экран-->
+      <section class="head">
+        <div class="container">
+          <div class="head__top"><a href="index.html" class="head__top__logo"><img data-src="img/logo/logo-white.svg" alt="Логотип"></a><a href="#" class="head__top__back">На главную<svg class="icon icon-review-arrow "><use xlink:href="../img/sprite.svg#icon-review-arrow"></use></svg></a></div>
+          <div
+            class="head__block">
+            <div class="row middle-md">
+              <div class="col-md-5 col-md-offset-7">
+                <div class="head__block__text">
+                  <h2>IBC - очищение и восстановление организма</h2><span>(Innovation boby cleansing)</span>
+                  <p>Концентрат IBC (сорбент нового поколения) это натуральный органический продукт, который очищает и восстанавливает наш организм, при этом не нарушая микрофлоры ЖКТ!</p><a href="#" class="btn">Заказать</a></div><img data-src="img/ibc-landing/head.png"
+                  alt=""></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--END Главный экран-->
+    <!--BEGIN  cause-->
+    <section class="cause">
+      <div class="cause__top">
+        <div class="row middle-md">
+          <div class="col-md-12 center-xs">
+            <h2>Причины накопления шлаков и таксинов в организме</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="cause__content"><img data-src="img/ibc-landing-svg/warning.svg" alt="">
+          <div class="cause__content__left">
+            <h3>Внешние</h3>
+            <p>Повышенный радиационный<br> и радиомагнитный фоны;</p>
+            <p>Интенсивное использование<br> синтетических лекарственных средств;</p>
+            <p>Низкое качество продуктов питания<br> и высокая концентрации в них<br> химических компонентов вплоть<br>до канцерогенов;</p>
+            <p>Избыточный и недостаточный<br> типы питания людей и т.д.</p>
+          </div>
+          <div class="cause__content__right">
+            <h3>Внутренние</h3>
+            <p>Хронические патологии, особенно<br> при нарушениях функций печени и почек;</p>
+            <p>Неправильные обменные процессы;</p>
+            <p>Интенсивные физические нагрузки<br> (ВНИМАНИЕ! ЗАНИМАЮЩИЕСЯ<br> СПОРТОМ ЛЮБОГО УРОВНЯ);</p>
+            <p>Стрессы.</p>
+            <h3>Симптомы
+              <p>Ощущения<br> общей слабости и разбитости;<span>1</span></p>
+              <p>Прогрессирующее снижение работоспособности;<span>2</span></p>
+              <p>Частые головные боли и т.д.;<span>3</span></p>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END cause-->
+    <!--BEGIN  better-->
+    <section class="better">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 center-md">
+            <h2>Что улучшает IBC?</h2>
+          </div>
+        </div>
+        <div class="better__content"><img data-src="img/ibc-landing/better.png" alt="">
+          <div class="better__content__left">
+            <p class="top">Белковый, углеводный <br>и липидный обмен веществ;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Белковый, углеводный <br>и липидный обмен веществ;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Рост полезной микрофлоры <br>кишечника;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Снижает уровень сахара <br>и холестирина в крови;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Защищает от свободных радикалов <br>и нормализует окислительно-<br>восстановительные процессы <br>в организме.<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+          </div>
+          <div class="better__content__right"><b>#IBC_УЛУЧШАЕТ</b>
+            <p>Снижает риск опухолей толстой <br>кишки, снижает аппетит; <span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p class="top">Поддерживает жизнедеятельность <br>и размножение бифидо <br>лактобактерий; <span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Снижает систолическое <br>давление, стабилизирует <br>артериальное давление; <span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Снижает вирусные и <br>респираторные инфекции, <br>восстанавливает иммунитет; <span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END better-->
+    <!--BEGIN  conclusion-->
+    <section class="conclusion">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 center-md">
+            <h2>Что выводит IBC?</h2>
+          </div>
+        </div>
+        <div class="conclusion__content">
+          <div class="conclusion__content__left">
+            <p class="top">Различные токсины, аллергены,<br> соли тяжелых металлов;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Радионуклиды, билирубин;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Холестерин и липиды;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Мочевину;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Продукты распада алкоголя; <span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+          </div>
+          <div class="conclusion__content__right">
+            <p>Метаболиты, формирующие эндогенный токсикоз;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p class="top top--padding">Продукты распада медикаментов, <br>канцерогены,патогенные микроорганизмы, <br>и многие другие опасные для организма <br>эндо- и экзогенные вещества <br>различной природы;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Ксенобиотики;<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p>
+            <p>Аммиак.<span><svg class="icon icon-check "><use xlink:href="../img/sprite.svg#icon-check"></use></svg></span></p><b>#IBC_ВЫВОДИТ</b></div>
+        </div>
+      </div>
+    </section>
+    <!--END conclusion-->
+    <!--BEGIN  use-->
+    <section class="use">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 center-xs">
+            <h2>Способ применения IBC<a href="#" class="start-md">Смотреть<br>видео-инструкцию<span><img data-src="img/play.svg" alt=""></span></a></h2>
+          </div>
+          <div class="col-md-4 center-md">
+            <div class="use__block use__block--1">
+              <p>Взрослым:</p>
+              <div class="use__block__foto"><img data-src="img/ibc-landing/use-1.png" alt=""><span>1</span></div>
+              <p>Открыть пакет IBC 210 г, <br>подготовить<span> ( ¼-½ ) стакана теплой воды (не менее 60oC)</span> </p>
+            </div>
+          </div>
+          <div class="col-md-4 center-md">
+            <div class="use__block">
+              <div class="use__block__foto use__block__foto--span"><img data-src="img/ibc-landing/use-2.png" alt=""><span>2</span></div>
+              <p>Для приготовления<br> одной порции необходимо 20 гр концентрата перемешать<br> в <span>( ¼-½ ) стакана теплой воды (не менее 60oC)</span> </p>
+            </div>
+          </div>
+          <div class="col-md-4 center-md">
+            <div class="use__block">
+              <div class="use__block__foto"><img data-src="img/ibc-landing/use-3.png" alt=""><span>3</span></div>
+              <p>Готово к применению</p>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="use__advice">
+              <p><b>Рекомендуется:</b> принимать за 20-30 минут до еды один раз в день. При интоксикации организма прием можно увеличить до 2-3 раз в день.</p>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="use__recommendation">
+              <div class="use__recommendation__block">
+                <p>Доза для детей:</p>
+                <p>½ - 1 мерная ложка (5-10 мл) в сутки</p>
+              </div>
+              <div class="use__recommendation__block use__recommendation__block--last">
+                <p>Противопоказания:</p>
+                <p>Индивидуальная непереносимость компонентов продукта.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END use-->
+    <!--BEGIN  order-->
+    <section class="order">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 middle-md">
+            <h2>НЕ УПУСТИ ВОЗМОЖНОСТЬ, ПОПРОБУЙ И ОЩУТИ ИЗМЕНЕНИЯ<br> ЗА 2 НЕДЕЛИ </h2>
+            <div class="order__block"><span>-30%</span>
+              <p>со скидкой</p>
+            </div><a href="#" class="btn">попробовать</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>© 2017 Smartlifebio</p>
+          </div>
+          <div class="col-md-6 end-md"><img src="img/landingsvg/footer-logo.svg" alt=""></div>
+        </div>
+      </div>
+    </section>
+    <!--END order-->
+    </div>
+    <!--LOAD SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+
+</html>

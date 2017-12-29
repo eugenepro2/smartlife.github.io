@@ -6,6 +6,7 @@
 		bottom: 40px
 		&--img
 			width: 400px
+			height: 456px
 			z-index: 10
 			position: relative
 			img
@@ -39,24 +40,31 @@
 		&--prev, &--next
 			position: absolute
 			width: 40px
+			z-index: 100
 			background: transparent
 			margin-top: 0
-			height: inherit
+			height: 40px
+			background: url('/img/afc/afc-arrow.svg')
+			transition: all 0.3s
 		&--prev
 			top: 29%
 			right: -1px
 			left: inherit
 			transform: rotate(-20deg)
+			&:hover
+				background: url('/img/afc/afc-arrow-hover.svg')
 		&--next
 			top: 63%
 			right: -1px
 			transform: rotate(200deg)
+			&:hover
+				background: url('/img/afc/afc-arrow-hover.svg')
 		.swiper-button-disabled
 			opacity: 1
 			pointer-events: inherit
 			cursor: pointer
 	&-slider
-		margin-left: 0
+		margin-left: 40px
 		height: 300px
 		width: 500px
 		transition: all 1s
@@ -64,13 +72,13 @@
 		font-style: italic
 		font-size: 16px
 		color: $warm-grey
-		transform: translateX(40px)
+		transform: translateX(0px)
 		transition: all 1s
-		&-prev, &-active
+		&-prev, &-active, &-duplicate, &-duplicate-active, &-duplicate-next, &-duplicate-prev
 			transition: all 1s
 		&-active
-			transform: translateX(70px)
-			color: $dark-grey-blue
+			transform: translateX(30px)
+			color: $dark-grey-blue-two
 			transition: all 1s
 		p
 			height: 100%

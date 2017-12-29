@@ -5,6 +5,7 @@
   &__slide
     margin-bottom: 20px
     padding-left: 20px
+    position: relative
     &__photo
       width: 320px
       height: 300px
@@ -40,8 +41,11 @@
         cursor: pointer
         letter-spacing: 1.8px
         text-transform: uppercase
-        position: relative
+        position: absolute
+        bottom: 30px
         transition: all 0.3s
+        &:hover
+          color: $dark-grey-blue-two
         span
           position: absolute
           top: -15px
@@ -50,7 +54,7 @@
           height: 75px
           border-radius: 50%
           padding: 5px
-          background-image: linear-gradient(to right, $greeny-blue 37%, #29413b)
+          background-image: linear-gradient(to right, #32d6c1 37%, #284a41)
           transition: all 0.3s
           background-size: 200% 200%
           animation: Gradient 5s ease infinite
@@ -61,12 +65,16 @@
   .swiper-container
     width: 750px
   .swiper-slide
-    padding-top: 30px
+    padding-top: 50px
     text-align: center
     cursor: pointer
+    &-photo
+      position: relative
     img
       width: 110px
       height: 100px
+      position: relative
+      z-index: 10
     h3
       font-size: 16px
       color: $black-two
@@ -80,8 +88,10 @@
       font-weight: 500
     p
       display: none
-    &:hover img
-      box-shadow: -9.5px 3.3px 34.8px 8.2px rgba(51, 51, 51, 0.28)
+    &:hover
+      animation-name: pulse
+      animation-duration: .75s
+      animation-fill-mode: both
   .swiper-button
     &-prev
       transform: rotate(180deg)
@@ -91,7 +101,7 @@
       background: transparent
       height: inherit
       opacity: 1
-      top: 35%
+      top: 100px
       .icon
         width: 34px
         height: 34px

@@ -12,6 +12,27 @@
   </head>
 
   <body>
+    <div id="preloader">
+      <div class="svg-wrapper"><svg height="150" width="150" xmlns="http://www.w3.org/2000/svg"><rect height="150" width="150" class="animate"></rect></svg>
+        <div class="text"><img src="img/logo/logo-preloader.svg" alt=""><img src="img/logo/logo-preloader-text.svg" alt=""></div>
+      </div>
+    </div>
+    <script>
+      var p = document.querySelector('.animate'),
+        offset = 0;
+      var offsetMe = function()
+      {
+        if (offset < 0)
+        {
+          offset = 600;
+        }
+        p.style.strokeDashoffset = offset;
+        offset = offset - 5;
+        requestAnimationFrame(offsetMe);
+      };
+      offsetMe();
+
+    </script>
     <div id="fullpage">
       <!--BEGIN sidebar-->
       <aside class="sidebar"><a href="index.html" class="sidebar__logo"><img src="img/logo/logo.svg" alt="Логотип"></a>
@@ -42,10 +63,10 @@
               <div class="container">
                 <div class="row middle-xs">
                   <div class="col-md-3 col-md-offset-9 end-xs">
-                    <div class="home__comp"><img src="img/comp-1.png" alt=""></div>
+                    <div class="home__comp"><img data-src="img/comp-1.png" alt=""></div>
                     <div class="home__block">
-                      <div class="swiper-pagination"></div>
-                      <p>Продукты<br>для здоровой<br>и счастливой<br>жизни</p><a href="#">Все о нас<br>за 60 секунд<span><img src="img/play.svg" alt=""></span></a></div>
+                      <p>Продукты<br>для здоровой<br>и счастливой<br>жизни</p>
+                      <div class="swiper-pagination"></div><a href="#">Все о нас<br>за 60 секунд<span><img data-src="img/play.svg" alt=""></span></a></div>
                   </div>
                 </div>
               </div>
@@ -54,10 +75,10 @@
               <div class="container">
                 <div class="row middle-xs">
                   <div class="col-md-3 col-md-offset-9 end-xs">
-                    <div class="home__comp"><img src="img/comp-1.png" alt=""></div>
+                    <div class="home__comp"><img data-src="img/comp-1.png" alt=""></div>
                     <div class="home__block">
-                      <div class="swiper-pagination"></div>
-                      <p>Продукты<br>для здоровой<br>и счастливой<br>жизни</p><a href="#">Все о нас<br>за 60 секунд</a></div>
+                      <p>Продукты<br>для здоровой<br>и счастливой<br>жизни 2</p>
+                      <div class="swiper-pagination"></div><a href="#">Все о нас<br>за 60 секунд<span><img data-src="img/play.svg" alt=""></span></a></div>
                   </div>
                 </div>
               </div>
@@ -72,11 +93,11 @@
           <div class="row middle-xs">
             <div class="col-md-3 col-md-offset-2">
               <div class="afc__slider">
-                <div class="afc__slider--img"><img src="img/afc.png" alt=""></div>
-                <div class="afc__slider--line"><img src="img/afc/afc-line.svg" alt="">
+                <div class="afc__slider--img"><img data-src="img/afc.png" alt=""></div>
+                <div class="afc__slider--line"><img data-src="img/afc/afc-line.svg" alt="">
                   <div class="afc__slider--active"></div>
-                  <div class="afc__slider--prev swiper-button-prev"><img src="img/afc/afc-arrow.svg" alt=""></div>
-                  <div class="afc__slider--next swiper-button-next"><img src="img/afc/afc-arrow.svg" alt=""></div>
+                  <div class="afc__slider--prev swiper-button-prev"></div>
+                  <div class="afc__slider--next swiper-button-next"></div>
                 </div>
               </div>
             </div>
@@ -98,7 +119,7 @@
                   </div>
                 </div>
               </div>
-              <div class="afc__info"><img src="img/afc/afc-info.svg" alt=""></div>
+              <div class="afc__info"><img data-src="img/afc/afc-info.svg" alt=""></div>
               <div class="afc__price">
                 <div class="afc__price__block">
                   <p>Цена</p>
@@ -121,14 +142,14 @@
               <h2>IBC - очищение и<br>восстановление организма<span>(Innovation adaptogenic functional concentrate)</span></h2>
               <div class="ibc__advantages">
                 <div class="ibc__advantages__block ibc__advantages__block--1">
-                  <p>Улучшает баланс<br>веществ в организме</p><img src="img/ibc/ibc-line-1.svg" alt=""></div>
+                  <p>Улучшает баланс<br>веществ в организме</p><img data-src="img/ibc/ibc-line-1.svg" alt=""></div>
                 <div class="ibc__advantages__block ibc__advantages__block--2">
-                  <p>Выводит различные токсины, аллергены,<br>соли тяжелых металлов, радионуклиды билирубин,<br>холестерин и липиды, мочевину,продукты распада<br>алкоголя, метаболиты, формирующие эндогенный<br>токсикоз и другое</p><img src="img/ibc/ibc-line-2.svg"
+                  <p>Выводит различные токсины, аллергены,<br>соли тяжелых металлов, радионуклиды билирубин,<br>холестерин и липиды, мочевину,продукты распада<br>алкоголя, метаболиты, формирующие эндогенный<br>токсикоз и другое</p><img data-src="img/ibc/ibc-line-2.svg"
                     alt=""></div>
                 <div class="ibc__advantages__block ibc__advantages__block--3">
-                  <p>Не нарушает естественную<br>микрофлору</p><img src="img/ibc/ibc-line-3.svg" alt=""></div>
+                  <p>Не нарушает естественную<br>микрофлору</p><img data-src="img/ibc/ibc-line-3.svg" alt=""></div>
               </div>
-              <div class="ibc__info"><img src="img/ibc/ibc-info.svg" alt=""></div>
+              <div class="ibc__info"><img data-src="img/ibc/ibc-info.svg" alt=""></div>
               <div class="ibc__price">
                 <div class="ibc__price__block">
                   <p>Цена</p>
@@ -136,7 +157,7 @@
                 </div><a href="#" class="btn btn--white">заказать</a><a href="#" class="btn">подробнее</a></div>
             </div>
             <div class="col-md-4">
-              <div class="ibc__comp"><img src="img/ibc.png" alt=""></div>
+              <div class="ibc__comp"><img data-src="img/ibc.png" alt=""></div>
             </div>
           </div>
         </div>
@@ -151,33 +172,38 @@
               <div class="review__slide">
                 <div class="row">
                   <div class="col-md-4">
-                    <div class="review__slide__photo"><img src="img/review/review-1.png" alt=""></div>
+                    <div class="review__slide__photo"><img data-src="img/review/review-1.png" alt=""></div>
                   </div>
                   <div class="col-md-8">
                     <div class="review__slide__block">
                       <h3>Виктор</h3><i>Мастер спорта по пауэрлифтингу</i>
                       <p>Были проблемы со сном, знакомые посоветовали попробовать AFC, но сразу сказали, чтобы почувствовать эффект, нужно минимум 14 дней, решил попробовать. Очень доволен результатом,увеличились показатели в спорте, начал легко просыпаться
-                        по утрам. Рекомендую.</p><a href="#">Смотреть<br>видео-отзыв<span><img src="img/play.svg" alt=""></span></a></div>
+                        по утрам. Рекомендую.</p><a href="#">Смотреть<br>видео-отзыв<span><img data-src="img/play.svg" alt=""></span></a></div>
                   </div>
                 </div>
               </div>
               <div class="review__s">
                 <div class="swiper-container review-slider">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/review/review-1.png" alt="">
-                      <h3>Виктор</h3><i>Мастер спорта по пауэрлифтингу</i>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-photo"><img data-src="img/review/review-1.png" alt=""></div>
+                      <h3>Виктор</h3><i>Мастер спорта<br>по пауэрлифтингу</i>
                       <p>Были проблемы со сном, знакомые посоветовали попробовать AFC, но сразу сказали, чтобы почувствовать эффект, нужно минимум 14 дней, решил попробовать. Очень доволен результатом,увеличились показатели в спорте, начал легко просыпаться
                         по утрам. Рекомендую.</p>
                     </div>
-                    <div class="swiper-slide"><img src="img/review/review-2.png" alt="">
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
                       <h3>Андрей</h3><i>Профессиональный<br>боец Муай Тай</i>
                       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis ab ipsum dolorem culpa. Blanditiis, facere alias voluptates illum veniam aliquam perferendis impedit! Maxime nisi voluptas laboriosam minus, fugit molestiae nihil!</p>
                     </div>
-                    <div class="swiper-slide"><img src="img/review/review-2.png" alt="">
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
                       <h3>Юрий</h3><i>Мастер спорта<br>международного<br>класса по тайскому<br>боксу</i></div>
-                    <div class="swiper-slide"><img src="img/review/review-2.png" alt="">
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
                       <h3>Екатерина</h3><i>Мама двух<br>малышек</i></div>
-                    <div class="swiper-slide"><img src="img/review/review-2.png" alt="">
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
                       <h3>Андрей</h3><i>Триатлон</i></div>
                   </div>
                 </div>
@@ -222,11 +248,37 @@
       </section>
       <!--END Photos-->
       <!--BEGIN  Contact-->
-      <section class="section contact"><img src="img/contact.png" alt="">
+      <section class="section contact">
+        <div class="contact__left">
+          <div id="contact-1" class="scene__contact--1 scene__contact">
+            <div data-depth="4"><img data-src="img/contact-comp/2.png" alt=""></div>
+          </div><img data-src="img/contact-comp/left.png" alt="" class="img">
+          <div id="contact-2" data-invert-x="false" data-invert-y="false" relativeInput="true" class="scene__contact--2 scene__contact">
+            <div data-depth="2"><img data-src="img/contact-comp/8.png" alt=""></div>
+          </div>
+        </div>
+        <div class="contact__right">
+          <div id="contact-3" class="scene__contact--3 scene__contact">
+            <div data-depth="2"><img data-src="img/contact-comp/5.png" alt=""></div>
+          </div>
+          <div id="contact-4" class="scene__contact--4 scene__contact">
+            <div data-depth="2"><img data-src="img/contact-comp/6.png" alt=""></div>
+          </div><img data-src="img/contact-comp/right.png" alt="" class="img">
+          <div id="contact-5" data-invert-x="false" data-invert-y="false" relativeInput="true" class="scene__contact--5 scene__contact">
+            <div data-depth="2"><img data-src="img/contact-comp/3.png" alt=""></div>
+          </div>
+          <div id="contact-6" class="scene__contact--6 scene__contact">
+            <div data-depth="2"><img data-src="img/contact-comp/4.png" alt=""></div>
+          </div>
+        </div>
         <div class="container">
           <div class="row middle-xs">
             <div class="col-md-offset-2 col-md-10">
-              <h2>Контакты</h2>
+              <h2>Контакты
+                <div id="contact-7" class="scene__contact--7 scene__contact">
+                  <div data-depth="2"><img data-src="img/contact-comp/1.png" alt=""></div>
+                </div>
+              </h2>
               <div class="contact__block">
                 <div class="row">
                   <div class="col-md-6">
@@ -249,7 +301,8 @@
                   </div>
                   <div class="col-md-6">
                     <form>
-                      <h3>Обратная связь</h3><input type="text" placeholder="Имя" required><input type="tel" placeholder="Ваш телефон" required><input type="text" placeholder="Ваш комментарий"><input type="submit" value="отправить"></form>
+                      <h3>Обратная связь</h3><input type="text" placeholder="Имя" required><input type="tel" placeholder="Ваш телефон" required><input type="text" placeholder="Ваш комментарий"><input id="checkbox" type="checkbox" class="checkbox"><label for="checkbox"
+                        class="label"></label><label for="checkbox" class="label-for">Я прочитал и согласен <a href="#">на обработку персональных данных</a> на сайте smartlife.bio  </label><input type="submit" value="отправить"></form>
                   </div>
                 </div>
               </div>
@@ -262,6 +315,7 @@
     </div>
     <!--LOAD SCRIPTS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 

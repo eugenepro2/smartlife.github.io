@@ -4,11 +4,11 @@
 	 viewBox="0 0 45.6 45.6" style="enable-background:new 0 0 45.6 45.6;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#E7E7E7;stroke:url(#SVGID_1_);stroke-miterlimit:10;}
-	.st1{fill:url(#SVGID_2_);}
+	.st1{fill:#2d6965;}
 </style>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1.827" y1="22.8" x2="43.773" y2="22.8">
-	<stop  offset="0.2314" style="stop-color:#5AB29F"/>
-	<stop  offset="1" style="stop-color:#283F3A"/>
+	<stop  offset="0.2314" style="stop-color:#2d6965"/>
+	<stop  offset="1" style="stop-color:#2d6965"/>
 </linearGradient>
 <circle class="st0" cx="22.8" cy="22.8" r="20.5"/>
 <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="10.6947" y1="22.8" x2="34.9053" y2="22.8">

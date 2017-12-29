@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>SmartLife</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="svg-wrapper"><svg height="150" width="150" xmlns="http://www.w3.org/2000/svg"><rect height="150" width="150" class="animate"></rect></svg>
+        <div class="text"><img src="img/logo/logo-preloader.svg" alt=""><img src="img/logo/logo-preloader-text.svg" alt=""></div>
+      </div>
+    </div>
+    <script>
+      var p = document.querySelector('.animate'),
+        offset = 0;
+      var offsetMe = function()
+      {
+        if (offset < 0)
+        {
+          offset = 600;
+        }
+        p.style.strokeDashoffset = offset;
+        offset = offset - 5;
+        requestAnimationFrame(offsetMe);
+      };
+      offsetMe();
+
+    </script>
+    <div class="content">
+      <!--BEGIN Главный экран-->
+      <section class="head">
+        <div class="container">
+          <div class="head__top"><a href="index.html" class="head__top__logo"><img src="img/logo/logo-white.svg" alt="Логотип"></a><a href="#" class="head__top__back">На главную<svg class="icon icon-review-arrow "><use xlink:href="../img/sprite.svg#icon-review-arrow"></use></svg></a></div>
+          <div
+            class="head__block">
+            <div class="row middle-md">
+              <div class="col-md-5 col-md-offset-7">
+                <div class="head__block__text">
+                  <h2>AFC - Концентрат Повышающий Работоспособность</h2>
+                  <p>Продукт для здоровья и повышения <br>работоспособности, а не достижения результата любой ценой!</p>
+                  <p>Его можно принимать всей семьей!</p>
+                  <p>Это природный продукт, основой которого являются высокоэффект ивные вещества, экстракты, специально подобранные в один комплекс для получения мощного синергического эффекта.</p><a href="#" class="btn">Заказать</a></div><img src="img/afc-landing/head.png"
+                  alt="" class="head__block__afc"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--END Главный экран-->
+    <!--BEGIN  consist-->
+    <section class="consist">
+      <div class="consist__top">
+        <div class="row middle-md">
+          <div class="col-md-12 center-xs">
+            <h2>СОСТАВ: 16 ПРИРОДНЫХ КОМПОНЕНТОВ</h2>
+          </div>
+        </div>
+      </div>
+      <div class="consist__content">
+        <div class="container">
+          <div class="row center-md">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6 start-md">
+                  <div class="consist__content__left">
+                    <ul>
+                      <li class="middle-md"><span>1</span>
+                        <p>Органическое железо</p>
+                      </li>
+                      <li class="middle-md"> <span>2</span>
+                        <p>Экстракт из молодых рогов (пантов) алтайского марала</p>
+                      </li>
+                      <li class="middle-md"> <span>3</span>
+                        <p>Гидролизат белка ультрафильтрованный</p>
+                      </li>
+                      <li class="middle-md"> <span>7</span>
+                        <p>Янтарная кислота</p>
+                      </li>
+                      <li class="middle-md"> <span>10</span>
+                        <p>Экстракт имбиря сухой</p>
+                      </li>
+                      <li class="middle-md"> <span>11</span>
+                        <p>Экстракт зеленого чая сухой</p>
+                      </li>
+                      <li class="middle-md arrow"> <span>13</span>
+                        <p>Экстракт родиолы розовой сухой</p>
+                      </li>
+                      <li class="middle-md"> <span>15</span>
+                        <p>Экстракт боярышника сухой</p>
+                      </li>
+                    </ul><img src="img/afc-landing/consist-left.png" alt=""></div>
+                </div>
+                <div class="col-md-5 start-md">
+                  <div class="consist__content__right">
+                    <ul>
+                      <li class="middle-md"><span>5</span>
+                        <p>Креатин</p>
+                      </li>
+                      <li class="arrow1 middle-md"><span>4</span>
+                        <p>Карнозин</p>
+                      </li>
+                      <li class="middle-md"><span>6</span>
+                        <p>Йод в хелатной форме</p>
+                      </li>
+                      <li class="middle-md"><span>8</span>
+                        <p>Аскорбиновая кислота</p>
+                      </li>
+                      <li class="arrow2 middle-md"><span>9</span>
+                        <p>Холин</p>
+                      </li>
+                      <li class="middle-md"><span>12</span>
+                        <p>Экстракт левзеи сухой</p>
+                      </li>
+                      <li class="middle-md"><span>14</span>
+                        <p>Экстракт сушеницы сухой</p>
+                      </li>
+                      <li class="arrow3 middle-md"><span>16</span>
+                        <p>Экстракт Саган Дайля</p>
+                      </li>
+                    </ul><img src="img/afc-landing/consist-right.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END consist-->
+    <!--BEGIN  applying-->
+    <section class="applying">
+      <div class="container">
+        <div class="applying__top">
+          <div class="row middle-md center-md">
+            <div class="col-md-6 start-md">
+              <h2>Для чего концентра AFC?</h2>
+              <p>#AFC_ ДЛЯЧЕГО</p>
+            </div>
+            <div class="col-md-3 start-md">
+              <div class="applying__swiper">
+                <div class="swiper-container applying-slider-top">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <ul>
+                        <li>Восстанавливает иммунитет, нервную систему, защитные силы при переутомлении</li>
+                        <li>Способствует уменьшению аллергии</li>
+                        <li>Нормализует сон </li>
+                        <li>Повышает физическую и умственную работоспособность</li>
+                        <li>Улучшает память, внимательность, обмен веществ</li>
+                        <li>Замедляет процессы старения </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul>
+                        <li>Восстанавливает иммунитет, нервную систему, защитные силы при переутомлении</li>
+                        <li>Способствует уменьшению аллергии</li>
+                        <li>Нормализует сон </li>
+                        <li>Повышает физическую и умственную работоспособность</li>
+                        <li>Улучшает память, внимательность, обмен веществ</li>
+                        <li>Замедляет процессы старения </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul>
+                        <li>Восстанавливает иммунитет, нервную систему, защитные силы при переутомлении</li>
+                        <li>Способствует уменьшению аллергии</li>
+                        <li>Нормализует сон </li>
+                        <li>Повышает физическую и умственную работоспособность</li>
+                        <li>Улучшает память, внимательность, обмен веществ</li>
+                        <li>Замедляет процессы старения </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next next"><span><svg class="icon icon-review-arrow "><use xlink:href="../img/sprite.svg#icon-review-arrow"></use></svg></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="applying__bottom">
+          <div class="row center-md">
+            <div class="col-md-3 col-md-offset-2 start-md">
+              <div class="applying__swiper">
+                <div class="swiper-container applying-slider-bottom">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <ul>
+                        <li>Вы ведете активный<br> образ жизни (спорт/фитнес)</li>
+                        <li>У вас интенсивный график с частыми разъездами и сменой часовых поясов</li>
+                        <li>Ваша работа связана со стрессом</li>
+                        <li>Регулярное недосыпание превратилось в норму</li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul>
+                        <li>Вы ведете активный<br> образ жизни (спорт/фитнес)</li>
+                        <li>У вас интенсивный график с частыми разъездами и сменой часовых поясов</li>
+                        <li>Ваша работа связана со стрессом</li>
+                        <li>Регулярное недосыпание превратилось в норму</li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul>
+                        <li>Вы ведете активный<br> образ жизни (спорт/фитнес)</li>
+                        <li>У вас интенсивный график с частыми разъездами и сменой часовых поясов</li>
+                        <li>Ваша работа связана со стрессом</li>
+                        <li>Регулярное недосыпание превратилось в норму</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="next" class="swiper-button-next"><span><svg class="icon icon-review-arrow "><use xlink:href="../img/sprite.svg#icon-review-arrow"></use></svg></span></div>
+              </div>
+            </div>
+            <div class="col-md-6 start-md">
+              <h2>Для кого концентра AFC?</h2>
+              <p>#AFC_ ДЛЯКОГО</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END applying-->
+    <!--BEGIN  use-->
+    <section class="use">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 center-xs">
+            <h2>Способ применения AFC<a href="#" class="start-md">Смотреть<br>видео-инструкцию<span><img src="img/play.svg" alt=""></span></a></h2>
+          </div>
+          <div class="col-md-4 center-md">
+            <div class="use__block use__block--1">
+              <p>Взрослым:</p>
+              <div class="use__block__foto"><img src="img/afc-landing/use-1.png" alt=""><span>1</span></div>
+              <p>Открыть флакон 35 г<br> (1 порцию концетрата)</p>
+            </div>
+          </div>
+          <div class="col-md-4 center-md">
+            <div class="use__block">
+              <div class="use__block__foto use__block__foto--span"><img src="img/afc-landing/use-2.png" alt=""><span>2</span></div>
+              <p>Добавить питьевую воду до объема 100 мл и хорошо перемешать</p>
+            </div>
+          </div>
+          <div class="col-md-4 center-md">
+            <div class="use__block">
+              <div class="use__block__foto"><img src="img/afc-landing/use-3.png" alt=""><span>3</span></div>
+              <p>Готово к применению</p>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="use__advice">
+              <p><b>Рекомендуется:</b> принимать утром натощак. При повышенных умственных и физических нагрузках прием можно увеличить до двух порций.</p>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="use__recommendation">
+              <div class="use__recommendation__block">
+                <p>14-18 лет:</p>
+                <p>1 флакон за два приема в первой половине дня</p>
+              </div>
+              <div class="use__recommendation__block">
+                <p>10-14 лет:</p>
+                <p>1 ложка столовая 1 раз в день, при интенсивных нагрузках до 2 раз в день в первой половине дня.</p>
+              </div>
+              <div class="use__recommendation__block">
+                <p>7-10 лет:</p>
+                <p>½ чайной ложки 1-2 раза в первой половине дня</p>
+              </div>
+              <div class="use__recommendation__block use__recommendation__block--last">
+                <p>Противопоказания:</p>
+                <p>Индивидуальная непереносимость компонентов продукта.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END use-->
+    <!--BEGIN  order-->
+    <section class="order">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 middle-md">
+            <h2>НЕ УПУСТИ ВОЗМОЖНОСТЬ, ПОПРОБУЙ И ОЩУТИ ИЗМЕНЕНИЯ<br> ЗА 2 НЕДЕЛИ </h2>
+            <div class="order__block"><span>-30%</span>
+              <p>со скидкой</p>
+            </div><a href="#" class="btn">попробовать</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>© 2017 Smartlifebio</p>
+          </div>
+          <div class="col-md-6 end-md"><img src="img/afc-landing-svg/footer-logo.svg" alt=""></div>
+        </div>
+      </div>
+    </section>
+    <!--END order-->
+    </div>
+    <!--LOAD SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+
+</html>

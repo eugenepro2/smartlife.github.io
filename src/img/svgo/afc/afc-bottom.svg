@@ -7,8 +7,11 @@
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_2_);}
 </style>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-5.5856" y1="2377.5186" x2="8101.4565" y2="2377.5186">
-	<stop  offset="0" style="stop-color:#5AB29F"/>
-	<stop  offset="1" style="stop-color:#283F3A"/>
+	<stop  offset="0" style="stop-color:#5AB29F">
+	
+	</stop>
+	<stop  offset="1" style="stop-color:#283F3A">
+	</stop>
 </linearGradient>
 <path class="st0" d="M7956.8,2757.7h144.7v-297.1c-0.9,0-1.8,0-2.7-0.1c-0.2-0.1-0.9-0.2-1.1-0.3c1.5,0.2,2.4,0.2,3.8,0.4v-428.3
 	c-75.9-9.2-161.2-13.6-208.8-10.5c1,0.5,2.3,1.1,4.3,1.7c-30-0.6-55.1-0.7-40.9,3.4c-7,1.4-14,2.9-21.2,4.3
@@ -103,8 +106,12 @@
 	c0.7,0.1,1.4,0.1,2.1,0.2c-0.6,0-1.2,0-1.8-0.1L7056.7,2038.3z M7734,2633.7c-1.2,1-8.6,1.1-18.3,0.7c4-0.5,7.6-1.2,11.8-2.4
 	C7732.1,2632.5,7734.8,2633,7734,2633.7z"/>
 <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-8.6346" y1="432.7406" x2="8098.4077" y2="432.7406">
-	<stop  offset="0" style="stop-color:#D55970"/>
-	<stop  offset="1" style="stop-color:#54C3AA"/>
+	<stop  offset="0" style="stop-color:#D55970">
+	<animate attributeName="stop-color" values="#D55970; #54C3AA; #D55970;" dur="4s" repeatCount="indefinite"></animate>
+	</stop>
+	<stop  offset="1" style="stop-color:#54C3AA">
+	<animate attributeName="stop-color" values="#54C3AA; #D55970; #54C3AA" dur="4s" repeatCount="indefinite"></animate>
+	</stop>
 </linearGradient>
 <path class="st1" d="M7953.7,813h144.7V515.8c-0.9,0-1.8,0-2.7-0.1c-0.2-0.1-0.9-0.2-1.1-0.3c1.5,0.2,2.4,0.2,3.8,0.4V87.6
 	c-75.9-9.2-161.2-13.6-208.8-10.5c1,0.5,2.3,1.1,4.3,1.7c-30-0.6-55.1-0.7-40.9,3.4c-7,1.4-14,2.9-21.2,4.3

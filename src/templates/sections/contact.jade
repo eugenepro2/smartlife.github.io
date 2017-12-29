@@ -1,9 +1,33 @@
 section.section.contact
-  img(src="img/contact.png", alt="")
+  .contact__left
+    .scene__contact--1.scene__contact#contact-1
+      div(data-depth="4")
+        img(data-src="img/contact-comp/2.png", alt="")
+    img.img(data-src="img/contact-comp/left.png", alt="")
+    .scene__contact--2.scene__contact#contact-2(data-invert-x="false" data-invert-y="false" relativeInput="true")
+      div(data-depth="2")
+        img(data-src="img/contact-comp/8.png", alt="")
+  .contact__right
+    .scene__contact--3.scene__contact#contact-3
+      div(data-depth="2")
+        img(data-src="img/contact-comp/5.png", alt="")
+    .scene__contact--4.scene__contact#contact-4
+      div(data-depth="2")
+        img(data-src="img/contact-comp/6.png", alt="")
+    img.img(data-src="img/contact-comp/right.png", alt="")
+    .scene__contact--5.scene__contact#contact-5(data-invert-x="false" data-invert-y="false" relativeInput="true")
+      div(data-depth="2")
+        img(data-src="img/contact-comp/3.png", alt="")
+    .scene__contact--6.scene__contact#contact-6
+      div(data-depth="2")
+        img(data-src="img/contact-comp/4.png", alt="")
   .container
     .row.middle-xs
       .col-md-offset-2.col-md-10
         h2 Контакты
+          .scene__contact--7.scene__contact#contact-7
+            div(data-depth="2")
+              img(data-src="img/contact-comp/1.png", alt="")
         .contact__block
           .row
             .col-md-6
@@ -32,4 +56,8 @@ section.section.contact
                 input(type="text" placeholder="Имя" required)
                 input(type="tel" placeholder="Ваш телефон" required)
                 input(type="text" placeholder="Ваш комментарий")
+                input#checkbox.checkbox(type="checkbox")
+                label.label(for="checkbox")
+                label.label-for(for="checkbox") Я прочитал и согласен <a href="#">на обработку персональных данных</a> на сайте smartlife.bio  
                 input(type="submit" value="отправить")
+                

@@ -10,23 +10,48 @@
   &__logo
     width: 130px
     height: 165px
-    background-image: url('/img/logo/logo-bg.svg')
     background-repeat: no-repeat
     background-size: cover
     display: flex
     justify-content: center
     align-items: center
     transition: all 0.3s
-    &.green
-       background-image: url('/img/logo/logo-bg-green.svg')
+    position: relative
+    &:before, &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 130px
+      height: 165px
+      background-repeat: no-repeat
+      background-size: cover
+      transition: all 0.3s
+    &:before
+      background-image: url('/img/logo/logo-bg-green.svg')
+      opacity: 0
+    &:after
+      background-image: url('/img/logo/logo-bg.svg')
+      opacity: 1
     img
       width: 80px
       height: 90px
+      position: relative
+      z-index: 10
+    &.green
+      &:after
+        opacity: 0
+      &:before
+        opacity: 1
   &__menu
     display: flex
     width: 200px
     margin-top: 70px
     ul
+      li.active
+        a:before
+          opacity: 1
+          transition: all 0.3s
+          transform: translateX(50%)
       a
         font-size: 12px
         font-weight: 600

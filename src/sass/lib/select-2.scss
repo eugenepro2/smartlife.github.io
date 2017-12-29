@@ -1,0 +1,120 @@
+.select-select {
+  display: none;
+  /* For when we are on a small touch device and want to use native controls */
+  pointer-events: none;
+  position: absolute;
+  opacity: 0; }
+
+.select-element, .select-element:after, .select-element:before, .select-element *, .select-element *:after, .select-element *:before {
+  box-sizing: border-box; }
+
+.select-element {
+  position: absolute;
+  display: none; }
+  .select-element.select-open {
+    display: block; }
+
+.select-theme-default-2, .select-theme-default-2 *, .select-theme-default-2 *:after, .select-theme-default-2 *:before {
+  box-sizing: border-box; }
+
+.select.select-theme-default-2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; 
+}
+  .select.select-theme-default-2 .select-content {
+    border-radius: 0;
+    background: #fff;
+    font-family: inherit;
+    color: inherit;
+    overflow: auto;
+    width: 200px;
+    max-height: 18rem;
+    -webkit-overflow-scrolling: touch; }
+  .select.select-theme-default-2 .select-options {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px }
+    .select.select-theme-default-2 .select-options .select-option {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      position: relative;
+      list-style: none;
+      margin: 0;
+      line-height: 1.25rem;
+      padding: 0.5rem 1em 0.5rem 1em;
+      display: block;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border: 1px solid $dark-grey-blue-two; }
+      .select.select-theme-default .select-options .select-option:not(:last-child) {
+        border-bottom: 0px;
+      }
+      .select.select-theme-default-2 .select-options .select-option:hover, .select.select-theme-default-2 .select-options .select-option.select-option-highlight {
+        background: $dark-grey-blue-two;
+        color: #fff;
+        border: 1px solid $dark-grey-blue-two; }
+        
+      .select.select-theme-default-2 .select-options .select-option:first-child {
+        }
+      .select.select-theme-default-2 .select-options .select-option:last-child {
+         }
+
+.select-target.select-theme-default-2 {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  position: relative;
+  padding: 0.5rem 3em 0.5rem 1em;
+  border: 1px solid $pinkish-grey;
+  cursor: pointer;
+  color: $dark-grey-blue-two;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 200px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  font-family: 'Proxima Nova';
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .select-target.select-theme-default-2:hover {
+    border-color: #aaa;
+    color: #000; }
+  .select-target.select-theme-default-2.select-target-focused, .select-target.select-theme-default-2.select-target-focused:focus {
+    border-color: $dark-grey-blue-two;
+    outline: none; }
+  .select-target.select-theme-default-2 b {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 1.25rem;
+    width: 2em; }
+    .select-target.select-theme-default-2 b:before{
+      content: "";
+      display: block;
+      position: absolute;
+      margin: auto;
+      right: 0;
+      top: 2px;
+      transform: rotate(90deg);
+      background: url('/img/checkout/select-arrow.svg') no-repeat;
+      height: 16px;
+      width: 16px;}

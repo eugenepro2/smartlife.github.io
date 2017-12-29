@@ -1,0 +1,15 @@
+<svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 358.2 180.5">
+    <style>
+        .st0{fill:none;stroke:#000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.st1{stroke-dasharray:1.009,10.095}.st1,.st2,.st3{clip-path:url(#SVGID_2_);fill:none;stroke:#000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.st3{stroke-miterlimit:10}
+    </style>
+    <path class="st0" d="M347.2 164.6l-.2-.5"/>
+    <defs>
+        <path id="SVGID_1_" d="M0 0h358.2v180.5H0z"/>
+    </defs>
+    <clipPath id="SVGID_2_">
+        <use xlink:href="#SVGID_1_" overflow="visible"/>
+    </clipPath>
+    <path class="st1" d="M342.7 155c-12.7-25.5-32.2-55.4-62.2-82.3C179.2-17.9 41.7 1.2 6.9 7.7"/>
+    <path class="st2" d="M2 8.6c-.2 0-.3.1-.5.1"/>
+    <path class="st3" d="M351.4 147.7l5.3 31.3-25.5-18.3"/>
+</svg>

@@ -1,0 +1,163 @@
+.content
+	.use
+		background: #e8e8e8
+		position: relative
+		padding-top: 60px
+		&:after
+			content: ''
+			background: url('../img/afc-landing-svg/consist-bg.svg') no-repeat
+			background-size: cover
+			width: 101%
+			height: 100px
+			position: absolute
+			left: 0
+			top: -10px
+			z-index: 1
+		&:before
+			content: ''
+			background: url('../img/afc-landing-svg/consist-bottom-bg.svg') no-repeat
+			background-position: -200px 0
+			width: 150%
+			height: 13%
+			position: absolute
+			left: 0
+			bottom: -65px
+			z-index: 3
+		h2
+			font-size: 24px
+			font-weight: 500
+			padding-bottom: 40px
+			position: relative
+			z-index: 3
+			a
+				font-size: 18px
+				font-weight: 600
+				color: $greeny-blue
+				display: block
+				cursor: pointer
+				letter-spacing: 1.8px
+				text-transform: uppercase
+				position: relative
+				transition: all 0.3s
+				position: absolute
+				right: 30px
+				top: -8px
+				span
+					position: absolute
+					top: -15px
+					left: -100px
+					width: 75px
+					height: 75px
+					border-radius: 50%
+					padding: 5px
+					background-image: linear-gradient(to right, $greeny-blue 37%, #29413b)
+					transition: all 0.3s
+					background-size: 200% 200%
+					animation: Gradient 5s ease infinite
+		&__block
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: relative
+			z-index: 1
+			&--1
+				p:first-child
+					background: #f64869
+					padding: 15px 25px
+					color: #fff
+					margin-bottom: 30px
+					margin-right: 25px
+					position: absolute
+					left: 0
+					top: 60px
+					z-index: 5
+					font-size: 16px
+					font-weight: 600
+					letter-spacing: 3px
+				.use__block__foto
+					span
+						padding-top: 9px
+						width: 45px
+						height: 45px
+						border-radius: 100px
+						background: #fff
+						font-size: 24px
+						font-weight: 500
+						position: absolute
+						left: 70px !important
+						bottom: 30px !important
+			&__foto
+				min-height: 400px
+				position: relative
+				&--span
+					span
+						left: 25px !important
+				span
+					padding-top: 9px
+					width: 45px
+					height: 45px
+					border-radius: 100px
+					background: #fff
+					font-size: 24px
+					font-weight: 500
+					position: absolute
+					left: 70px
+					bottom: 30px
+				img
+					width: auto
+					min-height: 350px
+			p
+				font-weight: 600
+				font-size: 16px
+				width: 180px
+				margin-top: -25px
+				padding-bottom: 30px
+		&__advice
+			border: 1px dashed #2e6b67
+			padding: 15px 30px
+			p
+				font-style: italic
+				font-size: 16px
+				font-weight: 500
+				color: #999999
+				b
+					font-weight: 500
+					color: #2e6b67
+		&__recommendation
+			padding-top: 40px
+			&__block
+				p
+					font-weight: 600
+					font-size: 16px
+					display: inline-block
+					&:first-child
+						background: #f64869
+						padding: 15px 23px
+						color: #fff
+						margin-bottom: 30px
+						margin-right: 25px
+						width: 120px
+				&--last
+					position: relative
+					z-index: 5
+					p
+						&:first-child
+							border: 1px dashed #f64869
+							padding: 15px 23px
+							color: #f64869
+							margin-bottom: 30px
+							margin-right: 25px
+							background: none
+							width: auto
+
+
+
+
+
+
+
+
+
+
+
+

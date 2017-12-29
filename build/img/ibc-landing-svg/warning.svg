@@ -1,0 +1,21 @@
+<svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 440.4 362.4">
+    <style>
+        .st0,.st1{clip-path:url(#SVGID_2_);fill:#f36}.st1{fill:none;stroke:#f36;stroke-linecap:round;stroke-miterlimit:10}
+    </style>
+    <defs>
+        <path id="SVGID_1_" d="M0 0h440.4v362.4H0z"/>
+    </defs>
+    <clipPath id="SVGID_2_">
+        <use xlink:href="#SVGID_1_" overflow="visible"/>
+    </clipPath>
+    <path class="st0" d="M318.3 273.7l-86.1-149.1c-2.5-4.3-7.1-7-12.1-7s-9.6 2.7-12.1 7l-86 149.1c-2.5 4.3-2.5 9.6 0 13.9 2.5 4.3 7.1 7 12.1 7h172.1c5 0 9.6-2.7 12.1-7s2.5-9.6 0-13.9m-182.8 5l84.7-146.6 83 146.6H135.5z"/>
+    <path class="st0" d="M220.2 180.9v58.2"/>
+    <path class="st0" d="M212.7 180.9h15V239h-15z"/>
+    <path class="st0" d="M229.4 254.1c0 5.1-4.1 9.2-9.2 9.2s-9.2-4.1-9.2-9.2 4.1-9.2 9.2-9.2 9.2 4.1 9.2 9.2"/>
+    <path class="st1" d="M144.1 193.2c8.4-72-55.8-140.3-141.2-146.9"/>
+    <path class="st1" d="M12.8 42L1.3 46.3l11.1 5"/>
+    <path class="st1" d="M320.2 260.5c53.9-.6 110.7 47.3 117.5 99"/>
+    <path class="st1" d="M439.9 349l-1.8 12.1-7.2-9.8"/>
+    <path class="st1" d="M265.7 151.7C257.3 79.6 321.4 11.4 406.8 4.8"/>
+    <path class="st1" d="M396.9.5l11.5 4.3-11 5"/>
+</svg>

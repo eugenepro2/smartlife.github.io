@@ -9,33 +9,33 @@
             label(for="name") Ваше имя и отчество*
           .form-element
             input#lastname(type="text" name="lastname" required autocomplete="off")
-            label(for="lastname") Ваша фамилия
+            label(for="lastname") Ваша фамилия*
           .form-element
             input#tel(type="tel" required autocomplete="off")
-            label(for="tel") Телефон
+            label(for="tel") Телефон*
           .form-element
             input#email(type="email" name="email" required autocomplete="off") 
-            label(for="email") E-mail
+            label(for="email") E-mail*
           i * Обязательные поля для заполнения 
         .step__address
           h2 Адрес
           .form-element
             input#city(type="text" name="city" required autocomplete="off")
-            label(for="city") Страна и город 
+            label(for="city") Страна и город *
           .form-element
             input#street(type="text" name="street" required autocomplete="off")
-            label(for="street") Улица
+            label(for="street") Улица*
           .form-element
             input#house(type="text" name="house" required autocomplete="off")
-            label(for="house") Дом / корпус
+            label(for="house") Дом / корпус*
           .form-element
             input#room(type="text" name="room" required autocomplete="off")
             label(for="room") Квартира
           textarea(name="comment" placeholder="Комментарий к заказу. Например: “Подьезд 9”, “Оставить к консъержа” и т.д.")
         .step__checkbox
-          input#checkbox.checkbox(type="checkbox" checked)
-          label(for="checkbox")
-          label.label(for="checkbox") Я прочитал и согласен <a href="#">с условиями оформления и оплаты заказа</a> на сайте smartlife.bio  
+          input#checkbox.checkbox(type="checkbox")
+          label.label(for="checkbox")
+          label.label-for(for="checkbox") Я прочитал и согласен <a href="#">с условиями оформления и оплаты заказа</a> на сайте smartlife.bio  
   .step__bottom.flex.center-xs
     .step__bottom__block  
       p 
@@ -43,4 +43,4 @@
         | Контактные данные и адрес:
         span 5890
         +icon('ruble')
-      a.btn.next(href="#step-3") Далее
+      a.btn.next.next-3(href="#step-3") Далее

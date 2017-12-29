@@ -1,10 +1,10 @@
 <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.6 45.6">
     <style>
-        .st0{fill:#e7e7e7;stroke:url(#SVGID_1_);stroke-miterlimit:10}.st1{fill:url(#SVGID_2_)}
+        .st0{fill:#e7e7e7;stroke:url(#SVGID_1_);stroke-miterlimit:10}.st1{fill:#2d6965}
     </style>
     <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1.827" y1="22.8" x2="43.773" y2="22.8">
-        <stop offset=".231" stop-color="#5ab29f"/>
-        <stop offset="1" stop-color="#283f3a"/>
+        <stop offset=".231" stop-color="#2d6965"/>
+        <stop offset="1" stop-color="#2d6965"/>
     </linearGradient>
     <circle class="st0" cx="22.8" cy="22.8" r="20.5"/>
     <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="10.695" y1="22.8" x2="34.905" y2="22.8">

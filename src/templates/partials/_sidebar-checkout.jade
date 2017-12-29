@@ -6,17 +6,15 @@ aside.sidebar
     a(href="#").sidebar__checkout__back
       +icon('checkout-back')
       | На главную
-      
     nav
       ul
         li.active
           +icon('step-1')
-          a(href="#step-1") Шаг 1
-        li
+          a Шаг 1
+        li(data-menu="step-2")
           +icon('step-2')
-          a(href="#step-2") Шаг 2
-        li
+          a Шаг 2
+        li(data-menu="step-3")
           +icon('step-3')
-          a(href="#step-3") Шаг 3
-
+          a Шаг 3
 //END sidebar

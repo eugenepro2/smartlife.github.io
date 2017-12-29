@@ -4,14 +4,20 @@
       .col-md-offset-2.col-md-10
         .step__afc.step
           .step__add
-            span Добавить IBC к заказу
+            span Добавить AFC к заказу
           .step__delete
             .step__delete__block
               +icon('checkout-delete')
               span Удалить
           .step__afc__left
-            .step__photo
+            .step__photo.step__photo--normal
               img(src="img/checkout/afc.png", alt="")
+              .step__short-desc
+                p Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора
+                img(src="img/checkout/line.svg", alt="")
+            .step__photo.step__photo--gray
+              .step__photo__white
+              img(src="img/checkout/afc-gray.png", alt="")
               .step__short-desc
                 p Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора
                 img(src="img/checkout/line.svg", alt="")
@@ -19,8 +25,12 @@
             h2 AFC - Концентрат Повышающий<br>Работоспособность
             .step__set
               p Выберете набор
-              select.select
-                option Набор 10 шт / 4990
+              select.select.select-first
+                option(value="10" data-price="4990") Набор 10 шт / 4990 ₽
+                option(value="20" data-price="9980") Набор 20 шт / 9980 ₽
+                option(value="30" data-price="11970") Набор 30 шт / 11970 ₽
+                option(value="40" data-price="14760") Набор 40 шт / 14760 ₽
+                option(value="60" data-price="19740") Набор 60 шт / 19740 ₽
             .step__smack
               p Выберите вкус:
               .step__smack__block
@@ -29,7 +39,7 @@
                   span Клубника
                 .step__smack__block__calc
                   .substract
-                  input(type="number")
+                  input.keyup(type="number" value="0")
                   .add
               .step__smack__block
                 .step__smack__block__icon
@@ -37,7 +47,7 @@
                   span Мята
                 .step__smack__block__calc
                   .substract
-                  input(type="number")
+                  input.keyup(type="number" value="0")
                   .add
               .step__smack__block
                 .step__smack__block__icon
@@ -45,7 +55,7 @@
                   span Шоколад
                 .step__smack__block__calc
                   .substract
-                  input(type="number")
+                  input.keyup(type="number" value="0")
                   .add
               .step__smack__block
                 .step__smack__block__icon
@@ -53,8 +63,11 @@
                   span Вишня
                 .step__smack__block__calc
                   .substract
-                  input(type="number")
+                  input.keyup(type="number" value="0")
                   .add
+              .error Набор сформирован не полностью, Вы можете добавить еще
+                span 
+                | шт. AFC  любого вкуса
       .col-md-offset-2.col-md-10
         .step__ibc.step.no-active
           .step__add
@@ -65,15 +78,18 @@
               span удалить 
           .row
             .col-md-6
-              .step__ibc__photo.step__ibc__photo--grey
+              .step__ibc__photo.step__photo--gray
                 .step__ibc__photo__white
                 img(src="img/checkout/ibc-gray.png", alt="")
+              .step__ibc__photo.step__photo--normal
+                img(src="img/checkout/ibc.png", alt="")
             .col-md-6
               h2 IBC - очищение и<br>восстановление организма
               .step__ibc__count
                 p Выберите количество:
-                select
-                  option 1 шт / 890 
+                select.select.select-second
+                  option(value="1" data-price="890") 1 шт / 890 ₽
+                  option(value="2" data-price="1890") 2 шт / 1890 ₽
               .step__ibc__smack
                 p Выберите вкус: 
                 .step__ibc__smack__icon
@@ -84,9 +100,9 @@
       p 
         b ШАГ 1.
         | Состав заказа / общая сумма:   
-        span 5890
+        span
         +icon('ruble')
-      a.btn.next(href="#step2") Далее
+      a.btn.next.next-2(href="#step-2") Далее
 
 
 

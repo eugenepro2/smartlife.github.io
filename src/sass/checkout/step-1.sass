@@ -49,6 +49,7 @@
 			z-index: 10
 			top: 40px
 			left: -30px
+			transition: all 0.3s
 			span 
 				color: #ffffff !important
 			&:before
@@ -60,6 +61,8 @@
 				top: 50%
 				color: #ffffff !important
 				transform: translateY(-50%)
+			&:hover
+				background: $dark-grey-blue-two
 		&__afc
 			display: flex
 			flex-wrap: wrap
@@ -78,6 +81,15 @@
 			position: relative
 			img
 				width: 100%
+			&--gray
+				display: none
+			&__white
+				background: rgba(255, 255, 255, 0.5)
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
 		&__short-desc
 			position: absolute
 			top: 63%
@@ -197,7 +209,7 @@
 							position: relative
 							left: 1px
 		&__ibc
-			margin-top: 80px
+			margin-top: 20px
 			margin-bottom: 140px
 			position: relative
 			&__photo
@@ -212,6 +224,8 @@
 					height: 100%
 				img
 					width: 100%
+				&--gray
+					display: none
 			h2
 				margin-top: 50px
 			&__count
@@ -248,12 +262,13 @@
 
 
 
-
 .no-active
 	h2, p, a, svg, span, div
 		color: $warm-grey !important
 		fill: $warm-grey !important
 		pointer-events: none
+	b:before
+		opacity: 0.5
 	&.step
 		border: 1px dashed $pinkish-grey
 	.step
@@ -262,6 +277,28 @@
 		&__add
 			display: block
 			pointer-events: inherit
+	.step__photo--gray
+		display: block
+	.step__photo--normal
+		display: none
+
+
+.error
+	visibility: hidden
+	opacity: 0
+	margin-top: 20px
+	font-size: 16px
+	font-weight: 500
+	letter-spacing: 1px
+	font-style: italic
+	color: $dark-grey-blue-two
+	transition: all 0.3s
+	&.active
+		visibility: visible
+		opacity: 1
+		transition: all 0.3s
+	span
+		padding: 0 5px
 
 
 .step__bottom
@@ -269,7 +306,7 @@
 	background-size: cover
 	margin-left: -4px
 	position: fixed
-	width: 110%
+	width: 101%
 	height: 100px
 	bottom: 0
 	z-index: 20
@@ -297,6 +334,8 @@
 				fill: #ffffff
 				
 
-
+.stop
+	pointer-events: none
+	opacity: 0.5
 
 			
