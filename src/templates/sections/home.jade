@@ -1,37 +1,111 @@
 section.section.home
-  .social
-    a(href="#")
+  .social.hidden-xs
+    a(href="https://www.instagram.com/smartlifebio/")
       +icon('instagram')
-    a(href="#")
+    a(href="https://vk.com/smartlifebio")
       +icon('vk')
-    a(href="#")
+    a(href="https://www.facebook.com/Smartlifebio-1523077057727677/")
       +icon('facebook')
-    a(href="#")
+    a(href="https://www.youtube.com/channel/UCm2VbUPuY5qgYqlZvAKFysg")
       +icon('youtube')
   .swiper-container.home-slider
     .swiper-wrapper
       .swiper-slide
         .container
           .row.middle-xs
-            .col-md-3.col-md-offset-9.end-xs
+            .col-sm-3.col-sm-offset-9.end-xs.col-xs-12
               .home__comp
-                img(data-src="img/comp-1.png", alt="")
+                //img(src="img/comp-1.png", alt="")
+                .home__comp__scene#home-1
+                  div
+                    img(src="img/home-comp/afc.png", alt="")
+                .home__comp__scene#home-2(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div
+                    img(src="img/home-comp/list-1.png", alt="")
+                .home__comp__scene#home-3
+                  div
+                    img(src="img/home-comp/list-2.png", alt="")
+                .home__comp__scene#home-4(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div
+                    img(src="img/home-comp/list-3.png", alt="")
+                .home__comp__scene#home-5
+                  div
+                    img(src="img/home-comp/list-4.png", alt="")
+                .home__comp__scene#home-6(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div(data-depth="1")
+                    img(src="img/home-comp/sma.png", alt="")
+                .home__comp__scene#home-7(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div(data-depth="1")
+                    img(src="img/home-comp/rt.png", alt="")
+                .home__comp__scene#home-8
+                  div(data-depth="1")
+                    img(src="img/home-comp/li-fe.png", alt="")
+                .home__comp__scene#home-9(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div(data-depth="0.5")
+                    img(src="img/home-comp/bio.png", alt="")
+                .home__comp__scene#home-10
+                  div(data-depth="1.3")
+                    img(src="img/home-comp/1.png", alt="")
+                .home__comp__scene#home-11
+                  div(data-depth="2")
+                    img(src="img/home-comp/2.png", alt="")
+                .home__comp__scene#home-12
+                  div(data-depth="2")
+                    img(src="img/home-comp/3.png", alt="")
+                .home__comp__scene#home-13
+                  div(data-depth="2")
+                    img(src="img/home-comp/4.png", alt="")
+                .home__comp__scene#home-14
+                  div(data-depth="2")
+                    img(src="img/home-comp/5.png", alt="")
               .home__block
-                p Продукты<br>для здоровой<br>и счастливой<br>жизни
+                p.hidden-xs Продукты для<br> здоровья, а не<br> достижения<br> результата любой ценой!
+                p.hidden-sm Продукты для здоровья,<br>а не достижения результата<br>любой ценой!
+                span.hidden-xs От производителя оборудования<br> для функционального<br> тестирования
+                span.hidden-sm От производителя оборудования<br>для функционального тестирования
                 .swiper-pagination
-                a(href="#") Все о нас<br>за 60 секунд
-                  span
-                    img(data-src="img/play.svg", alt="")
+                //- a(href="#home-video-modal" rel="modal:open") Все о нас<br>за 60 секунд
+                //-   span
+                //-     img(data-src="img/play.svg", alt="")
       .swiper-slide
         .container
           .row.middle-xs
-            .col-md-3.col-md-offset-9.end-xs
-              .home__comp
-                img(data-src="img/comp-1.png", alt="")
+            .col-sm-3.col-sm-offset-9.end-xs.col-xs-12
+              .home__comp--2
+                .home__comp--2__photo 
+                  img(src="img/home-comp-2/ibc.png", alt="")
+                .home__comp--2__scene#home__2-1(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div(data-depth="1")
+                    img(src="img/home-comp-2/1.png", alt="")
+                .home__comp--2__scene#home__2-2
+                  div(data-depth="1.5")
+                    img(src="img/home-comp-2/2.png", alt="")
+                .home__comp--2__scene#home__2-3(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div(data-depth="1")
+                    img(src="img/home-comp-2/3.png", alt="")
+                .home__comp--2__scene#home__2-4
+                  div(data-depth="2")
+                    img(src="img/home-comp-2/4.png", alt="")
+                .home__comp--2__scene#home__2-5
+                  div(data-depth="1")
+                    img(src="img/home-comp-2/5.png", alt="")
+                .home__comp--2__scene#home__2-6
+                  div(data-depth="1")
+                    img(src="img/home-comp-2/6.png", alt="")
+                .home__comp--2__scene#home__2-7(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div(data-depth="1.5")
+                    img(src="img/home-comp-2/7.png", alt="")
+                .home__comp--2__scene#home__2-8(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                  div(data-depth="2")
+                    img(src="img/home-comp-2/8.png", alt="")
               .home__block
-                p Продукты<br>для здоровой<br>и счастливой<br>жизни 2
+                p Питайся правильно, добивайся большего!
                 .swiper-pagination
-                a(href="#") Все о нас<br>за 60 секунд
-                  span
-                    img(data-src="img/play.svg", alt="")
+                //- a(href="#home-video-modal" rel="modal:open") Все о нас<br>за 60 секунд
+                //-   span
+                //-     img(data-src="img/play.svg", alt="")
 
+
+
+  #home-video-modal.video-modal(style="display: none")
+    iframe(width='560', height='315', src='https://www.youtube.com/embed/B7GXecLhxMo?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')

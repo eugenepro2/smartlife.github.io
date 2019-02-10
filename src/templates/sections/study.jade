@@ -1,23 +1,41 @@
-section.section.study
-  .container
-    .row.middle-xs
-      .col-md-offset-2.col-md-10
-        h2 Исследования
-        ul
-          li
-            a(href="#") Реакция
-          li
-            a(href="#") Стрессоустойчивость
-          li
-            a(href="#") Сосуды
-          li
-            a(href="#") Работоспособность
-          li
-            a(href="#") Скорость восстановления
-          li
-            a(href="#") Память,внимание, восприятие 
-          li
-            a(href="#") Риск получения травм
-          li
-            a(href="#") Чистота болезней
-        canvas#myChart
+section.section.study#study-m
+	.container
+		.row.middle-sm
+			.col-md-offset-2.col-md-10.hidden-xs
+				h2 Влияние AFC на организм
+				ul
+					li
+						a Реакция
+					li
+						a Стрессоустойчивость
+					li
+						a Сосуды
+					li
+						a Работоспособность
+					li
+						a Скорость восстановления
+					li
+						a Память, внимание, восприятие 
+					li.opacity
+						a Риск получения травм
+					li.opacity
+						a Частота болезней
+				img.svg(src="img/chart.svg")
+			.col-xs-12.hidden-sm
+				h2 Влияние AFC на организм
+				.select
+					select
+						option(value="0") Выберите исследуемый раздел
+						option(value="1") Реакция
+						option(value="2") Стрессоустойчивость
+						option(value="3") Сосуды
+						option(value="4") Работоспособность
+						option(value="5") Скорость восстановления
+						option(value="6") Память,внимание, восприятие 
+						option(value="7") Риск получения травм
+						option(value="8") Частота болезней
+					span
+				img.svg-m(src="img/chart-m.svg")
+	.study__bottom.hidden-xs
+		h2 Наши уникальные<br>технологии
+		a(href="#") подробнее

@@ -1,45 +1,53 @@
 section.applying
 	.container
+		.applying__parallax__content
+			.applying__parallax#applying-1(data-invert-x="false" data-invert-y="false")
+				div.wow.fadeInDown(data-wow-delay="0.1s" data-depth="0.4")
+					img(src="img/afc-landing/parallax/applying-1.png", alt="")
+			.applying__parallax#applying-2(data-invert-x="false" data-invert-y="false" relativeInput="true")
+				div.wow.fadeInDown(data-wow-delay="0.1s" data-depth="0.2")
+					img(src="img/afc-landing/parallax/applying-2.png", alt="")
+			.applying__parallax#applying-3(data-invert-x="false" data-invert-y="false")
+				div.wow.fadeInDown(data-wow-delay="0.1s" data-depth="0.6")
+					img(src="img/afc-landing/parallax/applying-3.png", alt="")
 		.applying__top
 			.row.middle-md.center-md
 				.col-md-6.start-md
-					h2 Для чего концентра AFC?
-					p #AFC_ ДЛЯЧЕГО
-				.col-md-3.start-md
-					.applying__swiper
+					p.wow.fadeIn(data-wow-delay="0.3s") #AFC_ ДЛЯЧЕГО
+						span
+				.col-md-3.start-md.col-xs-12
+					.applying__swiper.wow.fadeIn(data-wow-delay="0.5s")
 						.swiper-container.applying-slider-top
 							.swiper-wrapper
 								.swiper-slide
 									ul
-										li Восстанавливает иммунитет, нервную систему, защитные силы при переутомлении
+										li Восстанавливает иммунитет
+										li Нервную систему, защитные силы при переутомлении
 										li Способствует уменьшению аллергии
 										li Нормализует сон 
-										li Повышает физическую и умственную работоспособность
-										li Улучшает память, внимательность, обмен веществ
-										li Замедляет процессы старения 
 								.swiper-slide
 									ul
-										li Восстанавливает иммунитет, нервную систему, защитные силы при переутомлении
-										li Способствует уменьшению аллергии
-										li Нормализует сон 
 										li Повышает физическую и умственную работоспособность
-										li Улучшает память, внимательность, обмен веществ
-										li Замедляет процессы старения 
+										li Улучшает память, внимательность
+										li Замедляет процессы старения
+										li Улучшает обмен веществ
 								.swiper-slide
 									ul
-										li Восстанавливает иммунитет, нервную систему, защитные силы при переутомлении
-										li Способствует уменьшению аллергии
-										li Нормализует сон 
-										li Повышает физическую и умственную работоспособность
-										li Улучшает память, внимательность, обмен веществ
-										li Замедляет процессы старения 
+										li Восстановление после травм и операций
+										li Улучшает состояние сосудов
+										li Снижает риск возникновения сердечно-сосудистых и онкологических заболеваний
+								.swiper-slide
+									ul
+										li Минимизирует последствия стресса
+										li Снимает отечность,<br>«синяки под глазами»
+										li Восстанавливает биоритмы<br>(бодрость по утрам и в течении дня)
 						.swiper-button-next.next
 							span
 								+icon('review-arrow')
 		.applying__bottom
 			.row.center-md
-				.col-md-3.col-md-offset-2.start-md
-					.applying__swiper
+				.col-md-3.col-md-offset-2.start-md.col-xs-12
+					.applying__swiper.wow.fadeIn(data-wow-delay="0.5s")
 						.swiper-container.applying-slider-bottom
 							.swiper-wrapper
 								.swiper-slide
@@ -47,22 +55,17 @@ section.applying
 										li Вы ведете активный<br> образ жизни (спорт/фитнес)
 										li У вас интенсивный график с частыми разъездами и сменой часовых поясов
 										li Ваша работа связана со стрессом
-										li Регулярное недосыпание превратилось в норму
 								.swiper-slide
 									ul
-										li Вы ведете активный<br> образ жизни (спорт/фитнес)
-										li У вас интенсивный график с частыми разъездами и сменой часовых поясов
-										li Ваша работа связана со стрессом
 										li Регулярное недосыпание превратилось в норму
+										li Вы часто простужаетесь и болеете
 								.swiper-slide
 									ul
-										li Вы ведете активный<br> образ жизни (спорт/фитнес)
-										li У вас интенсивный график с частыми разъездами и сменой часовых поясов
-										li Ваша работа связана со стрессом
-										li Регулярное недосыпание превратилось в норму
+										li Подготовка к экзаменам
+										li Вы занимаетесь любым спортом на любом уровне: фитнес, триатлоном <span>(бег, плавание, велосипед), кроссфит, пауэрлифтинг, тяжелая атлетика, единоборства лыжи, сноуборд, ролики</span> и другие.
 						.swiper-button-next#next
 							span
 								+icon('review-arrow')
-				.col-md-6.start-md
-					h2 Для кого концентра AFC?
-					p #AFC_ ДЛЯКОГО
+				.col-md-6.start-md.col-xs-12.first-xs.last-sm.start-sm.end-xs
+					p.wow.fadeIn(data-wow-delay="0.3s") #AFC_ ДЛЯКОГО
+						span

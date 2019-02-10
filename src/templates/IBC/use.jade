@@ -1,30 +1,40 @@
 section.use
 	.container
 		.row
-			.col-md-12.center-xs
-				h2 Способ применения IBC
-					a(href="#").start-md Смотреть<br>видео-инструкцию
+			.col-xs-12.center-xs
+				h2.wow.fadeInDown(data-wow-delay="0.3s") Способ применения IBC
+					a.wow.fadeInDown(data-wow-delay="0.5s" href="#use-video-modal-2" rel="modal:open").start-md Смотреть<br>видео-инструкцию
 						span
-							img(data-src="img/play.svg", alt="")
-			.col-md-4.center-md
-				.use__block.use__block--1
-					p Взрослым:
-					.use__block__foto
-						img(data-src="img/ibc-landing/use-1.png", alt="")
-						span 1
-					p Открыть пакет IBC 210 г, <br>подготовить<span> ( ¼-½ ) стакана теплой воды (не менее 60oC)</span>   
-			.col-md-4.center-md
-				.use__block
-					.use__block__foto.use__block__foto--span
-						img(data-src="img/ibc-landing/use-2.png", alt="")
-						span 2
-					p Для приготовления<br> одной порции необходимо 20 гр концентрата перемешать<br> в <span>( ¼-½ ) стакана теплой воды (не менее 60oC)</span>  
-			.col-md-4.center-md
-				.use__block
-					.use__block__foto
-						img(data-src="img/ibc-landing/use-3.png", alt="")
-						span 3
-					p Готово к применению
+							img(src="img/play.svg", alt="")
+		.use__pagination
+			span.use__pagination__block.use__pagination--1.active 1
+			span.use__pagination__block.use__pagination--2 2
+			span.use__pagination__block.use__pagination--3 3
+		.use-swiper.swiper-container
+			p.up Взрослым:
+			.swiper-wrapper
+				.swiper-slide.wow.fadeInDown(data-wow-delay="0.4s")
+					.use__block.use__block--1
+						.use__block__foto
+							img(src="img/ibc-landing/use-1.png", alt="")
+							span 1
+						p Открыть пакет IBC 210 г, <br>подготовить<span> ( ¼-½ ) стакана теплой воды <br>(не менее 60<sup>0</sup>C)</span> 
+				.swiper-slide.wow.fadeInDown(data-wow-delay="0.5s")
+					.use__block.use__block--2
+						.use__block__foto.use__block__foto--span
+							img(src="img/ibc-landing/use-2.png", alt="")
+							span 2
+						p Для приготовления<br> одной порции необходимо 20 мл концентрата перемешать<br> в <span>( ¼-½ ) стакана теплой воды (не менее 60<sup>0</sup>C)</span>  
+				.swiper-slide.wow.fadeInDown(data-wow-delay="0.6s")
+					.use__block.use__block--3
+						.use__block__foto
+							img(src="img/ibc-landing/use-3.png", alt="")
+							span 3
+						p Готово к применению
+		//- a(href="#use-video-modal-2" rel="modal:open").mobile Смотреть<br>видео-инструкцию
+		//- 	span
+		//- 		img(src="img/play.svg", alt="")
+		.row
 			.col-xs-12
 				.use__advice
 					p <b>Рекомендуется:</b> принимать за 20-30 минут до еды один раз в день. При интоксикации организма прием можно увеличить до 2-3 раз в день.
@@ -36,8 +46,11 @@ section.use
 					.use__recommendation__block.use__recommendation__block--last
 						p Противопоказания:
 						p Индивидуальная непереносимость компонентов продукта.
-
-
+					.use__recommendation__block.use__recommendation__block--2.use__recommendation__block--last
+						p Условия хранения:
+						p В сухом, защищенном от прямых солнечных лучей и недоступном для детей месте при температуре не ниже 0°С и не выше 30°С.<span>Срок хранения 12 месяцев.</span>
+	#use-video-modal-2.video-modal(style="display: none")
+		iframe(width='560', height='315', src='https://www.youtube.com/embed/B7GXecLhxMo?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
 
 
 

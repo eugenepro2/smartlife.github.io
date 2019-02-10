@@ -1,7 +1,7 @@
-section.section.afc
+section.section.afc#afc-m
   .container
     .row.middle-xs
-      .col-md-3.col-md-offset-2
+      .col-md-3.col-md-offset-2.hidden-xs
         .afc__slider
           .afc__slider--img
             img(data-src="img/afc.png", alt="")
@@ -10,32 +10,45 @@ section.section.afc
             .afc__slider--active
             .afc__slider--prev.swiper-button-prev
             .afc__slider--next.swiper-button-next
-      .col-md-offset-1.col-md-6
-        h2 AFC - Концентрат Повышающий<br>Работоспособност 
+      .col-md-offset-1.col-md-6.col-xs-12
+        h2 AFC - концентрат, повышающий<br>работоспособность
           span (Innovation adaptogenic functional concentrate)
+        .afc__slider.hidden-sm
+          .afc__slider__info
+            img(data-src="img/afc/afc-info-m.svg", alt="")
+          .afc__slider--img
+            img(data-src="img/afc-m.png", alt="")
+          .afc__slider--line
+            img(data-src="img/afc/afc-line.svg", alt="")
+            .afc__slider--active
+            .afc__slider--prev.swiper-button-prev
+            .afc__slider--next.swiper-button-next
         .swiper-container.afc-slider
           .swiper-wrapper
             .swiper-slide
+              p Повышает физическую и умственную<br>работоспособность 
+            .swiper-slide
+              p Укрепляет иммунитет
+            .swiper-slide
               p Замедляет процессы старения
             .swiper-slide
-              p Повышает физическую и умственную<br>работоспособность 
+              p Улучшает обмен веществ и состояние сосудов
             .swiper-slide
-              p Снижает риск возникновения сердечно-сосудистых<br>и онкологических заболеваний,<br>последствия стресса
-            .swiper-slide
-              p Повышает физическую и умственную<br>работоспособность 
-        .afc__info
+              p Снижает риск возникновения сердечно-сосудистых и онкологических заболеваний,<br>последствия стресса
+        .afc__info.hidden-xs
           img(data-src="img/afc/afc-info.svg", alt="")
         .afc__price
           .afc__price__block
             p Цена
-            h3 от 
-              span 329
-              +icon('ruble')
+            h3
+              span 350
+              .ruble ₽
               |/ шт 
-          a.btn.btn--white(href="#") заказать
-          a.btn(href="#") подробнее
-  .afc__bottom.flex.center-xs
-    .afc__bottom__block
-      p Не упусти возможность, попробуй и ощути изменения за 2 недели
-        span со скидкой 30%
-      a.btn.btn__afc--bottom Попробовать
+          a.btn.btn--white(href="checkout.html" data-cookie="afc") заказать
+          //- a.btn.btn--white(data-cookie="afc" data-checkout="checkout") заказать
+          a.btn.btn--green--2(href="afc.html") подробнее
+  //- .afc__bottom.flex.center-xs.hidden-xs
+  //-   .afc__bottom__block
+  //-     p Не упусти возможность, попробуй и ощути изменения за 2 недели
+  //-       span со скидкой 30%
+  //-     a(href="checkout.html" data-cookie="afc").btn.btn__afc--bottom Попробовать

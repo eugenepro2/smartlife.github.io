@@ -1,11 +1,36 @@
 .afc
 	background: #e8e8e8
 	position: relative
+	+r(640)
+		height: 1150px
+		.container
+			overflow: hidden
+	+r(640)
+		&:before
+			content: ''
+			background: url('/img/separator-m.svg') no-repeat
+			width: 100%
+			height: 112px
+			bottom: -15px
+			position: absolute
+			transform: scale(-1, 1) rotate(180deg)
 	&__slider
 		position: relative
 		bottom: 40px
+		+r(640)
+			top: 10px
+			bottom: inherit
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		&__info
+			width: 250px
+			position: absolute
+			top: 60px
+			left: 60px
 		&--img
-			width: 400px
+			width: 430px
 			height: 456px
 			z-index: 10
 			position: relative
@@ -16,6 +41,13 @@
 			top: -25px
 			right: -140px
 			width: 265px
+			+r(640)
+				right: 36px
+				top: 85px
+				width: 340px
+				height: 673px
+				z-index: 100
+				transform: rotate(44deg)
 			img
 				width: 100%
 		&--active
@@ -27,6 +59,11 @@
 			height: 13px
 			border-radius: 50%
 			background-image: linear-gradient(to right, #29413b, #38c9c9)
+			+r(640)
+				top: 81%
+				right: 67px
+				width: 22px
+				height: 22px
 			&:before
 				content: ''
 				width: 23px
@@ -37,6 +74,8 @@
 				top: -5px
 				left: -5px
 				position: absolute
+				+r(640)
+					content: none
 		&--prev, &--next
 			position: absolute
 			width: 40px
@@ -44,39 +83,53 @@
 			background: transparent
 			margin-top: 0
 			height: 40px
-			background: url('/img/afc/afc-arrow.svg')
-			transition: all 0.3s
+			background: url('/img/afc/afc-arrow.svg') no-repeat
+			+r(640)
+				width: 80px
+				height: 80px
+				transition: initial
+			&:hover
+				background: url('/img/afc/afc-arrow-hover.svg') no-repeat
 		&--prev
 			top: 29%
 			right: -1px
 			left: inherit
-			transform: rotate(-20deg)
-			&:hover
-				background: url('/img/afc/afc-arrow-hover.svg')
+			transform: rotate(-14deg)
+			+r(640)
+				right: -34px
+				top: 44%
 		&--next
 			top: 63%
 			right: -1px
 			transform: rotate(200deg)
-			&:hover
-				background: url('/img/afc/afc-arrow-hover.svg')
+			+r(640)
+				right: 190px
+				top: 90%
+				transform: rotate(250deg)
 		.swiper-button-disabled
 			opacity: 1
 			pointer-events: inherit
 			cursor: pointer
 	&-slider
-		margin-left: 40px
 		height: 300px
 		width: 500px
 		transition: all 1s
+		+r(640)
+			margin-top: 100px
 	.swiper-slide
 		font-style: italic
 		font-size: 16px
 		color: $warm-grey
 		transform: translateX(0px)
 		transition: all 1s
+		+r(640)
+			color: $dark-grey-blue-two
+			font-size: 24px
+			display: flex
+			justify-content: center
 		&-prev, &-active, &-duplicate, &-duplicate-active, &-duplicate-next, &-duplicate-prev
 			transition: all 1s
-		&-active
+		&-next
 			transform: translateX(30px)
 			color: $dark-grey-blue-two
 			transition: all 1s
@@ -84,18 +137,28 @@
 			height: 100%
 			display: flex
 			align-items: center
+			+r(640)
+				text-align: center
 	h2
 		font-size: 24px
 		font-weight: 600
 		letter-spacing: 1.8px
 		text-transform: uppercase
 		margin-left: 40px
+		+r(640)
+			font-size: 30px
+			text-align: center
+			margin-left: 0
 		span
 			margin-top: 10px
 			font-size: 16px
 			text-transform: none
 			display: block
 			letter-spacing: 1.2px
+			+r(640)
+				font-size: 18px
+				text-align: center
+				letter-spacing: 1.4px
 	&__info
 		width: 390px
 		margin-bottom: 50px
@@ -103,24 +166,52 @@
 			width: 100%
 	&__price
 		display: flex
+		position: relative
+		+r(640)
+			flex-direction: row-reverse
+			.btn
+				color: $dark-grey-blue-two
+				border: 1px solid $dark-grey-blue-two
+				width: 310px
+				font-size: 24px
+				padding: 25px 40px
+			.btn--white
+				margin-right: 0
+				margin-left: 18px
+				background: $dark-grey-blue-two
+				color: #ffffff
+				border: 1px solid $dark-grey-blue-two
+				width: 230px
 		&__block
 			margin-right: 15px
+			+r(640)
+				position: absolute
+				top: -70px
 			p
 				font-size: 14px
 				color: $black-two
+				+r(640)
+					display: none
 			h3
 				color: $dark-grey-blue-two
 				font-size: 16px
 				font-weight: 500
+				+r(640)
+					width: 192px
+					font-size: 24px
+					font-weight: 600
 				span
 					font-size: 36px
 					margin-left: 2px
-				.icon
-					display: inline-block
-					fill: $dark-grey-blue-two
-					width: 20px
-					height: 23px
-					margin-left: 5px
+					+r(640)
+						font-size: 48px
+						font-weight: 600
+				.ruble
+					font-weight: 500
+					font-size: 34px
+					+r(640)
+						font-size: 44px
+						font-weight: 300 !important
 	&__bottom
 		position: absolute
 		bottom: 0

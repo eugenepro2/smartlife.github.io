@@ -1,6 +1,13 @@
 .step-2
 	margin-top: 100px
 	padding-bottom: 150px
+	+r(640)
+		margin-top: 0
+		padding-bottom: 0
+		.step__m__bottom
+			margin-top: 50px
+		.container
+			padding: 0 80px
 	.step
 		&__contact
 			display: flex
@@ -8,10 +15,18 @@
 			h2
 				width: 100%
 				margin-bottom: 40px
+				+r(640)
+					font-size: 24px
+					font-weight: 500
+					text-transform: none
+					letter-spacing: normal
+					margin-top: 40px
 			i
 				width: 100%
 				color: $warm-grey
 				font-size: 16px
+				+r(640)
+					font-size: 24px
 			input
 				width: 350px
 				margin-right: 50px
@@ -22,73 +37,108 @@
 			h2
 				width: 100%
 				margin-bottom: 40px
+				+r(640)
+					font-size: 24px
+					font-weight: 500
+					text-transform: none
+					letter-spacing: normal
 			input
 				margin-right: 20px
+			#address
+				width: 550px
+				margin-right: 25px
+				+r(640)
+					margin-right: 0
+				input
+					width: 100%
 			.form-element:nth-of-type(1)
 				input
 					width: 260px
 			.form-element:nth-of-type(2)
 				input
-					width: 275px
+					width: 260px
 			.form-element:nth-of-type(3)
 				input
-					width: 140px
-					+ label
-						left: 20px
+					width: 150px
 			.form-element:nth-of-type(4)
 				input
-					width: 115px
-					+ label
-						left: 23px
-
+					width: 120px
 				
 
-	.form-element
-		position: relative
-		margin-bottom: 25px
-		input
-			border: solid 1px $pinkish-grey
-			height: 50px
-			color: $dark-grey-blue-two
-			font-size: 16px
-			padding: 25px 25px 15px 25px
-			box-sizing: border-box
-			display: inline-block
-			transition: all 0.3s
-			&.invalid
-				border: 1px solid red
-			+ label
-				display: inline-block
-				position: absolute
-				font-size: 16px
-				font-weight: 500
-				color: $warm-grey
-				left: 25px
-				top: 50%
-				transition: all .3s ease-in-out
-				transform: translateY(-50%)
-			&:focus, &:active
-				+ label
-					transform: translateY(-20px)
-					font-size: 11px
-			&:valid
-				+ label
-					transform: translateY(-20px)
-					font-size: 11px
-	textarea
-		font-family: 'Proxima Nova'
+.form-element
+	position: relative
+	margin-bottom: 25px
+	box-sizing: border-box
+	+r(640)
+		margin-bottom: 40px
+		width: 100%
+	input
 		border: solid 1px $pinkish-grey
-		height: 100px
-		width: 850px
+		height: 50px
+		color: $dark-grey-blue-two
 		font-size: 16px
-		color: $warm-grey
-		padding: 20px 25px
-		resize: none
-		margin-bottom: 25px
-	::placeholder
-		color: $warm-grey
+		padding: 25px 25px 15px 25px
+		box-sizing: border-box
+		display: inline-block
+		transition: all 0.3s
+		+r(640)
+			border: solid 2px $warm-grey
+			width: 100% !important
+			height: 75px
+			font-size: 24px
+		&.invalid
+			border: 1px solid red
+		+ label
+			display: inline-block
+			position: absolute
+			font-size: 16px
+			font-weight: 500
+			color: $warm-grey
+			left: 25px
+			top: 50%
+			transition: all .3s ease-in-out
+			transform: translateY(-50%)
+			+r(640)
+				font-size: 24px
+		&:focus, &:active
+			+ label
+				transform: translateY(-20px)
+				font-size: 11px
+				+r(640)
+					font-size: 16px
+					transform: translateY(-30px)
+			+r(640)
+				border: solid 2px $dark-grey-blue-two
+		&:valid
+			+ label
+				transform: translateY(-20px)
+				font-size: 11px
+				+r(640)
+					font-size: 16px
+					transform: translateY(-30px)
+textarea
+	font-family: 'Proxima Nova'
+	border: solid 1px $pinkish-grey
+	height: 100px
+	width: 850px
+	font-size: 16px
+	color: $warm-grey
+	padding: 20px 25px
+	resize: none
+	margin-bottom: 25px
+	border-radius: 0
+	+r(640)
+		font-size: 24px
+		border: solid 2px $warm-grey
+		height: 235px
+::placeholder
+	color: $warm-grey
 	
 
 
 
-
++r(640)
+	.pac-item
+		padding: 10px 4px
+		&-query
+			font-size: 22px !important

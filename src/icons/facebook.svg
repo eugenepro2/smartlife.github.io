@@ -2,9 +2,9 @@
 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 253.8 253.8" style="enable-background:new 0 0 253.8 253.8;" xml:space="preserve">
-<style type="text/css">
+<!-- <style type="text/css">
 	.st0{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
-</style>
+</style> -->
 <g>
 	<defs>
 		<rect id="SVGID_1_" width="253.8" height="253.8"/>
@@ -12,7 +12,7 @@
 	<clipPath id="SVGID_2_">
 		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 	</clipPath>
-	<path class="st0" d="M126.9,0L126.9,0C56.8,0,0,56.8,0,126.9v0.1c0,70,56.8,126.8,126.8,126.8h0.1c70,0,126.8-56.8,126.8-126.8
+	<path  d="M126.9,0L126.9,0C56.8,0,0,56.8,0,126.9v0.1c0,70,56.8,126.8,126.8,126.8h0.1c70,0,126.8-56.8,126.8-126.8
 		v-0.1C253.7,56.8,196.9,0,126.9,0 M163.7,74.3l-13.6,0c-10.7,0-12.7,5.1-12.7,12.5v16.4h25.5l-3.3,25.7h-22.2v66h-26.6v-66H88.5
 		v-25.7h22.2v-19c0-22,13.4-34,33.1-34c9.4,0,17.5,0.7,19.9,1V74.3z"/>
 </g>

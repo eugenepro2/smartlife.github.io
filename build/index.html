@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css">
+    <meta name="viewport" id="viewport" content="width=640, minimum-scale=0.3, maximum-scale=3, user-scalable=0">
   </head>
 
   <body>
@@ -35,6 +36,16 @@
     </script>
     <div id="fullpage">
       <!--BEGIN sidebar-->
+      <header class="header hidden-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 center-xs">
+              <div class="header__logo"><img src="img/logo/logo.svg" alt="Логотип"></div>
+            </div>
+          </div>
+        </div>
+        <div class="open-menu"><span></span></div>
+      </header>
       <aside class="sidebar"><a href="index.html" class="sidebar__logo"><img src="img/logo/logo.svg" alt="Логотип"></a>
         <div class="sidebar__menu">
           <nav>
@@ -43,7 +54,7 @@
               <li data-menuanchor="afc"><a href="#afc">AFC</a></li>
               <li data-menuanchor="ibc"><a href="#ibc">IBC</a></li>
               <li data-menuanchor="review"><a href="#review">Отзывы</a></li>
-              <li data-menuanchor="study"><a href="#study">Исследования</a></li>
+              <li data-menuanchor="study"><a href="#study">Влияние AFC</a></li>
               <li data-menuanchor="photos"><a href="#photos">Публикации</a></li>
               <li data-menuanchor="contact"><a href="#contact">Контакты</a></li>
             </ul>
@@ -51,272 +62,1033 @@
         </div>
       </aside>
       <!--END sidebar-->
+      <div class="mobile-menu hidden-sm">
+        <nav>
+          <ul>
+            <li data-menuanchor="home" style="animation-delay: 0.2s" class="fadeInLeft animated"><a href="#">Главная</a></li>
+            <li data-menuanchor="afc" style="animation-delay: 0.3s" class="fadeInLeft animated"><a href="#afc-m">AFC</a></li>
+            <li data-menuanchor="ibc" style="animation-delay: 0.4s" class="fadeInLeft animated"><a href="#ibc-m">IBC</a></li>
+            <li data-menuanchor="review" style="animation-delay: 0.5s" class="fadeInLeft animated"><a href="#review-m">Отзывы</a></li>
+            <li data-menuanchor="study" style="animation-delay: 0.6s" class="fadeInLeft animated"><a href="#studyv">Влияние AFC</a></li>
+            <li data-menuanchor="photos" style="animation-delay: 0.7s" class="fadeInLeft animated"><a href="#photos-m">Публикации</a></li>
+            <li data-menuanchor="contact" style="animation-delay: 0.8s" class="fadeInLeft animated"><a href="#contact-m">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="social"><a href="https://www.instagram.com/smartlifebio/"><svg class="icon icon-instagram "><use xlink:href="img/sprite.svg#icon-instagram"></use></svg></a><a href="https://vk.com/smartlifebio"><svg class="icon icon-vk "><use xlink:href="img/sprite.svg#icon-vk"></use></svg></a>
+          <a
+            href="https://www.facebook.com/Smartlifebio-1523077057727677/"><svg class="icon icon-facebook "><use xlink:href="img/sprite.svg#icon-facebook"></use></svg></a><a href="https://www.youtube.com/channel/UCm2VbUPuY5qgYqlZvAKFysg"><svg class="icon icon-youtube "><use xlink:href="img/sprite.svg#icon-youtube"></use></svg></a></div>
+      </div>
       <!--BEGIN Главный экран-->
       <section class="section home">
-        <div class="social"><a href="#"><svg class="icon icon-instagram "><use xlink:href="../img/sprite.svg#icon-instagram"></use></svg></a><a href="#"><svg class="icon icon-vk "><use xlink:href="../img/sprite.svg#icon-vk"></use></svg></a><a href="#"><svg class="icon icon-facebook "><use xlink:href="../img/sprite.svg#icon-facebook"></use></svg></a>
+        <div class="social hidden-xs"><a href="https://www.instagram.com/smartlifebio/"><svg class="icon icon-instagram "><use xlink:href="img/sprite.svg#icon-instagram"></use></svg></a><a href="https://vk.com/smartlifebio"><svg class="icon icon-vk "><use xlink:href="img/sprite.svg#icon-vk"></use></svg></a>
           <a
-            href="#"><svg class="icon icon-youtube "><use xlink:href="../img/sprite.svg#icon-youtube"></use></svg></a>
-        </div>
-        <div class="swiper-container home-slider">
+            href="https://www.facebook.com/Smartlifebio-1523077057727677/"><svg class="icon icon-facebook "><use xlink:href="img/sprite.svg#icon-facebook"></use></svg></a><a href="https://www.youtube.com/channel/UCm2VbUPuY5qgYqlZvAKFysg"><svg class="icon icon-youtube "><use xlink:href="img/sprite.svg#icon-youtube"></use></svg></a></div>
+        <div
+          class="swiper-container home-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="container">
                 <div class="row middle-xs">
-                  <div class="col-md-3 col-md-offset-9 end-xs">
-                    <div class="home__comp"><img data-src="img/comp-1.png" alt=""></div>
+                  <div class="col-sm-3 col-sm-offset-9 end-xs col-xs-12">
+                    <div class="home__comp">
+                      <!--img(src="img/comp-1.png", alt="")-->
+                      <div id="home-1" class="home__comp__scene">
+                        <div><img src="img/home-comp/afc.png" alt=""></div>
+                      </div>
+                      <div id="home-2" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp__scene">
+                        <div><img src="img/home-comp/list-1.png" alt=""></div>
+                      </div>
+                      <div id="home-3" class="home__comp__scene">
+                        <div><img src="img/home-comp/list-2.png" alt=""></div>
+                      </div>
+                      <div id="home-4" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp__scene">
+                        <div><img src="img/home-comp/list-3.png" alt=""></div>
+                      </div>
+                      <div id="home-5" class="home__comp__scene">
+                        <div><img src="img/home-comp/list-4.png" alt=""></div>
+                      </div>
+                      <div id="home-6" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp__scene">
+                        <div data-depth="1"><img src="img/home-comp/sma.png" alt=""></div>
+                      </div>
+                      <div id="home-7" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp__scene">
+                        <div data-depth="1"><img src="img/home-comp/rt.png" alt=""></div>
+                      </div>
+                      <div id="home-8" class="home__comp__scene">
+                        <div data-depth="1"><img src="img/home-comp/li-fe.png" alt=""></div>
+                      </div>
+                      <div id="home-9" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp__scene">
+                        <div data-depth="0.5"><img src="img/home-comp/bio.png" alt=""></div>
+                      </div>
+                      <div id="home-10" class="home__comp__scene">
+                        <div data-depth="1.3"><img src="img/home-comp/1.png" alt=""></div>
+                      </div>
+                      <div id="home-11" class="home__comp__scene">
+                        <div data-depth="2"><img src="img/home-comp/2.png" alt=""></div>
+                      </div>
+                      <div id="home-12" class="home__comp__scene">
+                        <div data-depth="2"><img src="img/home-comp/3.png" alt=""></div>
+                      </div>
+                      <div id="home-13" class="home__comp__scene">
+                        <div data-depth="2"><img src="img/home-comp/4.png" alt=""></div>
+                      </div>
+                      <div id="home-14" class="home__comp__scene">
+                        <div data-depth="2"><img src="img/home-comp/5.png" alt=""></div>
+                      </div>
+                    </div>
                     <div class="home__block">
-                      <p>Продукты<br>для здоровой<br>и счастливой<br>жизни</p>
-                      <div class="swiper-pagination"></div><a href="#">Все о нас<br>за 60 секунд<span><img data-src="img/play.svg" alt=""></span></a></div>
+                      <p class="hidden-xs">Продукты для<br> здоровья, а не<br> достижения<br> результата любой ценой!</p>
+                      <p class="hidden-sm">Продукты для здоровья,<br>а не достижения результата<br>любой ценой!</p><span class="hidden-xs">От производителя оборудования<br> для функционального<br> тестирования</span><span class="hidden-sm">От производителя оборудования<br>для функционального тестирования</span>
+                      <div
+                        class="swiper-pagination"></div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="row middle-xs">
+                <div class="col-sm-3 col-sm-offset-9 end-xs col-xs-12">
+                  <div class="home__comp--2">
+                    <div class="home__comp--2__photo"> <img src="img/home-comp-2/ibc.png" alt=""></div>
+                    <div id="home__2-1" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp--2__scene">
+                      <div data-depth="1"><img src="img/home-comp-2/1.png" alt=""></div>
+                    </div>
+                    <div id="home__2-2" class="home__comp--2__scene">
+                      <div data-depth="1.5"><img src="img/home-comp-2/2.png" alt=""></div>
+                    </div>
+                    <div id="home__2-3" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp--2__scene">
+                      <div data-depth="1"><img src="img/home-comp-2/3.png" alt=""></div>
+                    </div>
+                    <div id="home__2-4" class="home__comp--2__scene">
+                      <div data-depth="2"><img src="img/home-comp-2/4.png" alt=""></div>
+                    </div>
+                    <div id="home__2-5" class="home__comp--2__scene">
+                      <div data-depth="1"><img src="img/home-comp-2/5.png" alt=""></div>
+                    </div>
+                    <div id="home__2-6" class="home__comp--2__scene">
+                      <div data-depth="1"><img src="img/home-comp-2/6.png" alt=""></div>
+                    </div>
+                    <div id="home__2-7" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp--2__scene">
+                      <div data-depth="1.5"><img src="img/home-comp-2/7.png" alt=""></div>
+                    </div>
+                    <div id="home__2-8" data-invert-x="false" data-invert-y="false" relativeInput="true" class="home__comp--2__scene">
+                      <div data-depth="2"><img src="img/home-comp-2/8.png" alt=""></div>
+                    </div>
+                  </div>
+                  <div class="home__block">
+                    <p>Питайся правильно, добивайся большего!</p>
+                    <div class="swiper-pagination"></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+    <div id="home-video-modal" style="display: none" class="video-modal"><iframe width="560" height="315" src="https://www.youtube.com/embed/B7GXecLhxMo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+    </section>
+    <!--END Главный экран-->
+    <!--BEGIN  AFC-->
+    <section id="afc-m" class="section afc">
+      <div class="container">
+        <div class="row middle-xs">
+          <div class="col-md-3 col-md-offset-2 hidden-xs">
+            <div class="afc__slider">
+              <div class="afc__slider--img"><img data-src="img/afc.png" alt=""></div>
+              <div class="afc__slider--line"><img data-src="img/afc/afc-line.svg" alt="">
+                <div class="afc__slider--active"></div>
+                <div class="afc__slider--prev swiper-button-prev"></div>
+                <div class="afc__slider--next swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-6 col-xs-12">
+            <h2>AFC - концентрат, повышающий<br>работоспособность<span>(Innovation adaptogenic functional concentrate)</span></h2>
+            <div class="afc__slider hidden-sm">
+              <div class="afc__slider__info"><img data-src="img/afc/afc-info-m.svg" alt=""></div>
+              <div class="afc__slider--img"><img data-src="img/afc-m.png" alt=""></div>
+              <div class="afc__slider--line"><img data-src="img/afc/afc-line.svg" alt="">
+                <div class="afc__slider--active"></div>
+                <div class="afc__slider--prev swiper-button-prev"></div>
+                <div class="afc__slider--next swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="swiper-container afc-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <p>Повышает физическую и умственную<br>работоспособность </p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Укрепляет иммунитет</p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Замедляет процессы старения</p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Улучшает обмен веществ и состояние сосудов</p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Снижает риск возникновения сердечно-сосудистых и онкологических заболеваний,<br>последствия стресса</p>
+                </div>
+              </div>
+            </div>
+            <div class="afc__info hidden-xs"><img data-src="img/afc/afc-info.svg" alt=""></div>
+            <div class="afc__price">
+              <div class="afc__price__block">
+                <p>Цена</p>
+                <h3><span>350</span>
+                  <div class="ruble">₽</div>/ шт </h3>
+              </div><a href="checkout.html" data-cookie="afc" class="btn btn--white">заказать</a><a href="afc.html" class="btn btn--green--2">подробнее</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END AFC-->
+    <!--BEGIN  IBC-->
+    <section id="ibc-m" class="section ibc">
+      <div class="container">
+        <div class="row middle-xs">
+          <div class="col-md-offset-2 col-md-6 col-xs-12">
+            <h2>IBC - очищение и<br>восстановление организма<span>(Innovation adaptogenic functional concentrate)</span></h2>
+            <div class="ibc__photo hidden-sm">
+              <div class="ibc__info"><img data-src="img/ibc/ibc-info-m.svg" alt=""></div>
+              <div class="ibc__photo__ibc">
+                <div class="ibc__comp"><img data-src="img/ibc-comp/ibc.png" alt="">
+                  <div id="ibc-1-m" class="ibc__comp__scene">
+                    <div data-depth="1.5"><img src="img/ibc-comp/1.png" alt=""></div>
+                  </div>
+                  <div id="ibc-2-m" data-invert-x="false" data-invert-y="false" relativeInput="true" class="ibc__comp__scene">
+                    <div data-depth="1.5"><img src="img/ibc-comp/2.png" alt=""></div>
+                  </div>
+                  <div id="ibc-3-m" class="ibc__comp__scene">
+                    <div data-depth="1.5"><img src="img/ibc-comp/3.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="ibc__photo__line--1"><img data-src="img/ibc/ibc-line-1.svg" alt=""></div>
+              <div class="ibc__photo__line--2"><img data-src="img/ibc/ibc-line-3.svg" alt=""></div>
+            </div>
+            <div class="ibc__advantages">
+              <div class="ibc__advantages__block ibc__advantages__block--1">
+                <p>Улучшает баланс <br>веществ в организме</p><img data-src="img/ibc/ibc-line-1.svg" alt=""></div>
+              <div class="ibc__advantages__block ibc__advantages__block--2">
+                <p>Выводит различныe токсины, аллергены, <br>соли тяжелых металлов, радионуклиды билирубин, <br>холестерин и липиды, мочевину, продукты распада <br>алкоголя, метаболиты, формирующие эндогенный <br>токсикоз и другое</p><img data-src="img/ibc/ibc-line-2.svg"
+                  alt=""></div>
+              <div class="ibc__advantages__block ibc__advantages__block--3">
+                <p>Не нарушает естественную микрофлору,<br> работу пищеварительных ферментов<br> и пищеварения в целом</p><img data-src="img/ibc/ibc-line-3.svg" alt=""></div>
+              <div class="ibc__advantages__block ibc__advantages__block--4">
+                <p>Снижает аппетит</p><img data-src="img/ibc/ibc-line-4.svg" alt=""></div>
+            </div>
+            <div class="ibc__info hidden-xs"><img data-src="img/ibc/ibc-info.svg" alt=""></div>
+            <div class="ibc__price">
+              <div class="ibc__price__block">
+                <p>Цена</p>
+                <h3><span>1500</span>
+                  <div class="ruble">₽</div>/ шт </h3>
+              </div><a href="checkout.html" data-cookie="ibc" class="btn btn--white">заказать</a>
+              <!--a.btn.btn--white(data-cookie="ibc" data-checkout="checkout" ) заказать--><a href="ibc.html" class="btn btn--green--2">подробнее</a></div>
+          </div>
+          <div class="col-md-4 hidden-xs">
+            <div class="ibc__comp"><img data-src="img/ibc-comp/ibc.png" alt="">
+              <div id="ibc-1" class="ibc__comp__scene">
+                <div data-depth="1.5"><img src="img/ibc-comp/1.png" alt=""></div>
+              </div>
+              <div id="ibc-2" data-invert-x="false" data-invert-y="false" relativeInput="true" class="ibc__comp__scene">
+                <div data-depth="1.5"><img src="img/ibc-comp/2.png" alt=""></div>
+              </div>
+              <div id="ibc-3" class="ibc__comp__scene">
+                <div data-depth="1.5"><img src="img/ibc-comp/3.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="check hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Наши уникальные<br>технологии </h2><img src="img/study/check.svg" alt="">
+            <ul>
+              <li>Микрофильтрация</li>
+              <li>Ультрафильтрация</li>
+              <li>Нанофильтрация</li>
+              <li>Низкотемпературное<br>выпаривание</li>
+              <li>Лиофилизационная<br>сушка</li>
+              <li>Препаративная<br>хроматография</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END IBC-->
+    <!--BEGIN  Review-->
+    <section id="review-m" class="section review">
+      <div class="container hidden-xs">
+        <div class="row middle-xs">
+          <div class="col-md-offset-2 col-md-10">
+            <h2>Отзывы</h2>
+            <div class="review__slide">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="review__slide__photo"><img data-src="img/review/lili.png" alt=""></div>
+                </div>
+                <div class="col-md-8">
+                  <div class="review__slide__block">
+                    <h3>Лили</h3><i>Мама, блоггер</i>
+                    <p>Вот и подходит год к концу и пришла пора подводить итоги уходящего года) сейчас многие блогеры составляют список лучших продуктов и топ средств в различных категориях! Вот именно сейчас хочется им посоветовать продукт под названием
+                      IBC (innovation body cleansing) от компании Smart Life!</p><a href="#review-text-modal" rel="modal:open" class="review__open">читать полностью</a>
+                    <div class="review__slide__block__text">
+                      <p>Вот и подходит год к концу и пришла пора подводить итоги уходящего года) сейчас многие блогеры составляют список лучших продуктов и топ средств в различных категориях! Вот именно сейчас хочется им посоветовать продукт под названием
+                        IBC (innovation body cleansing) от компании Smart Life! Это просто Мега полезный и в своём роде уникальный продукт, направленный на очищение, детоксикацию, вывод шлаков, красителей, консервантов (наша еду ими переполнена) и токсинов!!!
+                        Очистит и стенки кишечника (ни один детокс этого не делает) и сосуды и холестерин понизит! А сейчас внимание!!!! НЕ НАРУШАЕТ МИКРОФЛОРУ!!!! А только улучшает и насыщает полезными бактериями!! И всё это при абсолютно натуральном
+                        составе, без химии, консервантов, красителей и сахара!! Так что это точно тот продукт, который должен стоять на вершине ваших чартов!! Спасибо @smartlifebio что заботитесь о нас!</p>
+                    </div><a href="#review-video-modal" rel="modal:open" style="display: none" class="review__open--2">Смотреть<br>видео-отзыв<span><img data-src="img/play.svg" alt=""></span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="review__s">
+              <div class="swiper-container review-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/lili.png" alt=""></div>
+                    <h3>Лили</h3><i>Мама, блоггер</i>
+                    <div class="swiper-slide-text">
+                      <p>Вот и подходит год к концу и пришла пора подводить итоги уходящего года) сейчас многие блогеры составляют список лучших продуктов и топ средств в различных категориях! Вот именно сейчас хочется им посоветовать продукт под названием
+                        IBC (innovation body cleansing) от компании Smart Life!</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Вот и подходит год к концу и пришла пора подводить итоги уходящего года) сейчас многие блогеры составляют список лучших продуктов и топ средств в различных категориях! Вот именно сейчас хочется им посоветовать продукт под названием
+                        IBC (innovation body cleansing) от компании Smart Life! Это просто Мега полезный и в своём роде уникальный продукт, направленный на очищение, детоксикацию, вывод шлаков, красителей, консервантов (наша еду ими переполнена) и токсинов!!!
+                        Очистит и стенки кишечника (ни один детокс этого не делает) и сосуды и холестерин понизит! А сейчас внимание!!!! НЕ НАРУШАЕТ МИКРОФЛОРУ!!!! А только улучшает и насыщает полезными бактериями!! И всё это при абсолютно натуральном
+                        составе, без химии, консервантов, красителей и сахара!! Так что это точно тот продукт, который должен стоять на вершине ваших чартов!! Спасибо @smartlifebio что заботитесь о нас!</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img src="img/review/valyikin.png" alt=""></div>
+                    <h3>Антон Валуйкин</h3><i>Марафонец / Легкоатлет</i>
+                    <div class="swiper-slide-text">
+                      <p>Ровно месяц я принимаю концентрат AFC от @smartlifebio , решение попробовать его было не случайным. Предстоящие длительные старты, ограниченное время на восстановление, переутомляемость. Каждый из таких моментов может вывести из
+                        строя или подпортить результат любого атлета.</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Ровно месяц я принимаю концентрат AFC от @smartlifebio , решение попробовать его было не случайным. Предстоящие длительные старты, ограниченное время на восстановление, переутомляемость. Каждый из таких моментов может вывести из
+                        строя или подпортить результат любого атлета.</p>
+                      <p>В текущем месяце принял участие в полумарафоне, марафоне и двух забегах свыше 50 км, плюс стандартный тренировочный процесс, в итоге месячный объем составил более 400 километров.</p>
+                      <p>Какие изменения?</p>
+                      <p>· явно прослеживается снижение ЧСС при аналогичных нагрузках на тренировках и при восстановлении;</p>
+                      <p>· нормализация показателя гемоглобина (на основании клинического анализа крови);</p>
+                      <p>· стрессоустойчивость;</p>
+                      <p>· нормализация сна...</p>
+                      <p>Это всего лишь несколько положительных факторов...</p>
+                      <p>По трем вариантам вкуса препарата понравились шоколад и клубника, а вот мята – крайне неприятна и с утра на голодный желудок совсем не «заходила». Но, как говорится: на вкус и цвет… </p>
+                      <p>Может Вам понавится?!</p>
+                      <p>Препарат AFC адаптировал меня к сложным условиям, помог достичь высоких и комфортных результатов.</p>
+                      <p>Очень много известных людей рекомендуют этот проверенный препарат, я тоже советую попробовать его и улучшить свои спортивные и физиологические показатели.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/andrey-karpov.png" alt=""></div>
+                    <h3>Андрей Карпов</h3><i>Триатлон</i><a href="https://www.youtube.com/embed/GAVf9WK7uRA"></a>
+                    <div class="swiper-slide-text">
+                      <p>Употреблял курс из 20 баночек для улучшения сна и повышения дневной активности, т.к. обычные витамины перестали помогать. Также повлиял на желудочно-кишечный тракт в лучшую сторону! Так что, если хотите повысить активность, нормальный
+                        сон, рекомендую AFC. </p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Употреблял курс из 20 баночек для улучшения сна и повышения дневной активности, т.к. обычные витамины перестали помогать. Также повлиял на желудочно-кишечный тракт в лучшую сторону! Так что, если хотите повысить активность, нормальный
+                        сон, рекомендую AFC. </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/darya.png" alt=""></div>
+                    <h3>Дарья</h3><i>Модель</i>
+                    <div class="swiper-slide-text">
+                      <p>Сегодня хочу поделиться с вами с продуктом, который как говориться: Как я без него раньше то жила!!)) конечно, мы с вами не часто задумываемся, о том, как тяжело приходится нашему кишечнику и в целом пищеварительной системе!!</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Сегодня хочу поделиться с вами с продуктом, который как говориться: Как я без него раньше то жила!!)) конечно, мы с вами не часто задумываемся, о том, как тяжело приходится нашему кишечнику и в целом пищеварительной системе!! У кого
+                        неправильное и нерегулярное Питание, у кого фаст фуд и полуфабрикаты, да что уж там, у кого праздники и застолья уже скоро, поднимите руку?!!! Ага, добрая половина человечества!!! И почему у нас у всех понятие с очищением и детоксикацией
+                        связано с постоянной бегатнёй в уборную??? Это всё не то! Знакомьтесь IBC , детокс нового покаления! Да да, у него огромный список применения и спектр действия! Вот прям очень рекомендую, кому в платье влезть, а кому и чтоб праздники
+                        прошли незаметно для организма в целом!! И вообще, постоянный Новый житель моей аптечки!</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/andrey-zakopaylo.png" alt=""></div>
+                    <h3>Андрей Закопайло</h3><i>Профессиональный боец Муай Тай</i><a href="https://www.youtube.com/embed/6ScwPV6Bvk0"></a>
+                    <div class="swiper-slide-text">
+                      <p>В своей подготовке стал использовать AFC, он увеличивает выносливость и уменьшает время восстановления после тяжелых нагрузок. </p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>В своей подготовке стал использовать AFC, он увеличивает выносливость и уменьшает время восстановления после тяжелых нагрузок.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/irina-potapova.png" alt=""></div>
+                    <h3>Ирина Потапова</h3><i></i><a href="https://www.youtube.com/embed/-fJUXYfafyI"></a>
+                    <div class="swiper-slide-text">
+                      <p>Милые мои девочки, вот уже и платье выбрали для торжеств, но вот убрать пару лишних кг не лишне ))) и платье сидеть будет не то что хорошо, а идеально!!!</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Милые мои девочки, вот уже и платье выбрали для торжеств, но вот убрать пару лишних кг не лишне ))) и платье сидеть будет не то что хорошо, а идеально!!! Сорбент нового поколения IBC справится не только с чувством голода, но и полностью
+                        очистит ваш кишечник от шлаков, токсинов, солей, холестерина, аллергенов и все прочего!! Продукт должен быть в каждой аптечке!! При отравлении и интоксикации он первая помощь и деткам можно!! Давайте начнём Новый год с чистого
+                        листа (и кишечника тоже)))) @smartlifebio</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/yriu-zheludkov.png" alt=""></div>
+                    <h3>Юрий Желудков</h3><i>Мастер спорта международного класса по тайскому боксу</i><a href="https://www.youtube.com/embed/tA0px_h3g1A"></a>
+                    <div class="swiper-slide-text">
+                      <p>За две недели функциональная мощность увеличилась на 30%, выносливость на 25%, также заметил, что возросла работоспособность организма, плюс организм начал быстрее восстанавливаться. </p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>За две недели функциональная мощность увеличилась на 30%, выносливость на 25%, также заметил, что возросла работоспособность организма, плюс организм начал быстрее восстанавливаться. </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/nastay-domanskaya.png" alt=""></div>
+                    <h3>Настасья Доманская</h3><i></i>
+                    <div class="swiper-slide-text">
+                      <p>В любимом спа И кстати, раз пошла речь о красоте и уходе за собой, выскажусь на одну тему.</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>В любимом спа И кстати, раз пошла речь о красоте и уходе за собой, выскажусь на одну тему.</p>
+                      <p>Сейчас в тренде ПП Все следят за качеством продуктов. Но почему-то все забывают о своём пищеварении и о том, как важно следить за его правильной работой. Ведь именно с этого и начинается здоровье организма и то самое ПП. Вся гадость
+                        оседает в нашем кишечнике - на его стенках, тем самым забивая на столько, что всасывание витаминов и минералов снижается в 5 раз. А что происходит с микрофлорой, - страшно и подумать * <b>Тут на помощь приходят сорбенты. И не забываем, что сорбент сорбенту рознь)</b></p>
+                      <p><b>Прогресс движется вперёд! И ура! Появился потрясающий сорбент нового поколения @smartlifebio с идеальным составом и потрясающей детоксикацией *</b> У него такой огромный спектр воздействия, что полное очищение и восстановление
+                        вам гарантировано 100%❤️ Скажу только, что он улучшает микрофлору и работает на выработку полезных бактерий. Рассказывать о IBC можно очень долго и мой пост ни закончится никогда. </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/pavel-kislov.png" alt=""></div>
+                    <h3>Павел Кислов</h3><i>Мастер спорта международного класса по жимовому двоеборью</i><a href="https://www.youtube.com/embed/pkQJ2wFcrkw"></a>
+                    <div class="swiper-slide-text">
+                      <p>За месяц использовния возросли силовые показатели, выносливость, увеличилась мышечная масса. Организм стал быстрее восстанавливаться.</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>За месяц использовния возросли силовые показатели, выносливость, увеличилась мышечная масса. Организм стал быстрее восстанавливаться.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/evheniya.png" alt=""></div>
+                    <h3>Евгения Румянцева</h3><i>Марафонец</i>
+                    <div class="swiper-slide-text">
+                      <p>Бег может заполнять пустоту, а может ее создавать. С ощущением опустошённости после бега я столкнулась впервые в прошлом году, когда пробежала 775 км за 16 дней по Пути Сантьяго. В этом году после Тура Гигантов я ощутила ту же самую
+                        пустоту, только в этот раз она сопровождалась ночными кошмарами и постоянной усталостью.</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Бег может заполнять пустоту, а может ее создавать. С ощущением опустошённости после бега я столкнулась впервые в прошлом году, когда пробежала 775 км за 16 дней по Пути Сантьяго. В этом году после Тура Гигантов я ощутила ту же самую
+                        пустоту, только в этот раз она сопровождалась ночными кошмарами и постоянной усталостью. В Италии это называют "синдром Тура", а с финишерами Тура работают психологи. Я выкарабкивалась сама, много спала, ходила на массаж и капельницы,
+                        а ещё по совету @michaeldolgy пропила месячный курс концентрата AFC @smartlifebio , который повышает работоспособность. Концентрат плюс мотивация и эффект самовнушения помогли мне влиться в режим тренировок и пробегать по 25-30
+                        км в день через месяц после Тура. Каждое утро я выпивала концентрат и чувствовала прилив сил и энергии. Этот допинг без допинга помог мне победить в 2-недельном ультрамарафоне в @fitnessmania_mdm и я могу рекомендовать его всем,
+                        кто устал, у кого упадок сил и нежелание двигаться в преддверии зимы.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/alexandra.png" alt=""></div>
+                    <h3>Александра</h3><i></i>
+                    <div class="swiper-slide-text">
+                      <p>Самый опасный период, когда можно подцепить вирус- это межсезонье: весна и осень. В это время года взрослые и дети начинают чаще болеть, снижается работоспособность, ухудшается настроение, пропадает желание лишний раз выходить из
+                        дома. Это легко объясняется- АВИТОМИНОЗ!</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Самый опасный период, когда можно подцепить вирус- это межсезонье: весна и осень. В это время года взрослые и дети начинают чаще болеть, снижается работоспособность, ухудшается настроение, пропадает желание лишний раз выходить из
+                        дома. Это легко объясняется- АВИТОМИНОЗ! И если ничего не предпринимать, то состояние только ухудшится. Дети начнут носить двойки, с ревом вставать в сад или школу, взрослые утром будут ненавидеть все вокруг, а после обеда уже
+                        начнут впадать в спячку.</p>
+                      <p>Полтора года назад врач моей мамы перед операцией посоветовал начать принимать сильные витамины, чтобы усилить сопротивляемость организма во время реабилитации. Именно тогда в наши руки впервые попали эти чёрные бутылочки с концентратом
+                        AFC.</p>
+                      <p>Мы с мамой начали пить за две недели до операции. Что я хочу сказать?</p>
+                      <p>Препарат представляет натуральный концентрат без единого химического элемента. Он одобрен Министерством Здравоохранения РФ и на сегодняшний день после клинических испытаний ( а не по субъективным отзывам клиентам) является самым
+                        лучшим средством для поднятия гемоглобина и снижения холестерина в крови. Всего после двух недель применения смело сдавайте анализы и у вашего врача выпадут глаза. Гарантировано.</p>
+                      <p>Ни один витаминный комплекс не даст вам лучших показателей за столь короткий срок.</p>
+                      <p>Точно могу сказать, что просыпаюсь легко и бодрость чувствую отменную.</p>
+                      <p>Мама получила результаты предоперационных анализов. Ну что? Можно в космос, сказали!</p>
+                      <p>Разрешено детям с 7 лет для улучшения работоспособности и концентрации внимания.</p>
+                      <p>Посмотрите сколько именитых спортсменов рекомендуют этот препарат. И я тоже рекомендую 💯</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/tatayna-kostova.png" alt=""></div>
+                    <h3>Татьяна Костова</h3><i>Тренер</i>
+                    <div class="swiper-slide-text">
+                      <p>Быстро сделала фото для вас. И вот пост о концентрате из сториз. Вот вы часто спрашиваете про витамины и добавки, которые повышают работоспособность, поднимают иммунитет, улучшают качество сна....</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Быстро сделала фото для вас. И вот пост о концентрате из сториз.</p>
+                      <p>Вот вы часто спрашиваете про витамины и добавки, которые повышают работоспособность, поднимают иммунитет, улучшают качество сна....</p>
+                      <p>Этими всеми свойствами обладает это маленькая баночка!</p>
+                      <p>Концентрат, повышающий работоспособность «afc» это 16 природных компонентов, специально подобранных в один комплекс для мощного синергического эффекта. </p>
+                      <p>Но, я его заказала из-за другой важной функции . Он поднимает гемоглобин в крови за счёт органического железа. А для меня проблема после КС, потому что из роддома выписали с критически низкими показателями гемоглобина.</p>
+                      <p>Паша тоже его принимает, т.к. Тяжёлые тренировки, умственная деятельность и недосып( молодой папа все таки) дают о себе знать.</p>
+                      <p>Вкратце о основных свойствах концентрата afc:</p>
+                      <ul>
+                        <li>-проходят частые головные боли</li>
+                        <li>-повышает гемоглобин (проверка клиническим анализом крови)</li>
+                        <li>-восполнение йода (в концентрате в хелатной форме, усваивается на 95%, химический йод только на 5-10%)</li>
+                        <li>-улучшение цвета кожи</li>
+                        <li>-рост волос, снижение их выпадения</li>
+                        <li>-укрепление ногтей</li>
+                        <li>-восстанавливает биоритмы, помогает при бессоннице</li>
+                        <li>-бодрость утром и энергия на весь день</li>
+                        <li>-улучшение настроения, стрессоустойчивость</li>
+                        <li>-повышение метаболизма</li>
+                        <li>-нормализация работы кишечника</li>
+                        <li>-выносливость на тренировках, повышается мотивация к тренировкам</li>
+                        <li>-снижает чсс❤️ во время тренировок при нагрузке и при восстановлении после нагрузки!</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/katya.png" alt=""></div>
+                    <h3>Катерина</h3><i></i>
+                    <div class="swiper-slide-text">
+                      <p>Примерно месяц назад на работе у меня был жуткий завал и сильный стресс. Брат мне порекомендовал пропить концентрат "AFC". Начав его пить по утрам, мое настроение изменилось, переживать стрессовые ситуации на работе стала гораздо
+                        легче, плюс утренние подъемы стали легкими.</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Примерно месяц назад на работе у меня был жуткий завал и сильный стресс. Брат мне порекомендовал пропить концентрат "AFC". Начав его пить по утрам, мое настроение изменилось, переживать стрессовые ситуации на работе стала гораздо
+                        легче, плюс утренние подъемы стали легкими. За месяц я обратила внимание еще на то, что волосы стали меньше выпадать и ногти стали быстрее расти и стали более крепкими, прекратились головные боли, хотя довольно часто были до этого.
+                        Так что через месяц пропью еще курс, чтобы получить сильный иммунитет)))</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/diana-dipeshkova.png" alt=""></div>
+                    <h3>Диана Пешкова</h3><i></i>
+                    <div class="swiper-slide-text">
+                      <p>Девочки, это ЧУДО! Очень хвалю эти баночки. Читайте пост до конца и узнаете, как быть полным сил и энергии. Нам, мамам, это так актуально. Вы, кстати, сколько спите? Хватает или хотелось бы больше?</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Девочки, это ЧУДО! Очень хвалю эти баночки. Читайте пост до конца и узнаете, как быть полным сил и энергии. Нам, мамам, это так актуально.</p>
+                      <p>Вы, кстати, сколько спите? Хватает или хотелось бы больше?</p>
+                      <p>Многие часто спрашивают меня как я всё успеваю, сплю ли я вообще и откуда у меня силы - а бывало всякое: и уставала, и спала плохо, и режим сна из-за перелетов нарушался(</p>
+                      <p>Но как только я познакомилась со @smartlifebio, ситуация нормализовалась.</p>
+                      <p>В составе концентрата AFC исключительно НАТУРАЛЬНЫЕ компоненты, и что хорошо - нет кофеина, красителей, сахара, глютена и консервантов. Абсолютно органичен и БЕЗВРЕДЕН, а значит, подойдет даже школьникам.</p>
+                      <p>Придает сил, повышает жизненный тонус, улучшает память и помогает избежать депрессий!</p>
+                      <p>Рекомендую его ВСЕМ, кто ведет активный образ жизни, живет в интенсивном графике, испытывает стрессы, готовится к экзаменам, борется с недосыпами и просто хочет укрепить иммунитет.</p>
+                      <p>Познакомиться с ним более детально, узнать полный состав и купить его можно на @smartlifebio </p>
+                      <p>Рада, что попробовала такой концентрат по рекомендации друзей, - не пожалела ни разу</p>
+                      <p>С ним мне хватает 7 часов отдыха и я снова готова в бой!</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/marina-vovchenko.png" alt=""></div>
+                    <h3>Марина Вовченко</h3><i></i>
+                    <div class="swiper-slide-text">
+                      <p>Цветочки, уже как 3 недели принимаю концентрат повышающий работоспособность afc, и результаты сумасшедшие! Энергии у меня стало ещё больше, тренировки проходят намного лучше, мой пульс после нагрузок восстанавливается намного быстрее,
+                        выносливость увеличилась, хотя я сейчас пашу 24/7, марафон, работа, съёмки, дети.</p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Цветочки, уже как 3 недели принимаю концентрат повышающий работоспособность afc, и результаты сумасшедшие! Энергии у меня стало ещё больше, тренировки проходят намного лучше, мой пульс после нагрузок восстанавливается намного быстрее,
+                        выносливость увеличилась, хотя я сейчас пашу 24/7, марафон, работа, съёмки, дети. Сделан он из 16 природных компонентов, вы же знаете я только за натуралочку, поэтому и решила попробовать! </p>
+                      <p>Кстати производитель говорит, что при сниженном гемоглобине нормализует его тк в составе есть органическое железо, я лично не проверяла, так как у меня он всегда был в норме. Что меня ещё порадовало, так это наличие йода, нашей щитовидке
+                        он так нужен для нормальной работы всей гормональной сисиемы и обмена веществ.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide-photo"><img data-src="img/review/olga-yagnetynskaya.png" alt=""></div>
+                    <h3>Ольга Ягнетинская</h3><i>Нутрициолог</i>
+                    <div class="swiper-slide-text">
+                      <p>Совершенно уникальный по составу продукт, который я недавно попробовала - #afcконцентрат. Он создан компанией, которая занимается разработкой оборудования для функциональной диагностики и проверен клиническими исследованиями! </p>
+                    </div>
+                    <div class="swiper-slide-text-big">
+                      <p>Совершенно уникальный по составу продукт, который я недавно попробовала - #afcконцентрат</p>
+                      <p>Он создан компанией, которая занимается разработкой оборудования для функциональной диагностики и проверен клиническими исследованиями! </p>
+                      <p>Я пью их всего пару недель и заметила, что у меня появилось больше сил на тренировки, нагрузка ощущается легче и нет упадка энергии после занятия, отсутствие головных болей, а, самое приятное, осеннюю меланхолию как рукой сняло производитель
+                        обещает через месяц приёма, укрепление ногтей, улучшение цвета лица и остановку осеннего волосопада, что мы и проверим.</p>
+                      <p>Всем здоровья!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"><svg class="icon icon-review-arrow "><use xlink:href="img/sprite.svg#icon-review-arrow"></use></svg></div>
+              <div class="swiper-button-next"><svg class="icon icon-review-arrow "><use xlink:href="img/sprite.svg#icon-review-arrow"></use></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container hidden-sm">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Отзывы</h2>
+            <div class="swiper-container review-slider-mobile">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="review__slide">
+                    <div class="review__slide__photo"><img src="img/review/lili.png" alt=""></div>
+                    <h3>Лили</h3><i>Мама, блоггер</i>
+                    <div class="review__slide__text">
+                      <p>Вот и подходит год к концу и пришла пора подводить итоги уходящего года) сейчас многие блогеры составляют список лучших продуктов и топ средств в различных категориях! Вот именно сейчас хочется им посоветовать продукт под названием
+                        IBC (innovation body cleansing) от компании Smart Life! Это просто Мега полезный и в своём роде уникальный продукт, направленный на очищение, детоксикацию, вывод шлаков, красителей, консервантов (наша еду ими переполнена) и токсинов!!!
+                        Очистит и стенки кишечника (ни один детокс этого не делает) и сосуды и холестерин понизит! А сейчас внимание!!!! НЕ НАРУШАЕТ МИКРОФЛОРУ!!!! А только улучшает и насыщает полезными бактериями!! И всё это при абсолютно натуральном
+                        составе, без химии, консервантов, красителей и сахара!! Так что это точно тот продукт, который должен стоять на вершине ваших чартов!! Спасибо @smartlifebio что заботитесь о нас!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review__slide">
+                    <div class="review__slide__photo"><img src="img/review/valyikin.png" alt=""></div>
+                    <h3>Антон Валуйкин</h3><i>Марафонец / Легкоатлет</i>
+                    <div class="review__slide__text">
+                      <p>Ровно месяц я принимаю концентрат AFC от @smartlifebio , решение попробовать его было не случайным. Предстоящие длительные старты, ограниченное время на восстановление, переутомляемость. Каждый из таких моментов может вывести из
+                        строя или подпортить результат любого атлета.</p>
+                      <p>В текущем месяце принял участие в полумарафоне, марафоне и двух забегах свыше 50 км, плюс стандартный тренировочный процесс, в итоге месячный объем составил более 400 километров.</p>
+                      <p>Какие изменения?</p>
+                      <p>· явно прослеживается снижение ЧСС при аналогичных нагрузках на тренировках и при восстановлении;</p>
+                      <p>· нормализация показателя гемоглобина (на основании клинического анализа крови);</p>
+                      <p>· стрессоустойчивость;</p>
+                      <p>· нормализация сна...</p>
+                      <p>Это всего лишь несколько положительных факторов...</p>
+                      <p>По трем вариантам вкуса препарата понравились шоколад и клубника, а вот мята – крайне неприятна и с утра на голодный желудок совсем не «заходила». Но, как говорится: на вкус и цвет… </p>
+                      <p>Может Вам понавится?!</p>
+                      <p>Препарат AFC адаптировал меня к сложным условиям, помог достичь высоких и комфортных результатов.</p>
+                      <p>Очень много известных людей рекомендуют этот проверенный препарат, я тоже советую попробовать его и улучшить свои спортивные и физиологические показатели.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review__slide">
+                    <div class="review__slide__photo"><img src="img/review/andrey-karpov.png" alt=""></div>
+                    <h3>Андрей Карпов</h3><i>Триатлон</i>
+                    <p>Употреблял курс из 20 баночек для улучшения сна и повышения дневной активности, т.к. обычные витамины перестали помогать. Также повлиял на желудочно-кишечный тракт в лучшую сторону! Так что, если хотите повысить активность, нормальный
+                      сон, рекомендую AFC.</p><a href="#review-video-modal" rel="modal:open" data-src="https://www.youtube.com/embed/GAVf9WK7uRA">Смотреть<br>видео-отзыв<span><img src="img/play.svg" alt=""></span></a></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review__slide">
+                    <div class="review__slide__photo"><img data-src="img/review/darya.png" alt=""></div>
+                    <h3>Дарья</h3><i>Модель</i>
+                    <div class="review__slide__text">
+                      <p>Сегодня хочу поделиться с вами с продуктом, который как говориться: Как я без него раньше то жила!!)) конечно, мы с вами не часто задумываемся, о том, как тяжело приходится нашему кишечнику и в целом пищеварительной системе!! У кого
+                        неправильное и нерегулярное Питание, у кого фаст фуд и полуфабрикаты, да что уж там, у кого праздники и застолья уже скоро, поднимите руку?!!! Ага, добрая половина человечества!!! И почему у нас у всех понятие с очищением и детоксикацией
+                        связано с постоянной бегатнёй в уборную??? Это всё не то! Знакомьтесь IBC , детокс нового покаления! Да да, у него огромный список применения и спектр действия! Вот прям очень рекомендую, кому в платье влезть, а кому и чтоб праздники
+                        прошли незаметно для организма в целом!! И вообще, постоянный Новый житель моей аптечки!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review__slide">
+                    <div class="review__slide__photo"><img data-src="img/review/andrey-zakopaylo.png" alt=""></div>
+                    <h3>Андрей Закопайло</h3><i>Профессиональный боец Муай Тай</i><a href="#review-video-modal" rel="modal:open" data-src="https://www.youtube.com/embed/6ScwPV6Bvk0">Смотреть<br>видео-отзыв<span><img src="img/play.svg" alt=""></span></a>
+                    <div
+                      class="review__slide__text">
+                      <p>В своей подготовке стал использовать AFC, он увеличивает выносливость и уменьшает время восстановления после тяжелых нагрузок.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review__slide">
+                  <div class="review__slide__photo"><img data-src="img/review/irina-potapova.png" alt=""></div>
+                  <h3>Ирина Потапова</h3><i></i><a href="#review-video-modal" rel="modal:open" data-src="https://www.youtube.com/embed/-fJUXYfafyI">Смотреть<br>видео-отзыв<span><img src="img/play.svg" alt=""></span></a></div>
+                <div class="review__slide__text">
+                  <p>Милые мои девочки, вот уже и платье выбрали для торжеств, но вот убрать пару лишних кг не лишне ))) и платье сидеть будет не то что хорошо, а идеально!!! Сорбент нового поколения IBC справится не только с чувством голода, но и полностью
+                    очистит ваш кишечник от шлаков, токсинов, солей, холестерина, аллергенов и все прочего!! Продукт должен быть в каждой аптечке!! При отравлении и интоксикации он первая помощь и деткам можно!! Давайте начнём Новый год с чистого листа
+                    (и кишечника тоже)))) @smartlifebio</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review__slide">
+                  <div class="review__slide__photo"><img data-src="img/review/yriu-zheludkov.png" alt=""></div>
+                  <h3>Юрий Желудков</h3><i>Мастер спорта международного класса по тайскому боксу</i><a href="#review-video-modal" rel="modal:open" data-src="https://www.youtube.com/embed/tA0px_h3g1A">Смотреть<br>видео-отзыв<span><img src="img/play.svg" alt=""></span></a>
+                  <div
+                    class="review__slide__text">
+                    <p>За две недели функциональная мощность увеличилась на 30%, выносливость на 25%, также заметил, что возросла работоспособность организма, плюс организм начал быстрее восстанавливаться. </p>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="container">
-                <div class="row middle-xs">
-                  <div class="col-md-3 col-md-offset-9 end-xs">
-                    <div class="home__comp"><img data-src="img/comp-1.png" alt=""></div>
-                    <div class="home__block">
-                      <p>Продукты<br>для здоровой<br>и счастливой<br>жизни 2</p>
-                      <div class="swiper-pagination"></div><a href="#">Все о нас<br>за 60 секунд<span><img data-src="img/play.svg" alt=""></span></a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--END Главный экран-->
-      <!--BEGIN  AFC-->
-      <section class="section afc">
-        <div class="container">
-          <div class="row middle-xs">
-            <div class="col-md-3 col-md-offset-2">
-              <div class="afc__slider">
-                <div class="afc__slider--img"><img data-src="img/afc.png" alt=""></div>
-                <div class="afc__slider--line"><img data-src="img/afc/afc-line.svg" alt="">
-                  <div class="afc__slider--active"></div>
-                  <div class="afc__slider--prev swiper-button-prev"></div>
-                  <div class="afc__slider--next swiper-button-next"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-offset-1 col-md-6">
-              <h2>AFC - Концентрат Повышающий<br>Работоспособност <span>(Innovation adaptogenic functional concentrate)</span></h2>
-              <div class="swiper-container afc-slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <p>Замедляет процессы старения</p>
-                  </div>
-                  <div class="swiper-slide">
-                    <p>Повышает физическую и умственную<br>работоспособность </p>
-                  </div>
-                  <div class="swiper-slide">
-                    <p>Снижает риск возникновения сердечно-сосудистых<br>и онкологических заболеваний,<br>последствия стресса</p>
-                  </div>
-                  <div class="swiper-slide">
-                    <p>Повышает физическую и умственную<br>работоспособность </p>
-                  </div>
-                </div>
-              </div>
-              <div class="afc__info"><img data-src="img/afc/afc-info.svg" alt=""></div>
-              <div class="afc__price">
-                <div class="afc__price__block">
-                  <p>Цена</p>
-                  <h3>от <span>329</span><svg class="icon icon-ruble "><use xlink:href="../img/sprite.svg#icon-ruble"></use></svg>/ шт </h3>
-                </div><a href="#" class="btn btn--white">заказать</a><a href="#" class="btn">подробнее</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="afc__bottom flex center-xs">
-          <div class="afc__bottom__block">
-            <p>Не упусти возможность, попробуй и ощути изменения за 2 недели<span>со скидкой 30%</span></p><a class="btn btn__afc--bottom">Попробовать</a></div>
-        </div>
-      </section>
-      <!--END AFC-->
-      <!--BEGIN  IBC-->
-      <section class="section ibc">
-        <div class="container">
-          <div class="row middle-xs">
-            <div class="col-md-offset-2 col-md-6">
-              <h2>IBC - очищение и<br>восстановление организма<span>(Innovation adaptogenic functional concentrate)</span></h2>
-              <div class="ibc__advantages">
-                <div class="ibc__advantages__block ibc__advantages__block--1">
-                  <p>Улучшает баланс<br>веществ в организме</p><img data-src="img/ibc/ibc-line-1.svg" alt=""></div>
-                <div class="ibc__advantages__block ibc__advantages__block--2">
-                  <p>Выводит различные токсины, аллергены,<br>соли тяжелых металлов, радионуклиды билирубин,<br>холестерин и липиды, мочевину,продукты распада<br>алкоголя, метаболиты, формирующие эндогенный<br>токсикоз и другое</p><img data-src="img/ibc/ibc-line-2.svg"
-                    alt=""></div>
-                <div class="ibc__advantages__block ibc__advantages__block--3">
-                  <p>Не нарушает естественную<br>микрофлору</p><img data-src="img/ibc/ibc-line-3.svg" alt=""></div>
-              </div>
-              <div class="ibc__info"><img data-src="img/ibc/ibc-info.svg" alt=""></div>
-              <div class="ibc__price">
-                <div class="ibc__price__block">
-                  <p>Цена</p>
-                  <h3><span>890</span><svg class="icon icon-ruble "><use xlink:href="../img/sprite.svg#icon-ruble"></use></svg>/ шт </h3>
-                </div><a href="#" class="btn btn--white">заказать</a><a href="#" class="btn">подробнее</a></div>
-            </div>
-            <div class="col-md-4">
-              <div class="ibc__comp"><img data-src="img/ibc.png" alt=""></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--END IBC-->
-      <!--BEGIN  Review-->
-      <section class="section review">
-        <div class="container">
-          <div class="row middle-xs">
-            <div class="col-md-offset-2 col-md-10">
-              <h2>Отзывы</h2>
               <div class="review__slide">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="review__slide__photo"><img data-src="img/review/review-1.png" alt=""></div>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="review__slide__block">
-                      <h3>Виктор</h3><i>Мастер спорта по пауэрлифтингу</i>
-                      <p>Были проблемы со сном, знакомые посоветовали попробовать AFC, но сразу сказали, чтобы почувствовать эффект, нужно минимум 14 дней, решил попробовать. Очень доволен результатом,увеличились показатели в спорте, начал легко просыпаться
-                        по утрам. Рекомендую.</p><a href="#">Смотреть<br>видео-отзыв<span><img data-src="img/play.svg" alt=""></span></a></div>
-                  </div>
+                <div class="review__slide__photo"><img data-src="img/review/nastay-domanskaya.png" alt=""></div>
+                <h3>Настасья Доманская</h3><i></i>
+                <div class="review__slide__text">
+                  <p>В любимом спа И кстати, раз пошла речь о красоте и уходе за собой, выскажусь на одну тему.</p>
+                  <p>Сейчас в тренде ПП Все следят за качеством продуктов. Но почему-то все забывают о своём пищеварении и о том, как важно следить за его правильной работой. Ведь именно с этого и начинается здоровье организма и то самое ПП. Вся гадость
+                    оседает в нашем кишечнике - на его стенках, тем самым забивая на столько, что всасывание витаминов и минералов снижается в 5 раз. А что происходит с микрофлорой, - страшно и подумать * <b>Тут на помощь приходят сорбенты. И не забываем, что сорбент сорбенту рознь)</b></p>
+                  <p><b>Прогресс движется вперёд! И ура! Появился потрясающий сорбент нового поколения @smartlifebio с идеальным составом и потрясающей детоксикацией *</b> У него такой огромный спектр воздействия, что полное очищение и восстановление вам
+                    гарантировано 100%❤️ Скажу только, что он улучшает микрофлору и работает на выработку полезных бактерий. Рассказывать о IBC можно очень долго и мой пост ни закончится никогда. </p>
                 </div>
               </div>
-              <div class="review__s">
-                <div class="swiper-container review-slider">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="swiper-slide-photo"><img data-src="img/review/review-1.png" alt=""></div>
-                      <h3>Виктор</h3><i>Мастер спорта<br>по пауэрлифтингу</i>
-                      <p>Были проблемы со сном, знакомые посоветовали попробовать AFC, но сразу сказали, чтобы почувствовать эффект, нужно минимум 14 дней, решил попробовать. Очень доволен результатом,увеличились показатели в спорте, начал легко просыпаться
-                        по утрам. Рекомендую.</p>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
-                      <h3>Андрей</h3><i>Профессиональный<br>боец Муай Тай</i>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis ab ipsum dolorem culpa. Blanditiis, facere alias voluptates illum veniam aliquam perferendis impedit! Maxime nisi voluptas laboriosam minus, fugit molestiae nihil!</p>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
-                      <h3>Юрий</h3><i>Мастер спорта<br>международного<br>класса по тайскому<br>боксу</i></div>
-                    <div class="swiper-slide">
-                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
-                      <h3>Екатерина</h3><i>Мама двух<br>малышек</i></div>
-                    <div class="swiper-slide">
-                      <div class="swiper-slide-photo"><img data-src="img/review/review-2.png" alt=""></div>
-                      <h3>Андрей</h3><i>Триатлон</i></div>
-                  </div>
-                </div>
-                <div class="swiper-button-prev"><svg class="icon icon-review-arrow "><use xlink:href="../img/sprite.svg#icon-review-arrow"></use></svg></div>
-                <div class="swiper-button-next"><svg class="icon icon-review-arrow "><use xlink:href="../img/sprite.svg#icon-review-arrow"></use></svg></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="review__slide">
+                <div class="review__slide__photo"><img data-src="img/review/pavel-kislov.png" alt=""></div>
+                <h3>Павел Кислов</h3><i>Мастер спорта международного класса по жимовому двоеборью</i><a href="#review-video-modal" rel="modal:open" data-src="https://www.youtube.com/embed/pkQJ2wFcrkw">Смотреть<br>видео-отзыв<span><img src="img/play.svg" alt=""></span></a>
+                <div
+                  class="review__slide__text">
+                  <p>За месяц использовния возросли силовые показатели, выносливость, увеличилась мышечная масса. Организм стал быстрее восстанавливаться.</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!--END Review-->
-      <!--BEGIN  Study-->
-      <section class="section study">
-        <div class="container">
-          <div class="row middle-xs">
-            <div class="col-md-offset-2 col-md-10">
-              <h2>Исследования</h2>
-              <ul>
-                <li><a href="#">Реакция</a></li>
-                <li><a href="#">Стрессоустойчивость</a></li>
-                <li><a href="#">Сосуды</a></li>
-                <li><a href="#">Работоспособность</a></li>
-                <li><a href="#">Скорость восстановления</a></li>
-                <li><a href="#">Память,внимание, восприятие </a></li>
-                <li><a href="#">Риск получения травм</a></li>
-                <li><a href="#">Чистота болезней</a></li>
-              </ul><canvas id="myChart"></canvas></div>
+          <div class="swiper-slide">
+            <div class="review__slide">
+              <div class="review__slide__photo"><img data-src="img/review/evheniya.png" alt=""></div>
+              <h3>Евгения Румянцева</h3><i>Марафонец</i>
+              <div class="review__slide__text">
+                <p>Бег может заполнять пустоту, а может ее создавать. С ощущением опустошённости после бега я столкнулась впервые в прошлом году, когда пробежала 775 км за 16 дней по Пути Сантьяго. В этом году после Тура Гигантов я ощутила ту же самую пустоту,
+                  только в этот раз она сопровождалась ночными кошмарами и постоянной усталостью. В Италии это называют "синдром Тура", а с финишерами Тура работают психологи. Я выкарабкивалась сама, много спала, ходила на массаж и капельницы, а ещё по
+                  совету @michaeldolgy пропила месячный курс концентрата AFC @smartlifebio , который повышает работоспособность. Концентрат плюс мотивация и эффект самовнушения помогли мне влиться в режим тренировок и пробегать по 25-30 км в день через
+                  месяц после Тура. Каждое утро я выпивала концентрат и чувствовала прилив сил и энергии. Этот допинг без допинга помог мне победить в 2-недельном ультрамарафоне в @fitnessmania_mdm и я могу рекомендовать его всем, кто устал, у кого упадок
+                  сил и нежелание двигаться в преддверии зимы.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <!--END Study-->
-      <!--BEGIN  Photos-->
-      <section class="section photos">
-        <div class="container">
-          <div class="row middle-xs">
-            <div class="col-md-offset-2 col-md-10">
-              <h2>Публикации</h2><a href="https://www.instagram.com/smartlifebio/" class="photos__inst">перейти в instagram<svg class="icon icon-inst-arrow "><use xlink:href="../img/sprite.svg#icon-inst-arrow"></use></svg></a>
-              <div id="instafeed" class="center-xs"></div>
+          <div class="swiper-slide">
+            <div class="review__slide">
+              <div class="review__slide__photo"><img data-src="img/review/alexandra.png" alt=""></div>
+              <h3>Александра</h3><i></i>
+              <div class="review__slide__text">
+                <p>Самый опасный период, когда можно подцепить вирус- это межсезонье: весна и осень. В это время года взрослые и дети начинают чаще болеть, снижается работоспособность, ухудшается настроение, пропадает желание лишний раз выходить из дома.
+                  Это легко объясняется- АВИТОМИНОЗ! И если ничего не предпринимать, то состояние только ухудшится. Дети начнут носить двойки, с ревом вставать в сад или школу, взрослые утром будут ненавидеть все вокруг, а после обеда уже начнут впадать
+                  в спячку.</p>
+                <p>Полтора года назад врач моей мамы перед операцией посоветовал начать принимать сильные витамины, чтобы усилить сопротивляемость организма во время реабилитации. Именно тогда в наши руки впервые попали эти чёрные бутылочки с концентратом
+                  AFC.</p>
+                <p>Мы с мамой начали пить за две недели до операции. Что я хочу сказать?</p>
+                <p>Препарат представляет натуральный концентрат без единого химического элемента. Он одобрен Министерством Здравоохранения РФ и на сегодняшний день после клинических испытаний ( а не по субъективным отзывам клиентам) является самым лучшим
+                  средством для поднятия гемоглобина и снижения холестерина в крови. Всего после двух недель применения смело сдавайте анализы и у вашего врача выпадут глаза. Гарантировано.</p>
+                <p>Ни один витаминный комплекс не даст вам лучших показателей за столь короткий срок.</p>
+                <p>Точно могу сказать, что просыпаюсь легко и бодрость чувствую отменную.</p>
+                <p>Мама получила результаты предоперационных анализов. Ну что? Можно в космос, сказали!</p>
+                <p>Разрешено детям с 7 лет для улучшения работоспособности и концентрации внимания.</p>
+                <p>Посмотрите сколько именитых спортсменов рекомендуют этот препарат. И я тоже рекомендую 💯</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review__slide">
+              <div class="review__slide__photo"><img data-src="img/review/tatayna-kostova.png" alt=""></div>
+              <h3>Татьяна Костова</h3><i>Тренер</i>
+              <div class="review__slide__text">
+                <p>Быстро сделала фото для вас. И вот пост о концентрате из сториз.</p>
+                <p>Вот вы часто спрашиваете про витамины и добавки, которые повышают работоспособность, поднимают иммунитет, улучшают качество сна....</p>
+                <p>Этими всеми свойствами обладает это маленькая баночка!</p>
+                <p>Концентрат, повышающий работоспособность «afc» это 16 природных компонентов, специально подобранных в один комплекс для мощного синергического эффекта. </p>
+                <p>Но, я его заказала из-за другой важной функции . Он поднимает гемоглобин в крови за счёт органического железа. А для меня проблема после КС, потому что из роддома выписали с критически низкими показателями гемоглобина.</p>
+                <p>Паша тоже его принимает, т.к. Тяжёлые тренировки, умственная деятельность и недосып( молодой папа все таки) дают о себе знать.</p>
+                <p>Вкратце о основных свойствах концентрата afc:</p>
+                <ul>
+                  <li>-проходят частые головные боли</li>
+                  <li>-повышает гемоглобин (проверка клиническим анализом крови)</li>
+                  <li>-восполнение йода (в концентрате в хелатной форме, усваивается на 95%, химический йод только на 5-10%)</li>
+                  <li>-улучшение цвета кожи</li>
+                  <li>-рост волос, снижение их выпадения</li>
+                  <li>-укрепление ногтей</li>
+                  <li>-восстанавливает биоритмы, помогает при бессоннице</li>
+                  <li>-бодрость утром и энергия на весь день</li>
+                  <li>-улучшение настроения, стрессоустойчивость</li>
+                  <li>-повышение метаболизма</li>
+                  <li>-нормализация работы кишечника</li>
+                  <li>-выносливость на тренировках, повышается мотивация к тренировкам</li>
+                  <li>-снижает чсс❤️ во время тренировок при нагрузке и при восстановлении после нагрузки!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review__slide">
+              <div class="review__slide__photo"><img data-src="img/review/katya.png" alt=""></div>
+              <h3>Катерина</h3><i></i>
+              <div class="review__slide__text">
+                <p>Примерно месяц назад на работе у меня был жуткий завал и сильный стресс. Брат мне порекомендовал пропить концентрат "AFC". Начав его пить по утрам, мое настроение изменилось, переживать стрессовые ситуации на работе стала гораздо легче,
+                  плюс утренние подъемы стали легкими. За месяц я обратила внимание еще на то, что волосы стали меньше выпадать и ногти стали быстрее расти и стали более крепкими, прекратились головные боли, хотя довольно часто были до этого. Так что
+                  через месяц пропью еще курс, чтобы получить сильный иммунитет)))</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review__slide">
+              <div class="review__slide__photo"><img data-src="img/review/diana-dipeshkova.png" alt=""></div>
+              <h3>Диана Пешкова</h3><i></i>
+              <div class="review__slide__text">
+                <p>Девочки, это ЧУДО! Очень хвалю эти баночки. Читайте пост до конца и узнаете, как быть полным сил и энергии. Нам, мамам, это так актуально.</p>
+                <p>Вы, кстати, сколько спите? Хватает или хотелось бы больше?</p>
+                <p>Многие часто спрашивают меня как я всё успеваю, сплю ли я вообще и откуда у меня силы - а бывало всякое: и уставала, и спала плохо, и режим сна из-за перелетов нарушался(</p>
+                <p>Но как только я познакомилась со @smartlifebio, ситуация нормализовалась.</p>
+                <p>В составе концентрата AFC исключительно НАТУРАЛЬНЫЕ компоненты, и что хорошо - нет кофеина, красителей, сахара, глютена и консервантов. Абсолютно органичен и БЕЗВРЕДЕН, а значит, подойдет даже школьникам.</p>
+                <p>Придает сил, повышает жизненный тонус, улучшает память и помогает избежать депрессий!</p>
+                <p>Рекомендую его ВСЕМ, кто ведет активный образ жизни, живет в интенсивном графике, испытывает стрессы, готовится к экзаменам, борется с недосыпами и просто хочет укрепить иммунитет.</p>
+                <p>Познакомиться с ним более детально, узнать полный состав и купить его можно на @smartlifebio </p>
+                <p>Рада, что попробовала такой концентрат по рекомендации друзей, - не пожалела ни разу</p>
+                <p>С ним мне хватает 7 часов отдыха и я снова готова в бой!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review__slide">
+              <div class="review__slide__photo"><img data-src="img/review/marina-vovchenko.png" alt=""></div>
+              <h3>Марина Вовченко</h3><i></i>
+              <div class="review__slide__text">
+                <p>Цветочки, уже как 3 недели принимаю концентрат повышающий работоспособность afc, и результаты сумасшедшие! Энергии у меня стало ещё больше, тренировки проходят намного лучше, мой пульс после нагрузок восстанавливается намного быстрее,
+                  выносливость увеличилась, хотя я сейчас пашу 24/7, марафон, работа, съёмки, дети. Сделан он из 16 природных компонентов, вы же знаете я только за натуралочку, поэтому и решила попробовать! </p>
+                <p>Кстати производитель говорит, что при сниженном гемоглобине нормализует его тк в составе есть органическое железо, я лично не проверяла, так как у меня он всегда был в норме. Что меня ещё порадовало, так это наличие йода, нашей щитовидке
+                  он так нужен для нормальной работы всей гормональной сисиемы и обмена веществ.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review__slide">
+              <div class="review__slide__photo"><img src="img/review/olga-yagnetynskaya.png" alt=""></div>
+              <h3>Ольга Ягнетинская</h3><i>Нутрициолог</i></div>
+            <div class="review__slide__text">
+              <p>Совершенно уникальный по составу продукт, который я недавно попробовала - #afcконцентрат</p>
+              <p>Он создан компанией, которая занимается разработкой оборудования для функциональной диагностики и проверен клиническими исследованиями! </p>
+              <p>Я пью их всего пару недель и заметила, что у меня появилось больше сил на тренировки, нагрузка ощущается легче и нет упадка энергии после занятия, отсутствие головных болей, а, самое приятное, осеннюю меланхолию как рукой сняло производитель
+                обещает через месяц приёма, укрепление ногтей, улучшение цвета лица и остановку осеннего волосопада, что мы и проверим.</p>
+              <p>Всем здоровья!</p>
             </div>
           </div>
         </div>
-      </section>
-      <!--END Photos-->
-      <!--BEGIN  Contact-->
-      <section class="section contact">
-        <div class="contact__left">
-          <div id="contact-1" class="scene__contact--1 scene__contact">
-            <div data-depth="4"><img data-src="img/contact-comp/2.png" alt=""></div>
-          </div><img data-src="img/contact-comp/left.png" alt="" class="img">
-          <div id="contact-2" data-invert-x="false" data-invert-y="false" relativeInput="true" class="scene__contact--2 scene__contact">
-            <div data-depth="2"><img data-src="img/contact-comp/8.png" alt=""></div>
+        <div class="swiper-button-prev"><svg class="icon icon-review-arrow "><use xlink:href="img/sprite.svg#icon-review-arrow"></use></svg></div>
+        <div class="swiper-button-next"><svg class="icon icon-review-arrow "><use xlink:href="img/sprite.svg#icon-review-arrow"></use></svg></div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div id="review-video-modal" style="display: none" class="video-modal"><iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+      <div id="review-text-modal" style="display: none" class="text-modal">
+        <div></div>
+      </div>
+    </section>
+    <!--END Review-->
+    <!--BEGIN  Study-->
+    <section id="study-m" class="section study">
+      <div class="container">
+        <div class="row middle-sm">
+          <div class="col-md-offset-2 col-md-10 hidden-xs">
+            <h2>Влияние AFC на организм</h2>
+            <ul>
+              <li><a>Реакция</a></li>
+              <li><a>Стрессоустойчивость</a></li>
+              <li><a>Сосуды</a></li>
+              <li><a>Работоспособность</a></li>
+              <li><a>Скорость восстановления</a></li>
+              <li><a>Память, внимание, восприятие </a></li>
+              <li class="opacity"><a>Риск получения травм</a></li>
+              <li class="opacity"><a>Частота болезней</a></li>
+            </ul><img src="img/chart.svg" class="svg"></div>
+          <div class="col-xs-12 hidden-sm">
+            <h2>Влияние AFC на организм</h2>
+            <div class="select"><select><option value="0">Выберите исследуемый раздел</option><option value="1">Реакция</option><option value="2">Стрессоустойчивость</option><option value="3">Сосуды</option><option value="4">Работоспособность</option><option value="5">Скорость восстановления</option><option value="6">Память,внимание, восприятие </option><option value="7">Риск получения травм</option><option value="8">Частота болезней</option></select><span></span></div>
+            <img
+              src="img/chart-m.svg" class="svg-m"></div>
+        </div>
+      </div>
+      <div class="study__bottom hidden-xs">
+        <h2>Наши уникальные<br>технологии</h2><a href="#">подробнее</a></div>
+    </section>
+    <!--END Study-->
+    <!--BEGIN  Photos-->
+    <section id="photos-m" class="section photos">
+      <div class="container">
+        <div class="row middle-sm">
+          <div class="col-md-offset-2 col-md-10 col-xs-12">
+            <h2>Публикации</h2><a href="https://www.instagram.com/smartlifebio/" class="hidden-xs photos__inst">перейти в instagram<svg class="icon icon-inst-arrow "><use xlink:href="img/sprite.svg#icon-inst-arrow"></use></svg></a>
+            <div id="instafeed" class="center-xs"><a href="https://www.instagram.com/p/Bej8ty1h27M/?taken-by=smartlifebio" target="_blank"><img src="img/inst/1.jpg" alt=""><div class="black"></div></a><a href="https://www.instagram.com/p/BehgER6hXys/?taken-by=smartlifebio" target="_blank"><img src="img/inst/2.jpg" alt=""><div class="black"></div></a>
+              <a
+                href="https://www.instagram.com/p/Befa0QtBuzX/?taken-by=smartlifebio" target="_blank"><img src="img/inst/3.jpg" alt="">
+                <div class="black"></div>
+                </a><a href="https://www.instagram.com/p/Bec3aPUDM3Q/?taken-by=smartlifebio" target="_blank"><img src="img/inst/4.jpg" alt=""><div class="black"></div></a><a href="https://www.instagram.com/p/BeZrWvmDN_R/?taken-by=smartlifebio" target="_blank"><img src="img/inst/5.jpg" alt=""><div class="black"></div></a>
+                <a
+                  href="https://www.instagram.com/p/BeXF-uwDLRh/?taken-by=smartlifebio" target="_blank"><img src="img/inst/6.jpg" alt="">
+                  <div class="black"></div>
+                  </a>
+            </div>
+            <div class="photos__link hidden-sm"><a href="https://www.instagram.com/smartlifebio/">перейти в instagram</a><span><svg class="icon icon-inst-arrow "><use xlink:href="img/sprite.svg#icon-inst-arrow"></use></svg></span></div>
           </div>
         </div>
-        <div class="contact__right">
-          <div id="contact-3" class="scene__contact--3 scene__contact">
-            <div data-depth="2"><img data-src="img/contact-comp/5.png" alt=""></div>
-          </div>
-          <div id="contact-4" class="scene__contact--4 scene__contact">
-            <div data-depth="2"><img data-src="img/contact-comp/6.png" alt=""></div>
-          </div><img data-src="img/contact-comp/right.png" alt="" class="img">
-          <div id="contact-5" data-invert-x="false" data-invert-y="false" relativeInput="true" class="scene__contact--5 scene__contact">
-            <div data-depth="2"><img data-src="img/contact-comp/3.png" alt=""></div>
-          </div>
-          <div id="contact-6" class="scene__contact--6 scene__contact">
-            <div data-depth="2"><img data-src="img/contact-comp/4.png" alt=""></div>
-          </div>
+      </div>
+    </section>
+    <!--END Photos-->
+    <!--BEGIN  Contact-->
+    <section id="contact-m" class="section contact">
+      <div class="contact__left hidden-xs">
+        <div id="contact-1" class="scene__contact--1 scene__contact">
+          <div data-depth="4"><img data-src="img/contact-comp/2.png" alt=""></div>
+        </div><img data-src="img/contact-comp/left.png" alt="" class="img">
+        <div id="contact-2" data-invert-x="false" data-invert-y="false" relativeInput="true" class="scene__contact--2 scene__contact">
+          <div data-depth="2"><img data-src="img/contact-comp/8.png" alt=""></div>
         </div>
-        <div class="container">
-          <div class="row middle-xs">
-            <div class="col-md-offset-2 col-md-10">
-              <h2>Контакты
-                <div id="contact-7" class="scene__contact--7 scene__contact">
-                  <div data-depth="2"><img data-src="img/contact-comp/1.png" alt=""></div>
-                </div>
-              </h2>
-              <div class="contact__block">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="contact__block__info">
-                      <h3>Телефон:</h3><span>8(900) - 000- 00 - 00</span>
-                      <h3>E-mail:</h3><span>info@gmail.com</span>
-                      <h3>Вы можете связаться с нами любым<br>удобным для Вас способом:</h3>
+      </div>
+      <div class="contact__right hidden-xs">
+        <div id="contact-3" class="scene__contact--3 scene__contact">
+          <div data-depth="2"><img data-src="img/contact-comp/5.png" alt=""></div>
+        </div>
+        <div id="contact-4" class="scene__contact--4 scene__contact">
+          <div data-depth="2"><img data-src="img/contact-comp/6.png" alt=""></div>
+        </div><img data-src="img/contact-comp/right.png" alt="" class="img">
+        <div id="contact-5" data-invert-x="false" data-invert-y="false" relativeInput="true" class="scene__contact--5 scene__contact">
+          <div data-depth="2"><img data-src="img/contact-comp/3.png" alt=""></div>
+        </div>
+        <div id="contact-6" class="scene__contact--6 scene__contact">
+          <div data-depth="2"><img data-src="img/contact-comp/4.png" alt=""></div>
+        </div>
+      </div>
+      <div class="hidden-sm">
+        <div id="contact-1-m" class="scene__contact--1--m scene__contact">
+          <div data-depth="1"><img data-src="img/contact-comp/1-m.png" alt=""></div>
+        </div>
+        <div id="contact-2-m" class="scene__contact--2--m scene__contact">
+          <div data-depth="1"><img data-src="img/contact-comp/2-m.png" alt=""></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row middle-sm">
+          <div class="col-md-offset-2 col-md-10 col-xs-12 center-xs start-sm">
+            <h2>Контакты
+              <div id="contact-7" class="scene__contact--7 scene__contact hidden-xs">
+                <div data-depth="2"><img data-src="img/contact-comp/1.png" alt=""></div>
+              </div>
+            </h2>
+            <div class="contact__block">
+              <div class="row center-xs start-sm">
+                <div class="col-md-6 col-xs-12">
+                  <div class="contact__block__info">
+                    <h3>Телефон:</h3><a href="tel:+79165659194" class="tel">+7(916) 565-91-94</a>
+                    <h3>E-mail:</h3><a href="mailto:info@smartlife.bio" class="mail">info@smartlife.bio</a>
+                    <h3>Вы можете связаться с нами любым<br>удобным для Вас способом:</h3>
+                  </div>
+                  <div class="contact__block__social">
+                    <div class="contact__block__social__block"><a href="tg://resolve?domain=smartlifebio_bot"><svg class="icon icon-telegram "><use xlink:href="img/sprite.svg#icon-telegram"></use></svg></a>
+                      <p>Telegram</p>
                     </div>
-                    <div class="contact__block__social">
-                      <div class="contact__block__social__block"><a href="#"><svg class="icon icon-telegram "><use xlink:href="../img/sprite.svg#icon-telegram"></use></svg></a>
-                        <p>Telegram</p>
-                      </div>
-                      <div class="contact__block__social__block"><a href="#"><svg class="icon icon-whatsapp "><use xlink:href="../img/sprite.svg#icon-whatsapp"></use></svg></a>
-                        <p>WhatsApp</p>
-                      </div>
-                      <div class="contact__block__social__block"><a href="#"><svg class="icon icon-viber "><use xlink:href="../img/sprite.svg#icon-viber"></use></svg></a>
-                        <p>Viber</p>
-                      </div>
+                    <div class="contact__block__social__block"><a href="whatsapp://send?phone=+79165659194"><svg class="icon icon-whatsapp "><use xlink:href="img/sprite.svg#icon-whatsapp"></use></svg></a>
+                      <p>WhatsApp</p>
+                    </div>
+                    <div class="contact__block__social__block"><a href="viber://public?id=smartlifebio"><svg class="icon icon-viber "><use xlink:href="img/sprite.svg#icon-viber"></use></svg></a>
+                      <p>Viber</p>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <h4 class="hidden-xs">ООО «СМАРТЛАЙФ», ИНН 7714977147</h4><a class="btn btn--contact hidden-sm">обратная связь</a>
+                  <div class="contact__block__info hidden-sm">
+                    <h3>Мы в социальных сетях</h3>
+                    <div class="social"><a href="https://www.instagram.com/smartlifebio/"><svg class="icon icon-instagram "><use xlink:href="img/sprite.svg#icon-instagram"></use></svg></a><a href=" https://vk.com/smartlifebio"><svg class="icon icon-vk "><use xlink:href="img/sprite.svg#icon-vk"></use></svg></a>
+                      <a
+                        href="https://www.facebook.com/Smartlifebio-1523077057727677/"><svg class="icon icon-facebook "><use xlink:href="img/sprite.svg#icon-facebook"></use></svg></a><a href="https://www.youtube.com/channel/UCm2VbUPuY5qgYqlZvAKFysg"><svg class="icon icon-youtube "><use xlink:href="img/sprite.svg#icon-youtube"></use></svg></a></div>
+                  </div>
+                  <h4 class="hidden-sm">ООО «СМАРТЛАЙФ», ИНН 7714977147</h4>
+                </div>
+                <div class="col-md-6 hidden-xs">
+                  <div class="home-form">
                     <form>
-                      <h3>Обратная связь</h3><input type="text" placeholder="Имя" required><input type="tel" placeholder="Ваш телефон" required><input type="text" placeholder="Ваш комментарий"><input id="checkbox" type="checkbox" class="checkbox"><label for="checkbox"
-                        class="label"></label><label for="checkbox" class="label-for">Я прочитал и согласен <a href="#">на обработку персональных данных</a> на сайте smartlife.bio  </label><input type="submit" value="отправить"></form>
+                      <h3>Обратная связь</h3><input type="text" placeholder="Имя" required><input type="tel" placeholder="Ваш телефон" required><input type="email" placeholder="E-mail" required><input id="comment" type="text" placeholder="Ваш комментарий">
+                      <input
+                        id="checkbox" type="checkbox" checked class="checkbox"><label for="checkbox" class="label"></label><label for="checkbox" class="label-for">Я прочитал и согласен <a href="#">на обработку персональных данных</a> на сайте smartlife.bio  </label><input type="submit" value="отправить"></form>
+                    <div
+                      class="response">
+                      <p>Спасибо! Ваши данные успешно отправлены.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!--END Contact-->
-
+      </div><a href="https://excv.ru/?utm_sourse=smartlife.bio" class="copyright hidden-xs"><img src="img/footer-logo.svg" alt=""></a></div>
+      <footer class="footer hidden-sm">
+        <div class="container">
+          <div class="row middle-xs">
+            <div class="col-xs-6">
+              <p>© 2017 Smartlifebio</p>
+            </div>
+            <div class="col-xs-6 end-xs"><a href="https://excv.ru/?utm_sourse=smartlife.bio"><img src="img/footer-logo.svg" alt=""></a></div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!--END Contact-->
+    </div>
+    <div class="contact__form">
+      <div class="btn-close"><span></span></div>
+      <form>
+        <h3>Обратная связь</h3>
+        <div class="form-element"><input id="name" type="text" name="name" required autocomplete="off"><label for="name">Ваше имя</label></div>
+        <div class="form-element"><input id="phone" type="tel" name="phone" required autocomplete="off"><label for="phone">Телефон</label></div>
+        <div class="form-element"><input id="email" type="email" name="email" required autocomplete="off"><label for="email">E-mail</label></div><textarea placeholder="Ваш комментарий"></textarea><input id="checkbox-m" type="checkbox" class="checkbox"><label for="checkbox-m" class="label"></label>
+        <label
+          for="checkbox-m" class="label-for">Я принимаю условия <a href="#">передачи</a> информации </label><input type="submit" value="отправить"></form>
+    </div>
+    <div class="conclusion__consist study-popup"><a href="index.html" class="head__top__logo"><img src="img/logo/logo-white.svg" alt="Логотип"></a>
+      <div class="btn-close"></div>
+      <div class="conclusion__consist__block">
+        <div class="row">
+          <div class="col-sm-7 col-sm-offset-3 col-xs-12">
+            <h2>Наши уникальные технологии</h2><img src="img/study/check-big.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up pop-up-game"><a href="index.html" class="head__top__logo"><img src="img/logo/logo-white.svg" alt="Логотип"></a>
+      <div class="pop-up__block">
+        <div class="btn-close"></div>
+        <div class="row center-xs pop-up__block__cont">
+          <div class="col-xs-9">
+            <h2>А ты знаешь свою реакцию?</h2>
+            <h2>Проверь бесплатно на online-тренажоре</h2>
+            <p>займет не более 1 минуты</p><a href="#" class="btn__left">Да, хочу</a><a href="#" class="btn__right">Нет, спасибо</a></div>
+        </div>
+        <div id="gamecontainer" style="width: 100%;max-width: 400px;margin: 75px auto;padding: 0; height: 400px;">
+          <div id="gamefield" style="position: relative;width:100%; background-color: rgb(0, 250, 0); color: rgb(50, 50, 50); border: 5px solid rgb(0, 220, 0); border-radius: 5px;">
+            <div id="gameoutput" style="width: 300px;margin: 0px auto; font-size: 18px;text-align:center;">
+              <div id="currentTime" style="padding-top: 64px; font-size: 65px; color: #343434;"></div><button id="startBtn" class="myButton">НАЧАТЬ ИГРУ</button><button id="playAgain" class="myButton">НОВАЯ ИГРА</button>
+              <div id="instaction" style="font-size: 23px;">Чтобы измерить скорость реакции нужно как можно быстрее нажать когда цвет фона станет красным. Желтый цвет промежуточный и означает что игра запущена</div>
+              <div id="gameResult"></div>
+            </div>
+          </div>
+        </div>
+        <div style="display: none" class="row center-xs pop-up__block__cont pop-up__block__form">
+          <div class="col-xs-10">
+            <p class="thanks">Результат теста придет на Ваш<br>e-mail в течении 5 минут</p>
+          </div>
+          <div class="col-xs-8">
+            <form action="game.php" method="post" class="form-game"><input type="hidden" name="game" class="game"><input type="text" name="name" placeholder="Введите Ваше имя "><input type="tel" name="phone" placeholder="Телефон"><input type="email" name="email" placeholder="E-mail"><input type="submit" value="получить бесплатно"
+                class="submit"></form>
+          </div>
+        </div>
+        <div style="display: none" class="pop-up__block__result">
+          <div class="row center-xs">
+            <div class="col-xs-12">
+              <p class="thanks thanks--2">Спасибо, в течении 5 минут<br>результаты придут Вам на e-mail</p>
+            </div>
+            <div class="col-xs-12"><a href="index.html" class="submit__home">на главную</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up pop-up-checkout"><a href="index.html" class="head__top__logo"><img src="img/logo/logo-white.svg" alt="Логотип"/></a>
+      <div class="pop-up__block">
+        <div class="btn-close"></div>
+        <div class="row center-xs pop-up__block__cont">
+          <div class="col-xs-9">
+            <h2>Для заказа Вы можете связаться с нами любым удобным способом:</h2>
+            <div class="contact__block__social">
+              <div class="contact__block__social__block"><a href="tg://resolve?domain=smartlifebio_bot"><svg class="icon icon-telegram "><use xlink:href="img/sprite.svg#icon-telegram"></use></svg></a>
+                <p>Telegram</p>
+              </div>
+              <div class="contact__block__social__block"><a href="whatsapp://send?phone=+79165659194"><svg class="icon icon-whatsapp "><use xlink:href="img/sprite.svg#icon-whatsapp"></use></svg></a>
+                <p>WhatsApp</p>
+              </div>
+              <div class="contact__block__social__block"><a href="viber://public?id=smartlifebio"><svg class="icon icon-viber "><use xlink:href="img/sprite.svg#icon-viber"></use></svg></a>
+                <p>Viber</p>
+              </div>
+            </div>
+            <div class="contact__block__social">
+              <div class="contact__block__social__block"><a href="https://vk.com/write-158355927"><svg class="icon icon-vk "><use xlink:href="img/sprite.svg#icon-vk"></use></svg></a>
+                <p>VK</p>
+              </div>
+              <div class="contact__block__social__block"><a href="https://www.facebook.com/smartlifebio1/?ref=bookmarks"><svg class="icon icon-facebook "><use xlink:href="img/sprite.svg#icon-facebook"></use></svg></a>
+                <p>FaceBook</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--LOAD SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script>
+      svg4everybody();
+
+    </script>
   </body>
 
 </html>

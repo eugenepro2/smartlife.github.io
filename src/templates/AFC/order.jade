@@ -1,16 +1,18 @@
 section.order
 	.container
-		.row
-			.col-md-5.middle-md
+		.row.start-sm.center-xs
+			.col-md-5.middle-md.col-xs-10
 				h2 НЕ УПУСТИ ВОЗМОЖНОСТЬ, ПОПРОБУЙ И ОЩУТИ ИЗМЕНЕНИЯ<br> ЗА 2 НЕДЕЛИ 
 				.order__block
-					span -30%
-					p со скидкой
-				a(href="#").btn попробовать
-section.footer
+					span комплекс
+					p AFC + IBC
+				//a(href="checkout.html" data-cookie="afcibc").btn попробовать
+				a(data-checkout data-cookie="afcibc").btn попробовать
+footer.footer
 	.container
-		.row
-			.col-md-6
+		.row.middle-xs
+			.col-xs-6
 				p © 2017 Smartlifebio
-			.col-md-6.end-md
-				img(src="img/afc-landing-svg/footer-logo.svg", alt="")
+			.col-xs-6.end-xs
+				a(href="https://excv.ru/?utm_sourse=smartlife.bio")
+					img(src="img/footer-logo.svg", alt="")

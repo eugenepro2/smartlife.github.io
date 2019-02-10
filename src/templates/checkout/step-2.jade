@@ -1,27 +1,33 @@
 .step-2#step-2.checkout__step(style="display: none")
+  .step__m__top.hidden-sm
+    p
+      b ШAГ 2. 
+      | Контактные данные
   .container
     .row
-      .col-md-offset-2.col-md-10
+      .col-md-offset-2.col-md-10.col-xs-12 
         .step__contact
-          h2 Контактные данные
-          .form-element
-            input#name(type="text" name="name" required autocomplete="off")
-            label(for="name") Ваше имя и отчество*
+          h2.hidden-xs Контактные данные
+          h2.hidden-sm Введите личные данные:
           .form-element
             input#lastname(type="text" name="lastname" required autocomplete="off")
             label(for="lastname") Ваша фамилия*
           .form-element
-            input#tel(type="tel" required autocomplete="off")
+            input#name(type="text" name="name" required autocomplete="off")
+            label(for="name") Ваше имя и отчество*
+          .form-element
+            input#tel(type="tel" name="phone" required autocomplete="off")
             label(for="tel") Телефон*
           .form-element
             input#email(type="email" name="email" required autocomplete="off") 
             label(for="email") E-mail*
           i * Обязательные поля для заполнения 
         .step__address
-          h2 Адрес
+          h2.hidden-xs Адрес
+          h2.hidden-sm Введите адрес:
           .form-element
             input#city(type="text" name="city" required autocomplete="off")
-            label(for="city") Страна и город *
+            label(for="city") Страна и город*
           .form-element
             input#street(type="text" name="street" required autocomplete="off")
             label(for="street") Улица*
@@ -30,17 +36,24 @@
             label(for="house") Дом / корпус*
           .form-element
             input#room(type="text" name="room" required autocomplete="off")
-            label(for="room") Квартира
-          textarea(name="comment" placeholder="Комментарий к заказу. Например: “Подьезд 9”, “Оставить к консъержа” и т.д.")
+            label(for="room") Квартира*
+          textarea#comment(name="comment" placeholder="Комментарий к заказу. Например: “Подьезд 9”, “Оставить к консъержа” и т.д.")
         .step__checkbox
           input#checkbox.checkbox(type="checkbox")
           label.label(for="checkbox")
           label.label-for(for="checkbox") Я прочитал и согласен <a href="#">с условиями оформления и оплаты заказа</a> на сайте smartlife.bio  
-  .step__bottom.flex.center-xs
+  .step__bottom.flex.center-xs.hidden-xs
     .step__bottom__block  
-      p 
+      p
         b ШАГ 2.
         | Контактные данные и адрес:
         span 5890
-        +icon('ruble')
+        .ruble ₽
       a.btn.next.next-3(href="#step-3") Далее
+  a(href="#step-2").step__m__bottom.next-3.hidden-sm
+    p (
+      i итого:
+      span 4990
+      i.ruble ₽
+      | ) 
+      b ДАЛЕЕ 

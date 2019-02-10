@@ -1,12 +1,60 @@
 .conclusion
 	padding-bottom: 40px
+	padding-top: 70px
+	+r(640)
+		padding-top: 60px
+	.row
+		position: relative
+		z-index: 9
+	&__top
+		position: absolute
+		top: -150px
+		right: 80px
+		background: url('../img/ibc-landing-svg/better.svg') no-repeat
+		background-size: 96% 107%
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 390px
+		height: 170px
+		+r(640)
+			display: none
+		
+		h3
+			font-size: 24px
+			padding: 50px 100px 10px
+			font-weight: 500
+			text-transform: uppercase
+			position: relative
+			letter-spacing: 2px
+			&:before
+				content: ''
+				position: absolute
+				right: 20px
+				top: 20px
+				width: 70px
+				height: 100px
+				background: url('../img/ibc-landing-svg/better-arrow.svg') no-repeat
+				transform: rotate(-10deg)
+		.btn
+			background: #2e6b67
+			margin-bottom: 40px
+			padding: 15px 60px
+			border: 1px solid $dark-grey-blue-two
+			&:hover
+				background: transparent
+				color: $dark-grey-blue-two
 	h2
 		font-size: 24px
 		font-weight: 500
 		padding-bottom: 50px
-		padding-top: 70px
 		text-transform: uppercase
 		position: relative
+		left: -30px
+		letter-spacing: 2.2px
+		+r(640)
+			font-size: 30px
+			left: 20px
 		&:before
 			content: ''
 			width: 320px
@@ -14,11 +62,22 @@
 			background-image: url("../img/ibc-landing-svg/arrow-2.svg")
 			background-repeat: no-repeat
 			position: absolute
-			left: 23%
-			top: -70px
+			left: 8%
+			top: -140px
+			+r(640)
+				content: ''
+				background-image: url('../img/ibc-landing-svg/conclusion-mobile-arrow.svg')
+				background-repeat: no-repeat
+				position: absolute
+				left: 70%
+				top: -20px
+				width: 200px
+				height: 50px
 	&__content
 		display: flex
 		justify-content: center
+		+r(640)
+			display: none
 		&__left, &__right
 			width: 480px
 			p
@@ -53,6 +112,81 @@
 				position: relative
 				left: -50px
 				top: -20px
+	&__mobile
+		display: none
+		+r(640)
+			display: flex
+		.btn
+			padding: 25px 0
+			width: 90%
+			background: #2e6b67
+			height: 80px
+			font-size: 24px
+			letter-spacing: 2.4px
+			font-weight: 400
+			border: 2px solid #2e6b67
+			&:hover
+				background: #ffffff
+			&-1
+				margin-top: 40px
+				margin-bottom: 100px
+		h2.mobile
+			left: -20px
+			&:before
+				content: ''
+				background: url('../img/ibc-landing-svg/conclusion-mobile-arrow.svg') no-repeat
+				position: absolute
+				left: -90%
+				top: -64px
+				width: 200px
+				height: 50px
+				transform: rotateY(180deg)
+	&__consist__block
+		+r(640)
+			margin-top: 100px
+			padding: 0 40px
+			h4
+				padding-right: 20px
+				font-size: 24px
+			p
+				font-size: 24px !important
 
 
-
+.conclusion__parallax
+	position: absolute
+	top: 0
+	z-index: 3
+	width: 100%
+	height: 100%
+#conclusion-1
+	z-index: 6
+	top: 37%
+	left: 0px
+	+r(640)
+		top: 22%
+		left: 17%
+		img
+			width: 65px
+#conclusion-2
+	z-index: 6
+	top: -18%
+	left: -2%
+	+r(640)
+		top: 5%
+		left: -7%
+		img
+			transform: rotate(-50deg)
+			width: 120px
+#conclusion-3
+	z-index: 6
+	left: 64%
+	top: -3%
+	+r(640)
+		display: none
+#conclusion-4
+	z-index: 6
+	left: 81%
+	top: -28%
+	+r(640)
+		top: -91%
+		left: 70%

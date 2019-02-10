@@ -1,4 +1,12 @@
 //BEGIN sidebar
+header.header.hidden-sm
+  .container
+    .row
+      .col-xs-12.center-xs
+        .header__logo
+          img(src="img/logo/logo.svg", alt="Логотип")
+  .open-menu
+    span
 aside.sidebar
   a(href="index.html").sidebar__logo
     img(src="img/logo/logo.svg", alt="Логотип")
@@ -14,9 +22,36 @@ aside.sidebar
         li(data-menuanchor="review")
           a(href="#review") Отзывы
         li(data-menuanchor="study")
-          a(href="#study") Исследования
+          a(href="#study") Влияние AFC
         li(data-menuanchor="photos")
           a(href="#photos") Публикации
         li(data-menuanchor="contact")
           a(href="#contact") Контакты
 //END sidebar
+
+.mobile-menu.hidden-sm
+  nav
+    ul
+      li.fadeInLeft.animated(data-menuanchor="home" style="animation-delay: 0.2s")
+        a(href="#") Главная
+      li.fadeInLeft.animated(data-menuanchor="afc" style="animation-delay: 0.3s")
+        a(href="#afc-m") AFC
+      li.fadeInLeft.animated(data-menuanchor="ibc" style="animation-delay: 0.4s")
+        a(href="#ibc-m") IBC
+      li.fadeInLeft.animated(data-menuanchor="review" style="animation-delay: 0.5s")
+        a(href="#review-m") Отзывы
+      li.fadeInLeft.animated(data-menuanchor="study" style="animation-delay: 0.6s")
+        a(href="#studyv") Влияние AFC
+      li.fadeInLeft.animated(data-menuanchor="photos" style="animation-delay: 0.7s")
+        a(href="#photos-m") Публикации
+      li.fadeInLeft.animated(data-menuanchor="contact" style="animation-delay: 0.8s")
+        a(href="#contact-m") Контакты
+  .social
+    a(href="https://www.instagram.com/smartlifebio/")
+      +icon('instagram')
+    a(href="https://vk.com/smartlifebio")
+      +icon('vk')
+    a(href="https://www.facebook.com/Smartlifebio-1523077057727677/")
+      +icon('facebook')
+    a(href="https://www.youtube.com/channel/UCm2VbUPuY5qgYqlZvAKFysg")
+      +icon('youtube')

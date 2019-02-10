@@ -71,6 +71,13 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
-    "chart.js": "^2.7.1"
+    "chart.js": "^2.7.1",
+    "jquery-modal": "^0.9.1",
+    "js-cookie": "^2.2.0",
+    "jsrender": "^0.9.90",
+    "readmore-js": "^2.1.0",
+    "snapsvg": "^0.5.1",
+    "svg4everybody": "^2.1.9",
+    "tether-select": "^1.1.0"
   }
 }

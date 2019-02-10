@@ -1,16 +1,37 @@
 .review
   background: #e8e8e8
+  +r(640)
+    background: #ffffff
+    position: relative
+  +r(640)
+    &:before
+      content: ''
+      background: url('/img/separator-m-white.svg') no-repeat
+      width: 100%
+      height: 112px
+      top: -15px
+      position: absolute
   h2
+    margin-top: 60px
     margin-bottom: 40px
+    +r(640)
+      font-size: 30px
+      text-align: center
   &__slide
     margin-bottom: 20px
     padding-left: 20px
     position: relative
+    +r(640)
+      padding-left: 0
     &__photo
       width: 320px
       height: 300px
       overflow: hidden
       background-size: cover
+      +r(640)
+        width: 450px
+        height: 410px
+        margin-bottom: 20px
       img
         width: 100%
     &__block
@@ -31,8 +52,13 @@
         font-size: 16px
         font-weight: 500
         color: $black-two
-        margin-bottom: 50px
         max-width: 500px
+        & + a
+          position: static
+          color: $dark-grey-blue-two
+          display: inline-block
+          font-size: 16px
+          text-transform: none
       a
         font-size: 18px
         font-weight: 600
@@ -58,27 +84,40 @@
           transition: all 0.3s
           background-size: 200% 200%
           animation: Gradient 5s ease infinite
+      &__text
+        display: none
   .review__s
     overflow: hidden
     position: relative
     width: 900px
   .swiper-container
     width: 750px
+    +r(640)
+      width: initial
   .swiper-slide
     padding-top: 50px
     text-align: center
     cursor: pointer
+    +r(640)
+      text-align: left
+      padding-top: 0
     &-photo
       position: relative
     img
-      width: 110px
+      width: 100px
       height: 100px
       position: relative
       z-index: 10
+      +r(640)
+        width: 100%
+        height: initial
     h3
       font-size: 16px
       color: $black-two
       font-weight: 600
+      +r(640)
+        font-size: 24px
+        font-weight: 500
     i
       margin-top: 5px
       color: $warm-grey
@@ -86,27 +125,113 @@
       display: block
       font-style: italic
       font-weight: 500
+      +r(640)
+        margin-top: 0
+        font-size: 18px
+        margin-bottom: 40px
     p
       display: none
+      +r(640)
+        display: block
+        font-size: 24px
+    ul
+      font-size: 24px
+    a
+      display: none
+    a
+      font-size: 18px
+      font-weight: 600
+      color: $greeny-blue
+      display: block
+      cursor: pointer
+      letter-spacing: 1.8px
+      text-transform: uppercase
+      position: absolute
+      top: 105px
+      right: 0
+      z-index: 10
+      transition: all 0.3s
+      +r(640)
+        font-size: 24px
+      &:hover
+        color: $dark-grey-blue-two
+      span
+        position: absolute
+        top: -105px
+        left: 0px
+        width: 75px
+        height: 75px
+        border-radius: 50%
+        padding: 5px
+        background-image: linear-gradient(to right, #32d6c1 37%, #284a41)
+        transition: all 0.3s
+        background-size: 200% 200%
+        animation: Gradient 5s ease infinite
     &:hover
       animation-name: pulse
       animation-duration: .75s
       animation-fill-mode: both
+      +r(640)
+        animation-name: none
+  .swiper-slide-text-big
+    display: none
   .swiper-button
-    &-prev
-      transform: rotate(180deg)
-    &-next
-      transform: translateY(3px)
     &-prev, &-next
       background: transparent
       height: inherit
       opacity: 1
-      top: 100px
+      left: initial
+      margin-top: 0
+      +r(640)
+        z-index: 100
+        right: -6px
       .icon
         width: 34px
         height: 34px
         fill: #ffffff
         transition: all 0.3s
+        +r(640)
+          fill: #000000
+          width: 60px
+          height: 60px
       &:hover
         .icon
           fill: #000000
+    &-prev
+      transform: rotate(180deg)
+      +r(640)
+        top: 200px
+    &-next
+      transform: translateY(3px)
+      +r(640)
+        right: 20px
+        top: 350px
+
+
+.text-modal
+  box-shadow: none
+  padding: 20px
+  max-width: 720px
+  border-radius: 0
+  .close-modal
+    top: -20px !important
+    right: -30px !important
+  div
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    height: 100%
+    p
+      margin-bottom: 10px
+    b
+      font-weight: 600
+
+
+.review .swiper-slide a.more, .review .swiper-slide a.less
+  position: static
+  display: block
+  text-align: center
+  text-transform: none
+  margin-top: 20px
+  margin-bottom: 20px

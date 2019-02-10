@@ -1,5 +1,7 @@
 .step-1
 	margin-top: 100px
+	+r(640)
+		margin-top: 0
 	.step
 		border: 1px dashed transparent
 		&__delete
@@ -67,7 +69,9 @@
 			display: flex
 			flex-wrap: wrap
 			position: relative
-			padding: 50px 0
+			padding: 50px 20px
+			+r(640)
+				padding: 0 80px
 			&__left
 				width: 45%
 			&__right
@@ -102,7 +106,7 @@
 				font-style: italic
 				color: $dark-grey-blue-two
 			img
-				width: 155px
+				width: 140px
 				position: absolute
 				top: -40px
 				left: 20px
@@ -212,6 +216,10 @@
 			margin-top: 20px
 			margin-bottom: 140px
 			position: relative
+			+r(640)
+				margin-top: 50px
+				margin-bottom: 50px
+				padding: 0 80px
 			&__photo
 				width: 440px
 				position: relative
@@ -271,16 +279,33 @@
 		opacity: 0.5
 	&.step
 		border: 1px dashed $pinkish-grey
+		+r(640)
+			border: none
 	.step
 		&__delete
 			display: none
 		&__add
 			display: block
 			pointer-events: inherit
+		&__m
+			&__add
+				margin-top: 50px
+				pointer-events: initial !important
+				span
+					color: #ffffff !important
+				&:before
+					color: #ffffff !important
 	.step__photo--gray
 		display: block
 	.step__photo--normal
 		display: none
+	
+.step-1--ibc.first-xs
+	.step__ibc
+		margin-bottom: 40px
+.step-1--afc.last-xs
+	.step__afc
+		margin-bottom: 140px
 
 
 .error
@@ -293,6 +318,8 @@
 	font-style: italic
 	color: $dark-grey-blue-two
 	transition: all 0.3s
+	+r(640)
+		font-size: 24px
 	&.active
 		visibility: visible
 		opacity: 1
@@ -319,7 +346,6 @@
 			font-weight: 300
 			text-transform: uppercase
 			letter-spacing: 0.9px
-			margin-right: 50px
 			b
 				padding-right: 7px
 				font-weight: 600
@@ -327,15 +353,291 @@
 				margin-left: 10px
 				font-size: 30px
 				display: inline-block
-				margin-right: 6px
-			.icon
-				width: 17px
-				height: 20px
-				fill: #ffffff
+				margin-right: 4px
+		.ruble
+			font-size: 29px
+			font-weight: 300
+			color: #ffffff
+			margin-right: 30px
 				
 
 .stop
 	pointer-events: none
 	opacity: 0.5
 
-			
+
+
+
+.step__m
+	.steps
+		display: flex
+		flex-direction: column
+	.container
+		padding: 0
+	&__add
+		width: 100%
+		height: 80px
+		background: #f64869
+		color: #ffffff
+		display: none
+		position: relative
+		padding: 25px
+		padding-left: 80px
+		span
+			letter-spacing: 2.4px
+			font-size: 24px
+			padding-left: 40px
+		&:before
+			content: '+'
+			position: absolute
+			font-size: 24px
+			top: 50%
+			transform: translateY(-50%)
+			left: 70px
+	&__delete
+		background: #e8e8e8
+		width: 60px
+		height: 60px
+		display: flex
+		justify-content: center
+		align-items: center
+		.icon
+			width: 25px
+			height: 25px
+			fill: #f64869
+	&__top
+		position: relative
+		top: 0
+		height: 112px
+		display: flex
+		justify-content: center
+		align-items: center
+		p
+			font-size: 30px
+			text-transform: uppercase
+			letter-spacing: 1.5px
+		b
+			font-weight: 600
+		&:before
+			content: ''
+			background: url('/img/separator-m.svg') no-repeat
+			width: 100%
+			height: 108px
+			top: 0px
+			z-index: -1
+			position: absolute
+			transform: scale(1, 1) rotate(180deg)
+	&__bottom
+		position: relative
+		height: 110px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: $dark-grey-blue-two
+		text-decoration: none
+		p
+			font-size: 30px
+			letter-spacing: 1.5px
+			color: #ffffff
+			font-weight: 600
+		i
+			font-size: 24px
+			font-style: normal
+		span
+			padding-left: 10px
+		.ruble
+			font-size: 29px
+			font-weight: 300
+			padding: 0 5px 0 2px
+			color: #ffffff
+		b
+			font-weight: 600
+			font-weight: 400
+			color: #ffffff
+		&:before
+			content: ''
+			background: url('/img/separator-m-green.svg') no-repeat
+			width: 100%
+			height: 115px
+			bottom: 10px
+			z-index: -1
+			position: absolute
+			transform: scale(-1, -1) rotate(180deg)
+	&__block
+		display: flex
+		flex-wrap: wrap
+		margin-top: 40px
+		h2
+			font-size: 24px
+			font-weight: 500
+			letter-spacing: 1.8px
+			position: relative
+			padding-left: 0px
+			text-transform: none
+			width: 87%
+			margin-top: 0 !important
+			span
+				width: 40px
+				height: 40px
+				background: #e8e8e8
+				font-size: 24px
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 50%
+				position: absolute
+				top: 5px
+				left: -55px
+		&__photo
+			display: flex
+			justify-content: center
+			img
+				width: 350px
+				height: 350px
+	&__set
+		margin-bottom: 50px
+		p
+			font-size: 24px
+			font-weight: 500
+			color: $brownish-grey
+			margin-bottom: 30px
+		.select
+			position: relative
+			select
+				border: 2px solid $warm-grey
+				background: none
+				font-size: 24px
+				font-weight: 600
+				letter-spacing: 2.5px
+				color: $dark-grey-blue-two
+				width: 100%
+				height: 80px
+				border-radius: 0
+				padding: 22px
+			span
+				background: url(/img/checkout/select-arrow.svg) no-repeat
+				width: 35px
+				height: 35px
+				position: absolute
+				top: 50%
+				transform: translateY(-50%) rotate(90deg)
+				right: 30px
+	&__smack
+		p 
+			font-size: 24px
+			font-weight: 500
+			color: $brownish-grey
+			margin-bottom: 30px
+		&__block:nth-of-type(1)
+			.icon
+				fill: #f64869
+				width: 70px
+				height: 60px
+				margin-right: 25px
+			span  
+				color: #f64869
+		&__block:nth-of-type(2)
+			.icon
+				fill: #7ac1b0
+			span  
+				color: #7ac1b0
+		&__block:nth-of-type(3)
+			.icon
+				fill: #554142
+			span  
+				color: #554142
+		&__block:nth-of-type(4)
+			.icon
+				fill: #842819
+			span  
+				color: #842819
+		&__block
+			border-bottom: 1px solid #e8e8e8
+			display: flex
+			justify-content: space-between
+			padding: 25px 0
+			&__icon
+				display: flex
+				align-items: center
+				width: 225px
+				.icon
+					width: 55px
+					height: 60px
+					margin-right: 40px
+				span
+					font-size: 23.7px
+					font-weight: 600
+					letter-spacing: 2.4px
+			&__calc
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				div
+					background-color: #e8e8e8
+					width: 60px
+					height: 60px
+					text-align: center
+					font-size: 36px
+					font-weight: 600
+					line-height: 0.8
+					letter-spacing: 2.3px
+					color: $dark-grey-blue-two
+					cursor: pointer
+					&:hover
+						background: $dark-grey-blue-two
+						color: #ffffff
+				.substract
+					line-height: 0.8
+					touch-action: manipulation
+					&:before
+						content: '_'
+						position: relative
+						left: 1px
+					&:hover
+				input
+					width: 60px
+					height: 60px
+					margin: 0 20px
+					border: 1px solid  $pinkish-grey
+					font-size: 24px
+					font-weight: 600
+					text-align: center
+					-webkit-appearance: none
+					letter-spacing: 1.2px
+				.add
+					line-height: 1.6
+					touch-action: manipulation
+					&:before
+						content: '+'
+						position: relative
+						left: 1px
+		&__ibc
+			width: 300px
+			height: 75px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 2px solid $warm-grey
+			margin-bottom: 50px
+			.icon
+				fill: #f64869
+				width: 50px
+				height: 42px
+			span
+				font-size: 23.7px
+				font-weight: 500
+				letter-spacing: 2.4px
+				color: #f64869
+				padding-left: 20px
+
++r(640)
+	.step__afc.last-xs 
+		margin-bottom: 50px
+		.step__m__add
+			margin-top: 0 !important
+	.step__ibc
+		margin-top: 0 !important
+		.select
+			width: 300px
+			select
+				width: 300px

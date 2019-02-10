@@ -1,13 +1,69 @@
 .ibc
 	background: #e8e8e8
 	position: relative
+	+r(640)
+		height: 1400px
+		margin-top: 40px
+	+r(640)
+		&:before
+			content: ''
+			background: url('/img/separator-m.svg') no-repeat
+			width: 100%
+			height: 112px
+			top: -15px
+			position: absolute
+			transform: scale(-1, 1)
+		&:after
+			content: ''
+			background: url('/img/separator-m.svg') no-repeat
+			width: 100%
+			height: 112px
+			bottom: -15px
+			position: absolute
+			transform: scale(1, -1)
+			z-index: -1
 	h2
+		+r(640)
+			font-size: 30px
+			text-align: center
 		span
 			margin-top: 10px
 			font-size: 16px
 			text-transform: none
 			display: block
 			letter-spacing: 1.2px
+			+r(640)
+				font-size: 18px
+	&__photo
+		margin-top: 50px
+		margin-bottom: 100px
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		&__ibc
+			width: 400px
+			height: 550px
+			position: relative
+			top: 70px
+			left: 30px
+			img
+				width: 100%
+		&__line
+			&--1
+				position: absolute
+				bottom: 20px
+				left: -80px
+				transform: rotate(-100deg)
+				img
+					width: 300px
+			&--2
+				position: absolute
+				bottom: -55px
+				right: -25px
+				transform: rotate(-90deg) scaleY(-1)
+				img
+					width: 205px
 	&__advantages
 		margin-top: 50px
 		&__block
@@ -15,58 +71,216 @@
 			font-size: 16px
 			color: $brownish-grey
 			position: relative
+			+r(640)
+				font-size: 24px
 			img
 				position: absolute
 			&--1
 				margin-left: 85px
 				margin-bottom: 50px
+				+r(640)
+					margin-left: 0
+					margin-bottom: 20px
 				img
 					width: 305px
 					top: -20px
 					right: 42px
+					+r(640)
+						display: none
 			&--2
-				margin-bottom: 25px
+				margin-bottom: 15px
+				+r(640)
+					margin-left: 0
+					margin-bottom: 20px
 				img
 					width: 200px
 					right: 45px
 					top: -7px
+					+r(640)
+						display: none
 			&--3
-				margin-left: 220px
-				margin-bottom: 30px
+				margin-left: 90px
+				margin-bottom: 10px
+				+r(640)
+					margin-left: 0
+					margin-bottom: 20px
 				img
 					width: 150px
-					right: 50px
+					right: 90px
 					top: -35px
+					+r(640)
+						display: none
+			&--4
+				margin-left: 300px
+				margin-bottom: 30px
+				+r(640)
+					margin-left: 0
+					margin-bottom: 20px
+				img
+					width: 100px
+					right: 90px
+					top: -45px
+					+r(640)
+						display: none
+			+r(640)
+				br
+					display: none
 	&__info
 		width: 500px
 		margin-bottom: 50px
+		font-size: 24px
+		+r(640)
+			width: 407px
+			position: absolute
+			left: 20px
 		img
 			width: 100%
 	&__price
 		display: flex
+		position: relative
+		+r(640)
+			margin-top: 100px
+			flex-direction: row-reverse
+			.btn
+				color: $dark-grey-blue-two
+				border: 1px solid $dark-grey-blue-two
+				width: 310px
+				font-size: 24px
+				padding: 25px 40px
+			.btn--white
+				margin-right: 0
+				margin-left: 18px
+				background: $dark-grey-blue-two
+				color: #ffffff
+				border: 1px solid $dark-grey-blue-two
+				width: 230px
 		&__block
 			margin-right: 15px
+			+r(640)
+				position: absolute
+				top: -70px
 			p
 				font-size: 14px
 				color: $black-two
+				+r(640)
+					display: none
 			h3
 				color: $dark-grey-blue-two
 				font-size: 16px
 				font-weight: 500
+				+r(640)
+					width: 185px
+					font-size: 24px
+					font-weight: 600
 				span
 					font-size: 36px
 					margin-left: 2px
-				.icon
-					display: inline-block
-					fill: $dark-grey-blue-two
-					width: 20px
-					height: 23px
-					margin-left: 5px
+					+r(640)
+						font-size: 48px
+						font-weight: 600
+				.ruble
+					font-weight: 500
+					font-size: 34px
+					+r(640)
+						font-size: 44px
+						font-weight: 300 !important
 	&__comp
-		width: 560px
+		width: 500px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0px
+		+r(640)
+			position: relative
+			right: 45px
 		img
-			width: 560px
+			width: 500px
+			+r(640)
+				width: 450px
+		&__scene
 			position: absolute
-			top: 50%
-			transform: translateY(-50%)
-			right: -40px
+			img
+				width: 100%
+				+r(640)
+					width: 100%
+		#ibc-1, #ibc-1-m
+			top: 20px
+			left: 40px
+			div
+				width: 120px
+		#ibc-2, #ibc-2-m
+			top: 90px
+			right: 30px
+			div
+				width: 100px
+		#ibc-3, #ibc-3-m
+			right: -100px
+			top: 200px
+			+r(640)
+				right: -30px
+			div
+				width: 120px
+
+.check
+	margin-top: 40px
+	position: relative
+	background: #e8e8e8
+	&:before
+		content: ''
+		background: url('/img/separator-m.svg') no-repeat
+		width: 100%
+		height: 112px
+		top: -15px
+		position: absolute
+		transform: scale(-1, 1)
+	h2
+		margin-top: 40px
+		text-align: center
+		font-size: 30px
+	img
+		width: 70px
+		height: 80px
+		position: absolute
+		left: 70px
+		display: block
+		z-index: 10
+	ul
+		margin-left: 145px
+		position: relative
+		margin-bottom: 50px
+		margin-top: 30px
+		&:after
+			content: ''
+			width: 50px
+			border-top: 2px dotted #2e6b67
+			display: block
+			position: absolute
+			left: -67px
+			top: 9px
+			transform: rotate(15deg)
+		&:before
+			content: ''
+			border-left: 2px dotted #2e6b67
+			height: 415px
+			display: block
+			position: absolute
+			left: -20px
+			top: 14px
+		li
+			font-size: 30px
+			padding-left: 10px
+			font-weight: 500
+			position: relative
+			margin-bottom: 30px
+			&:before
+				content: '•'
+				color: $dark-grey-blue-two
+				font-size: 50px
+				display: block
+				position: absolute
+				top: 37%
+				left: -28px
+				transform: translateY(-50%)
+			&:nth-last-child(-n+3)
+				&:before
+					top: 20%

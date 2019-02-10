@@ -3,6 +3,8 @@
 		background: #e8e8e8
 		position: relative
 		padding-top: 60px
+		+r(640)
+			padding: 40px 20px
 		&:after
 			content: ''
 			background: url('../img/afc-landing-svg/consist-bg.svg') no-repeat
@@ -13,6 +15,10 @@
 			left: 0
 			top: -10px
 			z-index: 1
+			+r(640)
+				top: -17px
+				height: 50px
+				background-size: 100% 123%
 		&:before
 			content: ''
 			background: url('../img/afc-landing-svg/consist-bottom-bg.svg') no-repeat
@@ -23,12 +29,85 @@
 			left: 0
 			bottom: -65px
 			z-index: 3
+			+r(640)
+				height: 5%
+				bottom: -20px
+		.up
+			background: #f64869
+			padding: 15px 25px
+			color: #fff
+			margin-bottom: 30px
+			margin-right: 25px
+			position: absolute
+			left: 0
+			top: 40px
+			z-index: 5
+			font-size: 16px
+			font-weight: 600
+			letter-spacing: 3px
+			+r(640)
+				font-size: 24px
+		&__pagination
+			position: absolute
+			right: 10px
+			top: 200px
+			display: none
+			flex-direction: column
+			+r(640)
+				display: flex
+			span
+				border-radius: 50%
+				width: 50px
+				height: 50px
+				font-size: 24px
+				color: #333333
+				background: #ffffff
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-bottom: 40px
+				padding-top: 2px
+				&.active
+					background: #ff3366
+					color: #ffffff
+		a.mobile
+			font-size: 18px
+			font-weight: 600
+			color: $greeny-blue
+			display: block
+			cursor: pointer
+			letter-spacing: 1.8px
+			text-transform: uppercase
+			position: relative
+			transition: all 0.3s
+			display: none
+			padding-left: 100px
+			padding-bottom: 50px
+			padding-top: 40px
+			display: none
+			+r(640)
+				display: block
+				font-size: 24px
+			span
+				position: absolute
+				left: 0
+				top: 30px
+				width: 75px
+				height: 75px
+				border-radius: 50%
+				padding: 5px
+				background-image: linear-gradient(to right, $greeny-blue 37%, #29413b)
+				transition: all 0.3s
+				background-size: 200% 200%
+				animation: Gradient 5s ease infinite
 		h2
 			font-size: 24px
 			font-weight: 500
 			padding-bottom: 40px
 			position: relative
 			z-index: 3
+			+r(640)
+				font-size: 30px
 			a
 				font-size: 18px
 				font-weight: 600
@@ -42,6 +121,11 @@
 				position: absolute
 				right: 30px
 				top: -8px
+				display: none
+				+r(640)
+					display: none
+				&:hover
+					color: $dark-grey-blue-two
 				span
 					position: absolute
 					top: -15px
@@ -54,29 +138,20 @@
 					transition: all 0.3s
 					background-size: 200% 200%
 					animation: Gradient 5s ease infinite
+		.swiper-container
+			+r(640)
+				margin-right: 30px
 		&__block
 			display: flex
 			flex-direction: column
 			align-items: center
 			position: relative
 			z-index: 1
+			+r(640)
+				overflow: hidden
 			&--1
-				p:first-child
-					background: #f64869
-					padding: 15px 25px
-					color: #fff
-					margin-bottom: 30px
-					margin-right: 25px
-					position: absolute
-					left: 0
-					top: 60px
-					z-index: 5
-					font-size: 16px
-					font-weight: 600
-					letter-spacing: 3px
 				.use__block__foto
 					span
-						padding-top: 9px
 						width: 45px
 						height: 45px
 						border-radius: 100px
@@ -84,16 +159,21 @@
 						font-size: 24px
 						font-weight: 500
 						position: absolute
-						left: 70px !important
-						bottom: 30px !important
 			&__foto
-				min-height: 400px
+				width: 100%
+				min-height: 440px
 				position: relative
+				img
+					width: 100% !important
+				+r(640)
+					min-height: auto
+					width: 90%
+					padding-bottom: 20px
 				&--span
 					span
 						left: 25px !important
+						// top: 390px !important
 				span
-					padding-top: 9px
 					width: 45px
 					height: 45px
 					border-radius: 100px
@@ -101,17 +181,36 @@
 					font-size: 24px
 					font-weight: 500
 					position: absolute
+					box-sizing: border-box
+					display: flex
+					justify-content: center
+					align-items: center
 					left: 70px
-					bottom: 30px
+					bottom: 60px
+					+r(640)
+						top: 350px
+						left: 40px
+						bottom: auto
 				img
 					width: auto
 					min-height: 350px
+					+r(640)
+						min-height: auto
+						width: 100%
 			p
 				font-weight: 600
 				font-size: 16px
 				width: 180px
 				margin-top: -25px
 				padding-bottom: 30px
+				position: relative
+				z-index: 10
+				text-align: center
+				+r(640)
+					margin-top: 0
+					font-size: 24px
+					width: 86%
+					font-weight: 400
 		&__advice
 			border: 1px dashed #2e6b67
 			padding: 15px 30px
@@ -120,12 +219,17 @@
 				font-size: 16px
 				font-weight: 500
 				color: #999999
+				+r(640)
+					font-size: 24px
 				b
 					font-weight: 500
 					color: #2e6b67
 		&__recommendation
 			padding-top: 40px
+			+r(640)
+				display: none
 			&__block
+				margin-bottom: 30px
 				p
 					font-weight: 600
 					font-size: 16px
@@ -134,9 +238,20 @@
 						background: #f64869
 						padding: 15px 23px
 						color: #fff
-						margin-bottom: 30px
+						margin-bottom: 0
 						margin-right: 25px
 						width: 120px
+				&--2
+					display: flex
+					align-items: center
+					p:first-child
+						color: $dark-grey-blue-two !important
+						border-color: $dark-grey-blue-two !important
+					p:last-child
+						width: 70%
+						span
+							color: $dark-grey-blue-two
+							padding-left: 5px
 				&--last
 					position: relative
 					z-index: 5
@@ -145,10 +260,78 @@
 							border: 1px dashed #f64869
 							padding: 15px 23px
 							color: #f64869
-							margin-bottom: 30px
+							margin-bottom: 0px
 							margin-right: 25px
 							background: none
 							width: auto
+		&__recommendation__mobile
+			position: relative
+			z-index: 7
+			display: none
+			padding-top: 60px
+			+r(640)
+				display: block
+			.tabs
+				min-height: 210px
+			h4
+				font-size: 24px
+				font-weight: 500
+				line-height: 1.5
+				color: #000
+			span
+				font-size: 24px
+				font-weight: 500
+				line-height: 1.5
+				color: #666666
+			ul
+				display: flex
+				padding-top: 20px
+				li
+					background: none
+					text-align: center
+					padding: 15px 0
+					color: #f64869
+					margin-bottom: 30px
+					margin-right: 25px
+					width: 100%
+					font-size: 24px
+					border: 2px solid #f64869
+					transition: all 0.3s
+					&.active
+						background-color: #f64869
+						color: #fff
+			.tabs__content
+				display: none
+				p
+					font-size: 24px
+					color: #00090e
+				&.active
+					display: block
+			&--last
+				margin-bottom: 30px
+				p
+					font-weight: 400
+					font-size: 24px
+					display: inline-block
+					color: #00090e
+					margin-top: 20px
+					&:first-child
+						border: 1px dashed #f64869
+						padding: 15px 23px
+						color: #f64869
+						font-weight: 400
+						line-height: 1.5
+						letter-spacing: 2.4px
+						margin-top: 0
+				&--2
+					p:first-child
+						color: $dark-grey-blue-two !important
+						border-color: $dark-grey-blue-two !important
+					p:last-child
+						span
+							color: $dark-grey-blue-two
+							display: block
+		
 
 
 

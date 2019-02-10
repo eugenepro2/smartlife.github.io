@@ -1,63 +1,99 @@
-section.section.contact
-  .contact__left
-    .scene__contact--1.scene__contact#contact-1
-      div(data-depth="4")
-        img(data-src="img/contact-comp/2.png", alt="")
-    img.img(data-src="img/contact-comp/left.png", alt="")
-    .scene__contact--2.scene__contact#contact-2(data-invert-x="false" data-invert-y="false" relativeInput="true")
-      div(data-depth="2")
-        img(data-src="img/contact-comp/8.png", alt="")
-  .contact__right
-    .scene__contact--3.scene__contact#contact-3
-      div(data-depth="2")
-        img(data-src="img/contact-comp/5.png", alt="")
-    .scene__contact--4.scene__contact#contact-4
-      div(data-depth="2")
-        img(data-src="img/contact-comp/6.png", alt="")
-    img.img(data-src="img/contact-comp/right.png", alt="")
-    .scene__contact--5.scene__contact#contact-5(data-invert-x="false" data-invert-y="false" relativeInput="true")
-      div(data-depth="2")
-        img(data-src="img/contact-comp/3.png", alt="")
-    .scene__contact--6.scene__contact#contact-6
-      div(data-depth="2")
-        img(data-src="img/contact-comp/4.png", alt="")
-  .container
-    .row.middle-xs
-      .col-md-offset-2.col-md-10
-        h2 Контакты
-          .scene__contact--7.scene__contact#contact-7
-            div(data-depth="2")
-              img(data-src="img/contact-comp/1.png", alt="")
-        .contact__block
-          .row
-            .col-md-6
-              .contact__block__info
-                h3 Телефон:
-                span 8(900) - 000- 00 - 00
-                h3 E-mail:
-                span info@gmail.com
-                h3 Вы можете связаться с нами любым<br>удобным для Вас способом:
-              .contact__block__social
-                .contact__block__social__block
-                  a(href="#")
-                    +icon('telegram')
-                  p Telegram
-                .contact__block__social__block
-                  a(href="#")
-                    +icon('whatsapp')
-                  p WhatsApp
-                .contact__block__social__block
-                  a(href="#")
-                    +icon('viber')
-                  p Viber
-            .col-md-6
-              form
-                h3 Обратная связь
-                input(type="text" placeholder="Имя" required)
-                input(type="tel" placeholder="Ваш телефон" required)
-                input(type="text" placeholder="Ваш комментарий")
-                input#checkbox.checkbox(type="checkbox")
-                label.label(for="checkbox")
-                label.label-for(for="checkbox") Я прочитал и согласен <a href="#">на обработку персональных данных</a> на сайте smartlife.bio  
-                input(type="submit" value="отправить")
-                
+section.section.contact#contact-m
+	.contact__left.hidden-xs
+		.scene__contact--1.scene__contact#contact-1
+			div(data-depth="4")
+				img(data-src="img/contact-comp/2.png", alt="")
+		img.img(data-src="img/contact-comp/left.png", alt="")
+		.scene__contact--2.scene__contact#contact-2(data-invert-x="false" data-invert-y="false" relativeInput="true")
+			div(data-depth="2")
+				img(data-src="img/contact-comp/8.png", alt="")
+	.contact__right.hidden-xs
+		.scene__contact--3.scene__contact#contact-3
+			div(data-depth="2")
+				img(data-src="img/contact-comp/5.png", alt="")
+		.scene__contact--4.scene__contact#contact-4
+			div(data-depth="2")
+				img(data-src="img/contact-comp/6.png", alt="")
+		img.img(data-src="img/contact-comp/right.png", alt="")
+		.scene__contact--5.scene__contact#contact-5(data-invert-x="false" data-invert-y="false" relativeInput="true")
+			div(data-depth="2")
+				img(data-src="img/contact-comp/3.png", alt="")
+		.scene__contact--6.scene__contact#contact-6
+			div(data-depth="2")
+				img(data-src="img/contact-comp/4.png", alt="")
+	.hidden-sm
+		.scene__contact--1--m.scene__contact#contact-1-m
+			div(data-depth="1")
+				img(data-src="img/contact-comp/1-m.png", alt="")
+		.scene__contact--2--m.scene__contact#contact-2-m
+			div(data-depth="1")
+				img(data-src="img/contact-comp/2-m.png", alt="")
+	.container
+		.row.middle-sm
+			.col-md-offset-2.col-md-10.col-xs-12.center-xs.start-sm
+				h2 Контакты
+					.scene__contact--7.scene__contact#contact-7.hidden-xs
+						div(data-depth="2")
+							img(data-src="img/contact-comp/1.png", alt="")
+				.contact__block
+					.row.center-xs.start-sm
+						.col-md-6.col-xs-12
+							.contact__block__info
+								h3 Телефон:
+								a.tel(href="tel:+79165659194") +7(916) 565-91-94
+								h3 E-mail:
+								a.mail(href="mailto:info@smartlife.bio") info@smartlife.bio
+								h3 Вы можете связаться с нами любым<br>удобным для Вас способом:
+							.contact__block__social
+								.contact__block__social__block
+									a(href="tg://resolve?domain=smartlifebio_bot")
+										+icon('telegram')
+									p Telegram
+								.contact__block__social__block
+									a(href="whatsapp://send?phone=+79165659194")
+										+icon('whatsapp')
+									p WhatsApp
+								.contact__block__social__block
+									a(href="viber://public?id=smartlifebio")
+										+icon('viber')
+									p Viber
+							h4.hidden-xs ООО «СМАРТЛАЙФ», ИНН 7714977147
+							a.btn.btn--contact.hidden-sm обратная связь
+							.contact__block__info.hidden-sm
+								h3 Мы в социальных сетях
+								.social
+									a(href="https://www.instagram.com/smartlifebio/")
+										+icon('instagram')
+									a(href=" https://vk.com/smartlifebio")
+										+icon('vk')
+									a(href="https://www.facebook.com/Smartlifebio-1523077057727677/")
+										+icon('facebook')
+									a(href="https://www.youtube.com/channel/UCm2VbUPuY5qgYqlZvAKFysg")
+										+icon('youtube')
+							h4.hidden-sm ООО «СМАРТЛАЙФ», ИНН 7714977147
+						.col-md-6.hidden-xs
+							.home-form
+								form
+									h3 Обратная связь
+									input(type="text" placeholder="Имя" required)
+									input(type="tel" placeholder="Ваш телефон" required)
+									input(type="email" placeholder="E-mail" required)
+									input#comment(type="text" placeholder="Ваш комментарий")
+									input#checkbox.checkbox(type="checkbox" checked)
+									label.label(for="checkbox")
+									label.label-for(for="checkbox") Я прочитал и согласен <a href="#">на обработку персональных данных</a> на сайте smartlife.bio  
+									input(type="submit" value="отправить")
+								.response 
+									p Спасибо! Ваши данные успешно отправлены.
+		a.copyright.hidden-xs(href="https://excv.ru/?utm_sourse=smartlife.bio")
+			img(src="img/footer-logo.svg", alt="")
+	footer.footer.hidden-sm
+		.container
+			.row.middle-xs
+				.col-xs-6
+					p © 2017 Smartlifebio
+				.col-xs-6.end-xs
+					a(href="https://excv.ru/?utm_sourse=smartlife.bio")
+						img(src="img/footer-logo.svg", alt="")
+								
+

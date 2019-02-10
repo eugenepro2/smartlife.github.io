@@ -1,0 +1,12 @@
+<svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288.2 348">
+    <style>
+        .st0{clip-path:url(#SVGID_2_);fill:#2e6b67}
+    </style>
+    <defs>
+        <path id="SVGID_1_" d="M0 0h288.2v348H0z"/>
+    </defs>
+    <clipPath id="SVGID_2_">
+        <use xlink:href="#SVGID_1_" overflow="visible"/>
+    </clipPath>
+    <path class="st0" d="M287.4 54.4c-59.4 0-104.9-17-143.3-54.4C105.6 37.4 60.2 54.4.8 54.4c0 97.4-20.2 236.9 143.3 293.6 163.5-56.7 143.3-196.2 143.3-293.6M132.2 225.8L84.5 178l21.4-21.4 26.4 26.4 50.1-50.1 21.4 21.4-71.6 71.5z"/>
+</svg>

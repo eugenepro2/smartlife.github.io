@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css">
+    <meta name="viewport" id="viewport" content="width=640, minimum-scale=0.3, maximum-scale=3, user-scalable=0">
   </head>
 
   <body>
@@ -38,122 +39,148 @@
       <div class="sidebar__checkout"><a href="#" class="sidebar__checkout__back"></a></div>
     </aside>
     <!--END sidebar-->
-    <div class="thank">
-      <div class="thank__1">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-offset-2 col-md-10">
-              <h2>Иван иванов, спасибо за ваш заказ в smartlifebio</h2>
-              <p>В ближайшее время с Вами свяжется менеджер для подтверждения заказа,<br>а пока проверьте, пожалуйста, его состав, дату и адрес доставки:</p>
-              <div class="thank__order">
-                <div class="thank__order__number">Заказ №201032</div>
-                <div class="row thank__order__block">
-                  <div class="col-md-8">
-                    <h3>AFC (концентрат повышающий работоспособность) </h3>
+    <div id="result"></div>
+    <script id="theTmpl" type="text/x-jsrender">
+      <div class="thank">
+        <div class="thank__1">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-offset-2 col-md-10 col-xs-12">
+                <h2>{{:name}} {{:lastName}}, спасибо за ваш заказ в smartlifebio</h2>
+                <p>Ваш заказ оформлен в автоматическом режиме. Звонок оператора не требуется. Заказанный товар есть в наличии. В случае необходимости с Вами свяжется менеджер. Проверьте, пожалуйста, состав Вашего заказа, дату и адрес доставки:</p>
+                <div class="thank__order">
+                  <div class="thank__order__number">Заказ №201032</div>{{if setAfc}}
+                  <div class="row thank__order__block middle-xs top-sm">
+                    <div class="col-md-8 col-xs-7">
+                      <h3>AFC (концентрат повышающий работоспособность) </h3>
+                    </div>
+                    <div class="col-md-2 col-xs-2">
+                      <p>{{:setAfc}} шт</p>
+                    </div>
+                    <div class="col-md-2 end-xs col-xs-3">
+                      <div class="thank__order__block__sum thank__order__block__sum--1"><span>{{:priceAfc}} ₽</span></div>
+                    </div>
+                    <div class="col-xs-12">
+                      <hr>
+                    </div>
                   </div>
-                  <div class="col-md-2">
-                    <p>20 шт </p>
+                  {{/if}}
+                  {{if setIbc}}
+                  <div class="row thank__order__block middle-xs top-sm">
+                    <div class="col-md-8 col-xs-7">
+                      <h3>IBC (очищение и восстановление организма) </h3>
+                    </div>
+                    <div class="col-md-2 col-xs-2">
+                      <p>{{:setIbc}} шт </p>
+                    </div>
+                    <div class="col-md-2 end-xs col-xs-3">
+                      <div class="thank__order__block__sum thank__order__block__sum--2"><span>{{:priceIbc}} ₽</span></div>
+                    </div>
+                    <div class="col-xs-12">
+                      <hr>
+                    </div>
                   </div>
-                  <div class="col-md-2 end-xs">
-                    <div class="thank__order__block__sum"><span>4990 ₽</span></div>
+                  {{/if}}
+                  <div class="row thank__order__block thank__order__block__delivery">
+                    <div class="col-md-8 col-xs-7">
+                      <h3>{{:delivery}}</h3>
+                    </div>
+                    <div class="col-md-2 col-xs-2">
+                      <p>-</p>
+                    </div>
+                    <div class="col-md-2 end-xs col-xs-3">
+                      <div class="thank__order__block__sum thank__order__block__sum--3"><span>{{:priceDelivery}} ₽</span></div>
+                    </div>
+                    <div class="col-xs-12">
+                      <hr>
+                    </div>
                   </div>
-                  <div class="col-xs-12">
-                    <hr>
-                  </div>
-                </div>
-                <div class="row thank__order__block thank__order__block__delivery">
-                  <div class="col-md-8">
-                    <h3>Доставка курьером </h3>
-                  </div>
-                  <div class="col-md-2">
-                    <p>-</p>
-                  </div>
-                  <div class="col-md-2 end-xs">
-                    <div class="thank__order__block__sum"><span>300 ₽</span></div>
-                  </div>
-                  <div class="col-xs-12">
-                    <hr>
-                  </div>
-                </div>
-                <div class="row thank__order__block thank__order__block__total">
-                  <div class="col-md-8">
-                    <h3>Итого:</h3>
-                  </div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-2 end-xs">
-                    <div class="thank__order__block__sum"><span>5290 ₽</span></div>
+                  <div class="row thank__order__block thank__order__block__total">
+                    <div class="col-md-8 col-xs-7">
+                      <h3>Итого:</h3>
+                    </div>
+                    <div class="col-md-2 col-xs-2"></div>
+                    <div class="col-md-2 end-xs col-xs-3">
+                      <div class="thank__order__block__sum thank__order__block__sum__all"><span>₽</span></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="thank__2">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-offset-2 col-md-10">
-              <div class="row thank__order__info">
-                <div class="col-md-6">
-                  <h3>Адрес:</h3>
-                </div>
-                <div class="col-md-6">
-                  <p>г. Москва, ул. Полянка, д. 37</p>
-                </div>
-                <div class="col-xs-12">
-                  <hr>
-                </div>
-                <div class="col-md-6">
-                  <h3>Дата приезда курьера:</h3>
-                </div>
-                <div class="col-md-6">
-                  <p>19.12.2017</p>
-                </div>
-                <div class="col-xs-12">
-                  <hr>
-                </div>
-                <div class="col-md-6">
-                  <h3>Способ оплаты:</h3>
-                </div>
-                <div class="col-md-6">
-                  <p>Наличными курьеру при получении</p>
-                </div>
-                <div class="col-xs-12">
-                  <hr>
-                </div>
-                <div class="col-md-6">
-                  <h3>Телефон:</h3>
-                </div>
-                <div class="col-md-6">
-                  <p>+7(900) 000-00-00</p>
-                </div>
-                <div class="col-xs-12">
-                  <hr>
-                </div>
-                <div class="col-md-6">
-                  <h3>E-mail:</h3>
-                </div>
-                <div class="col-md-6">
-                  <p>info@mail.ru</p>
-                </div>
-                <div class="col-xs-12">
-                  <hr>
+        <div class="thank__2">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-offset-2 col-md-10 col-xs-12">
+                <div class="row thank__order__info">
+                  <div class="col-md-6 col-xs-12">
+                    <h3>Адрес:</h3>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <p>{{:address}}</p>
+                  </div>
+                  <div class="col-xs-12">
+                    <hr>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <h3>Дата оформления заказа:</h3>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <p>{{:date}}</p>
+                  </div>
+                  <div class="col-xs-12">
+                    <hr>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <h3>Способ оплаты:</h3>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <p>{{:payment}}</p>
+                  </div>
+                  <div class="col-xs-12">
+                    <hr>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <h3>Телефон:</h3>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <p>{{:tel}}</p>
+                  </div>
+                  <div class="col-xs-12">
+                    <hr>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <h3>E-mail:</h3>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <p>{{:email}}</p>
+                  </div>
+                  <div class="col-xs-12">
+                    <hr>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 center-xs"><a href="#" class="btn btn--thank">Перейти на главную</a></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 center-xs"><a href="index.html" class="btn btn--thank">Перейти на главную</a></div>
+          </div>
         </div>
       </div>
-    </div>
+    </script>
     <!--LOAD SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script>
+      svg4everybody();
+
+    </script>
   </body>
 
 </html>

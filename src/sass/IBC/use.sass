@@ -3,6 +3,8 @@
 		background: #e8e8e8
 		position: relative
 		padding-top: 60px
+		+r(640)
+			padding: 40px 20px
 		&:after
 			content: ''
 			background: url('../img/ibc-landing-svg/consist-bg.svg') no-repeat
@@ -13,12 +15,82 @@
 			left: 0
 			top: -10px
 			z-index: 1
+		.up
+			background: #f64869
+			padding: 15px 25px
+			color: #fff
+			margin-bottom: 30px
+			margin-right: 25px
+			position: absolute
+			left: 0
+			top: 40px
+			z-index: 5
+			font-size: 16px
+			font-weight: 600
+			letter-spacing: 3px
+			+r(640)
+				font-size: 24px
+		&__pagination
+			position: absolute
+			right: 10px
+			top: 200px
+			display: none
+			flex-direction: column
+			+r(640)
+				display: flex
+			span
+				border-radius: 50%
+				width: 50px
+				height: 50px
+				font-size: 24px
+				color: #333333
+				background: #ffffff
+				display: flex
+				justify-content: center
+				align-items: center
+				padding-top: 2px
+				margin-bottom: 40px
+				&.active
+					background: #ff3366
+					color: #ffffff
+		a.mobile
+			font-size: 18px
+			font-weight: 600
+			color: $greeny-blue
+			display: block
+			cursor: pointer
+			letter-spacing: 1.8px
+			text-transform: uppercase
+			position: relative
+			transition: all 0.3s
+			display: none
+			padding-left: 100px
+			padding-bottom: 50px
+			padding-top: 40px
+			display: none
+			+r(640)
+				display: block
+				font-size: 24px
+			span
+				position: absolute
+				left: 0
+				top: 30px
+				width: 75px
+				height: 75px
+				border-radius: 50%
+				padding: 5px
+				background-image: linear-gradient(to right, $greeny-blue 37%, #29413b)
+				transition: all 0.3s
+				background-size: 200% 200%
+				animation: Gradient 5s ease infinite
 		h2
 			font-size: 24px
 			font-weight: 500
 			padding-bottom: 40px
 			position: relative
 			z-index: 3
+			+r(640)
+				font-size: 30px
 			a
 				font-size: 18px
 				font-weight: 600
@@ -32,6 +104,12 @@
 				position: absolute
 				right: 30px
 				top: -8px
+				transition: all 0.3s
+				display: none
+				+r(640)
+					display: none
+				&:hover
+					color: $dark-grey-blue-two
 				span
 					position: absolute
 					top: -15px
@@ -44,13 +122,33 @@
 					transition: all 0.3s
 					background-size: 200% 200%
 					animation: Gradient 5s ease infinite
+		.swiper-container
+			margin-bottom: 20px
+			+r(640)
+				margin-right: 30px
 		&__block
 			display: flex
 			flex-direction: column
 			align-items: center
 			position: relative
 			z-index: 1
+			&--2
+				position: relative
+				top: 25px
+				span
+					bottom: 61px !important
+			&--3
+				position: relative
+				top: 40px
+				span
+					bottom: 75px !important
+				p
+					position: relative
+					top: -16px
 			&--1
+				p
+					position: relative
+					top: 24px
 				p:first-child
 					background: #f64869
 					padding: 15px 20px
@@ -60,14 +158,13 @@
 					margin-right: 25px
 					position: absolute
 					left: 0px
-					top: 15px
+					top: 25px
 					z-index: 5
 					font-size: 16px
 					font-weight: 600
 					letter-spacing: 3px
 				.use__block__foto
 					span
-						padding-top: 9px
 						width: 45px
 						height: 45px
 						border-radius: 100px
@@ -75,16 +172,23 @@
 						font-size: 24px
 						font-weight: 500
 						position: absolute
-						left: 70px !important
-						bottom: 30px !important
+						box-sizing: border-box
+						display: flex
+						justify-content: center
+						align-items: center
+						left: 70px
+						bottom: 35px
 			&__foto
-				min-height: 400px
+				min-height: 425px
 				position: relative
-				&--span
-					span
-						left: 25px !important
+				width: 100%
+				img
+					width: 100% !important
+				+r(640)
+					min-height: auto
+					width: 90%
+					padding-bottom: 20px
 				span
-					padding-top: 9px
 					width: 45px
 					height: 45px
 					border-radius: 100px
@@ -92,19 +196,47 @@
 					font-size: 24px
 					font-weight: 500
 					position: absolute
+					box-sizing: border-box
+					display: flex
+					justify-content: center
+					align-items: center
 					left: 70px
 					bottom: 30px
+					+r(640)
+						top: 330px
+						left: 10px
+						bottom: auto
 				img
 					width: auto
 					min-height: 350px
+					+r(640)
+						min-height: auto
+						width: 107%
 			p
 				font-weight: 600
 				font-size: 16px
 				width: 250px
 				margin-top: -25px
 				padding-bottom: 30px
+				text-align: center
+				br
+					display: inline-block
+					+r(640)
+						display: none
+				+r(640)
+					margin-top: 0
+					font-size: 24px
+					width: 93%
+					margin-left: 40px
+					font-weight: 400
 				span
 					color: #524b3b
+					+r(640)
+							display: block
+					br
+						display: none
+						+r(640)
+							display: inline-block
 		&__advice
 			border: 1px dashed #2e6b67
 			padding: 15px 30px
@@ -113,23 +245,52 @@
 				font-size: 16px
 				font-weight: 500
 				color: #999999
+				+r(640)
+					font-size: 24px
 				b
 					font-weight: 500
 					color: #2e6b67
 		&__recommendation
 			padding-top: 40px
 			&__block
+				margin-bottom: 30px
 				p
 					font-weight: 600
 					font-size: 16px
 					display: inline-block
 					color: #524b3b
+					+r(640)
+						font-size: 24px
+						font-weight: 400
 					&:first-child
 						background: #f64869
 						padding: 15px 23px
 						color: #fff
 						margin-bottom: 30px
 						margin-right: 25px
+						line-height: 1.5
+						letter-spacing: 2.4px
+						width: 
+					&:last-child
+						+r(640)
+							display: block
+				&--2
+					display: flex
+					flex-wrap: wrap
+					align-items: center
+					p:first-child
+						color: $dark-grey-blue-two !important
+						border-color: $dark-grey-blue-two !important
+					p:last-child
+						width: 70%
+						span
+							color: $dark-grey-blue-two
+							padding-left: 5px
+							+r(640)
+								display: block
+								padding-left: 0
+						+r(640)
+							width: 100%
 				&--last
 					position: relative
 					z-index: 5
@@ -139,11 +300,11 @@
 							border: 1px dashed #f64869
 							padding: 15px 23px
 							color: #f64869
-							margin-bottom: 30px
+							margin-bottom: 0
 							margin-right: 25px
 							background: none
-
-
+							+r(640)
+								margin-bottom: 20px
 
 
 

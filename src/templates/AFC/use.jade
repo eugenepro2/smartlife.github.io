@@ -1,33 +1,43 @@
 section.use
 	.container
 		.row
-			.col-md-12.center-xs
-				h2 Способ применения AFC
-					a(href="#").start-md Смотреть<br>видео-инструкцию
+			.col-xs-12.center-xs
+				h2.wow.fadeInDown(data-wow-delay="0.3s") Способ применения AFC
+					a.wow.fadeInRight(data-wow-delay="0.4s" href="#use-video-modal" rel="modal:open").start-md Смотреть<br>видео-инструкцию
 						span
 							img(src="img/play.svg", alt="")
-			.col-md-4.center-md
-				.use__block.use__block--1
-					p Взрослым:
-					.use__block__foto
-						img(src="img/afc-landing/use-1.png", alt="")
-						span 1
-					p Открыть флакон 35 г<br> (1 порцию концетрата)
-			.col-md-4.center-md
-				.use__block
-					.use__block__foto.use__block__foto--span
-						img(src="img/afc-landing/use-2.png", alt="")
-						span 2
-					p Добавить питьевую воду до объема 100 мл и хорошо перемешать
-			.col-md-4.center-md
-				.use__block
-					.use__block__foto
-						img(src="img/afc-landing/use-3.png", alt="")
-						span 3
-					p Готово к применению
+		.use__pagination
+			span.wow.fadeInDown(data-wow-delay="0.3s").use__pagination__block.use__pagination--1.active 1
+			span.wow.fadeInDown(data-wow-delay="0.4s").use__pagination__block.use__pagination--2 2
+			span.wow.fadeInDown(data-wow-delay="0.6s").use__pagination__block.use__pagination--3 3
+		.use-swiper.swiper-container
+			p.up.wow.fadeIn(data-wow-delay="0.8s") Взрослым:
+			.swiper-wrapper.wow.fadeIn
+				.swiper-slide.wow.fadeInDown(data-wow-delay="0.3s")
+					.use__block.use__block--1
+						.use__block__foto
+							img(src="img/afc-landing/use-1.png", alt="")
+							span 1
+						p Открыть флакон 35 г<br> (1 порцию концетрата)
+				.swiper-slide.wow.fadeInDown(data-wow-delay="0.4s")
+					.use__block
+						.use__block__foto.use__block__foto--span
+							img(src="img/afc-landing/use-2.png", alt="")
+							span 2
+						p Добавить питьевую воду до объема 100 мл и хорошо перемешать
+				.swiper-slide.wow.fadeInDown(data-wow-delay="0.5s")
+					.use__block
+						.use__block__foto
+							img(src="img/afc-landing/use-3.png", alt="")
+							span 3
+						p Перемешать и выпить. Если во флаконе что-то осталось, то снова залить водой, перемешать и выпить. Так чтобы ничего не осталось во флаконе
+		//- a(href="#use-video-modal" rel="modal:open").mobile Смотреть<br>видео-инструкцию
+		//- 	span
+		//- 		img(src="img/play.svg", alt="")
+		.row
 			.col-xs-12
 				.use__advice
-					p <b>Рекомендуется:</b> принимать утром натощак. При повышенных умственных и физических нагрузках прием можно увеличить до двух порций.
+					p <b>Рекомендуется:</b> принимать взрослым либо утром натощак за 15-20 мин до еды, либо в первой половине дня спустя 2 часа после приема пищи. При повышенных умственных и физических нагрузках прием можно увеличить до двух порций.
 			.col-xs-12
 				.use__recommendation
 					.use__recommendation__block
@@ -42,6 +52,35 @@ section.use
 					.use__recommendation__block.use__recommendation__block--last
 						p Противопоказания:
 						p Индивидуальная непереносимость компонентов продукта.
+					.use__recommendation__block.use__recommendation__block--2.use__recommendation__block--last
+						p Условия хранения:
+						p В сухом, защищенном от прямых солнечных лучей и недоступном для детей месте при температуре не ниже 0°С и не выше 25°С.
+							span Срок хранения 11 месяцев.
+				.use__recommendation__mobile
+					h4 Способ применения для детей.
+					span Выберите возраст ребенка:
+					.tabs
+						ul.tabs__caption
+							li.active 14 - 18 лет:
+							li 10 - 14 лет:
+							li 7 - 10 лет:
+						.tabs__content.active
+							p 1 флакон за два приема в первой половине дня
+						.tabs__content
+							p 1 ложка столовая 1 раз в день, при интенсивных нагрузках до 2 раз в день в первой половине дня.
+						.tabs__content
+							p ½ чайной ложки 1-2 раза в первой половине дня
+					.use__recommendation__mobile--last
+						p Противопоказания:
+						p Индивидуальная непереносимость компонентов продукта.
+					.use__recommendation__mobile--last.use__recommendation__mobile--last--2
+						p Условия хранения:
+						p В сухом, защищенном от прямых солнечных лучей и недоступном для детей месте при температуре не ниже 0°С и не выше 25°С.
+							span Срок хранения 11 месяцев.
+	#use-video-modal.video-modal(style="display: none")
+		iframe(width='560', height='315', src='https://www.youtube.com/embed/B7GXecLhxMo?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+
+
 
 
 

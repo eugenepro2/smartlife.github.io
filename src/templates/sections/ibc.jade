@@ -1,32 +1,76 @@
-section.section.ibc
+section.section.ibc#ibc-m
   .container
     .row.middle-xs
-      .col-md-offset-2.col-md-6
+      .col-md-offset-2.col-md-6.col-xs-12
         h2 IBC - очищение и<br>восстановление организма
           span (Innovation adaptogenic functional concentrate)
+        .ibc__photo.hidden-sm
+          .ibc__info
+            img(data-src="img/ibc/ibc-info-m.svg", alt="")
+          .ibc__photo__ibc
+            .ibc__comp
+              img(data-src="img/ibc-comp/ibc.png", alt="")
+              .ibc__comp__scene#ibc-1-m
+                div(data-depth="1.5")
+                  img(src="img/ibc-comp/1.png", alt="")
+              .ibc__comp__scene#ibc-2-m(data-invert-x="false" data-invert-y="false" relativeInput="true")
+                div(data-depth="1.5")
+                  img(src="img/ibc-comp/2.png", alt="")
+              .ibc__comp__scene#ibc-3-m
+                div(data-depth="1.5")
+                  img(src="img/ibc-comp/3.png", alt="")
+          .ibc__photo__line--1
+            img(data-src="img/ibc/ibc-line-1.svg", alt="")
+          .ibc__photo__line--2
+            img(data-src="img/ibc/ibc-line-3.svg", alt="")
         .ibc__advantages
           .ibc__advantages__block.ibc__advantages__block--1
-            p Улучшает баланс<br>веществ в организме
+            p Улучшает баланс <br>веществ в организме
             img(data-src="img/ibc/ibc-line-1.svg", alt="")
           .ibc__advantages__block.ibc__advantages__block--2
-            p Выводит различные токсины, аллергены,<br>соли тяжелых металлов, радионуклиды билирубин,<br>холестерин и липиды, мочевину,продукты распада<br>алкоголя, метаболиты, формирующие эндогенный<br>токсикоз и другое
-
+            p Выводит различныe токсины, аллергены, <br>соли тяжелых металлов, радионуклиды билирубин, <br>холестерин и липиды, мочевину, продукты распада <br>алкоголя, метаболиты, формирующие эндогенный <br>токсикоз и другое
             img(data-src="img/ibc/ibc-line-2.svg", alt="")
           .ibc__advantages__block.ibc__advantages__block--3
-            p Не нарушает естественную<br>микрофлору
+            p Не нарушает естественную микрофлору,<br> работу пищеварительных ферментов<br> и пищеварения в целом
             img(data-src="img/ibc/ibc-line-3.svg", alt="")
-        .ibc__info
+          .ibc__advantages__block.ibc__advantages__block--4
+            p Снижает аппетит
+            img(data-src="img/ibc/ibc-line-4.svg", alt="")
+        .ibc__info.hidden-xs
           img(data-src="img/ibc/ibc-info.svg", alt="")
         .ibc__price
           .ibc__price__block
             p Цена
             h3
-              span 890
-              +icon('ruble')
+              span 1500
+              .ruble ₽
               |/ шт 
-          a.btn.btn--white(href="#") заказать
-          a.btn(href="#") подробнее
-      .col-md-4
+          a.btn.btn--white(href="checkout.html" data-cookie="ibc" ) заказать
+          //a.btn.btn--white(data-cookie="ibc" data-checkout="checkout" ) заказать
+          a.btn.btn--green--2(href="ibc.html") подробнее
+      .col-md-4.hidden-xs
         .ibc__comp
-          img(data-src="img/ibc.png", alt="")
+          img(data-src="img/ibc-comp/ibc.png", alt="")
+          .ibc__comp__scene#ibc-1
+            div(data-depth="1.5")
+              img(src="img/ibc-comp/1.png", alt="")
+          .ibc__comp__scene#ibc-2(data-invert-x="false" data-invert-y="false" relativeInput="true")
+            div(data-depth="1.5")
+              img(src="img/ibc-comp/2.png", alt="")
+          .ibc__comp__scene#ibc-3
+            div(data-depth="1.5")
+              img(src="img/ibc-comp/3.png", alt="")
+section.check.hidden-sm
+  .container
+    .row
+      .col-xs-12
+        h2 Наши уникальные<br>технологии 
+        img(src="img/study/check.svg", alt="")
+        ul
+          li Микрофильтрация
+          li Ультрафильтрация
+          li Нанофильтрация
+          li Низкотемпературное<br>выпаривание
+          li Лиофилизационная<br>сушка
+          li Препаративная<br>хроматография
 

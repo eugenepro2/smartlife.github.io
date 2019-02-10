@@ -1,27 +1,43 @@
 section.better
 	.container
-		.row
-			.col-md-12.center-md
-				h2 Что улучшает IBC?
+		.row.center-sm.end-xs
+			.col-sm-12.col-xs-4.center-sm.start-xs
+				h2.wow.fadeInDown(data-wow-delay="0.3s") Что улучшает IBC?
+		.better__parallax
+			.better__block__parallax#better-1(data-invert-x="false" data-invert-y="fulse")
+				div.wow.fadeInDown(data-wow-delay="0.3s" data-depth="0.6")
+					img(src="img/ibc-landing/parallax/better-1.png", alt="")
+			.better__block__parallax#better-2(data-invert-x="false" data-invert-y="fulse")
+				div.layer.wow.fadeInDown(data-wow-delay="0.3s" data-depth="0.2")
+					img(src="img/ibc-landing/parallax/better-2.png", alt="")
+			.better__block__parallax#better-3(data-invert-x="false" data-invert-y="false" relativeInput="true")
+				div.layer.wow.fadeInDown(data-wow-delay="0.3s" data-depth="0.1")
+					img(src="img/ibc-landing/parallax/better-3.png", alt="")
+			.better__block__parallax#better-4(data-invert-x="false" data-invert-y="fulse")
+				div.layer.wow.fadeInDown(data-wow-delay="0.3s" data-depth="0.3")
+					img(src="img/ibc-landing/parallax/better-4.png", alt="")
+			.better__block__parallax#better-5(data-invert-x="false" data-invert-y="false" relativeInput="true")
+				div.layer.wow.fadeInDown(data-wow-delay="0.3s" data-depth="0.6")
+					img(src="img/ibc-landing/parallax/better-5.png", alt="")
 		.better__content
-			img(data-src="img/ibc-landing/better.png", alt="")
-			.better__content__left
+			img(src="img/ibc-landing/better.png", alt="")
+			.better__content__left.wow.fadeInLeft(data-wow-delay="0.3s")
 				p.top Белковый, углеводный <br>и липидный обмен веществ;
 					span
-						+icon('check')		
-				p Белковый, углеводный <br>и липидный обмен веществ;
+						+icon('check')
+				p Синтез уксусной, пропионовой, масляной кислот (дают энергию для функционирования клеток кишечника)
 					span
-						+icon('check')		
+						+icon('check')
 				p Рост полезной микрофлоры <br>кишечника;
-					span
-						+icon('check')		
+					span.mobile
+						+icon('check')
 				p Снижает уровень сахара <br>и холестирина в крови;
 					span
-						+icon('check')		
+						+icon('check')
 				p Защищает от свободных радикалов <br>и нормализует окислительно-<br>восстановительные процессы <br>в организме.
 					span
 						+icon('check')
-			.better__content__right
+			.better__content__right.wow.fadeInRight(data-wow-delay="0.3s")
 				b #IBC_УЛУЧШАЕТ
 				p Снижает риск опухолей толстой <br>кишки, снижает аппетит; 
 					span
@@ -35,3 +51,5 @@ section.better
 				p Снижает вирусные и <br>респираторные инфекции, <br>восстанавливает иммунитет; 
 					span
 						+icon('check')
+
+		

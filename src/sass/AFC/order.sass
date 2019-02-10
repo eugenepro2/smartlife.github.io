@@ -4,15 +4,21 @@
 	padding-bottom: 110px
 	position: relative
 	z-index: 1
+	+r(640)
+		background: url('../img/afc-landing/order-mobile-bg.png') no-repeat
+		background-size: auto 100%
 	h2
 		padding-top: 115px
 		color: #fff
 		text-transform: uppercase
 		font-size: 30px
 		font-weight: 400
+		letter-spacing: 1.5px
 	&__block
 		position: relative
-		padding: 40px 60px 70px
+		padding: 40px 40px 70px
+		+r(640)
+			padding-bottom: 440px
 		&:before
 			content: ''
 			background: url('../img/afc-landing-svg/order.svg') no-repeat
@@ -20,20 +26,28 @@
 			height: 120px
 			position: absolute
 			left: -30px
+			+r(640)
+				left: 50%
+				transform: translateX(-50%)
 		span
-			font-size: 50px
+			font-size: 35px
 			color: #f64869
 			font-weight: 400
-			letter-spacing: 4px
+			letter-spacing: 4.4px
 			display: inline-block
-			padding-top: 10px
+			padding-top: 18px
 		p
 			color: #f64869
-			font-size: 18px
-			letter-spacing: 3px
+			font-size: 21px
+			letter-spacing: 1.1px
 	.btn
 		background: #f64869
 		border: 2px solid #f64869
+		+r(640)
+			padding: 25px 130px
+			position: relative
+			top: 50px
+			font-size: 24px
 		&:hover
 			background: none
 			color: #f64869
@@ -41,6 +55,10 @@
 	background: #e8e8e8
 	position: relative
 	padding-top: 20px
+	+r(640)
+		height: 100px
+		.container
+			position: relative
 	&:after
 		content: ''
 		background: url('../img/afc-landing-svg/consist-bg.svg') no-repeat
@@ -51,16 +69,24 @@
 		left: 0
 		top: -10px
 		z-index: 2
+		+r(640)
+			width: 100%
 	p
 		color: #666666
 		font-size: 16px
 		position: relative
 		z-index: 4
-	img
-		width: 80px
-		height: 30px
+		padding-bottom: 10px
+		+r(640)
+			font-size: 24px
+	a
 		position: relative
+		display: block
 		z-index: 4
+		img
+			width: 100px
+			+r(640)
+				width: 150px
 
 
 

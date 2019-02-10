@@ -1,112 +1,239 @@
 .step-1#step-1.checkout__step
-  .container
-    .row
-      .col-md-offset-2.col-md-10
-        .step__afc.step
-          .step__add
-            span Добавить AFC к заказу
-          .step__delete
-            .step__delete__block
-              +icon('checkout-delete')
-              span Удалить
-          .step__afc__left
-            .step__photo.step__photo--normal
-              img(src="img/checkout/afc.png", alt="")
-              .step__short-desc
-                p Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора
-                img(src="img/checkout/line.svg", alt="")
-            .step__photo.step__photo--gray
-              .step__photo__white
-              img(src="img/checkout/afc-gray.png", alt="")
-              .step__short-desc
-                p Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора
-                img(src="img/checkout/line.svg", alt="")
-          .step__afc__right
-            h2 AFC - Концентрат Повышающий<br>Работоспособность
-            .step__set
-              p Выберете набор
-              select.select.select-first
-                option(value="10" data-price="4990") Набор 10 шт / 4990 ₽
-                option(value="20" data-price="9980") Набор 20 шт / 9980 ₽
-                option(value="30" data-price="11970") Набор 30 шт / 11970 ₽
-                option(value="40" data-price="14760") Набор 40 шт / 14760 ₽
-                option(value="60" data-price="19740") Набор 60 шт / 19740 ₽
-            .step__smack
-              p Выберите вкус:
-              .step__smack__block
-                .step__smack__block__icon
-                  +icon('strawberry')
-                  span Клубника
-                .step__smack__block__calc
-                  .substract
-                  input.keyup(type="number" value="0")
-                  .add
-              .step__smack__block
-                .step__smack__block__icon
-                  +icon('mint')
-                  span Мята
-                .step__smack__block__calc
-                  .substract
-                  input.keyup(type="number" value="0")
-                  .add
-              .step__smack__block
-                .step__smack__block__icon
-                  +icon('chocolate')
-                  span Шоколад
-                .step__smack__block__calc
-                  .substract
-                  input.keyup(type="number" value="0")
-                  .add
-              .step__smack__block
-                .step__smack__block__icon
-                  +icon('cherry')
-                  span Вишня
-                .step__smack__block__calc
-                  .substract
-                  input.keyup(type="number" value="0")
-                  .add
-              .error Набор сформирован не полностью, Вы можете добавить еще
-                span 
-                | шт. AFC  любого вкуса
-      .col-md-offset-2.col-md-10
-        .step__ibc.step.no-active
-          .step__add
-            span Добавить IBC к заказу
-          .step__delete
-            .step__delete__block
-              +icon('checkout-delete')
-              span удалить 
-          .row
-            .col-md-6
-              .step__ibc__photo.step__photo--gray
-                .step__ibc__photo__white
-                img(src="img/checkout/ibc-gray.png", alt="")
-              .step__ibc__photo.step__photo--normal
-                img(src="img/checkout/ibc.png", alt="")
-            .col-md-6
-              h2 IBC - очищение и<br>восстановление организма
-              .step__ibc__count
-                p Выберите количество:
-                select.select.select-second
-                  option(value="1" data-price="890") 1 шт / 890 ₽
-                  option(value="2" data-price="1890") 2 шт / 1890 ₽
-              .step__ibc__smack
-                p Выберите вкус: 
-                .step__ibc__smack__icon
-                  +icon('strawberry')
-                  span Клубника
-  .step__bottom.flex.center-xs
-    .step__bottom__block  
-      p 
-        b ШАГ 1.
-        | Состав заказа / общая сумма:   
-        span
-        +icon('ruble')
-      a.btn.next.next-2(href="#step-2") Далее
+	.container.hidden-xs
+		.row
+			.col-md-offset-2.col-md-10.step-1--afc
+				.step__afc.step
+					.step__add
+						span Добавить AFC к заказу
+					.step__delete
+						.step__delete__block
+							+icon('checkout-delete')
+							span Удалить
+					.step__afc__left
+						.step__photo.step__photo--normal
+							img(src="img/checkout/afc.png", alt="")
+							.step__short-desc
+								p Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора
+								img(src="img/checkout/line.svg", alt="")
+						.step__photo.step__photo--gray
+							.step__photo__white
+							img(src="img/checkout/afc-gray.png", alt="")
+							.step__short-desc
+								p Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора
+								img(src="img/checkout/line.svg", alt="")
+					.step__afc__right
+						h2 AFC - Концентрат Повышающий<br>Работоспособность
+						.step__set
+							p Выберете набор
+							select.select.select-first.select-afc(name="afc")
+								option(value="20" data-price="6500") Набор 20 шт / 6500 ₽
+								option(value="30" data-price="9750") Набор 30 шт / 9750 ₽
+								option(value="40" data-price="13000") Набор 40 шт / 13000 ₽
+								option(value="50" data-price="16250") Набор 50 шт / 16250 ₽
+								option(value="60" data-price="19500") Набор 60 шт / 19500 ₽
+								option(value="70" data-price="22750") Набор 70 шт / 22750 ₽
+								option(value="80" data-price="26000") Набор 80 шт / 26000 ₽
+								option(value="90" data-price="29250") Набор 90 шт / 29250 ₽
+								option(value="100" data-price="32500") Набор 100 шт / 32500 ₽
+								option(value="120" data-price="39000") Набор 120 шт / 39000 ₽
+						.step__smack
+							p Выберите вкус:
+							.step__smack__block.strawberry
+								.step__smack__block__icon
+									+icon('strawberry')
+									span Клубника
+								.step__smack__block__calc
+									.substract
+									input.keyup(type="number" value="0" name="strawberry")
+									.add
+							.step__smack__block.mint
+								.step__smack__block__icon
+									+icon('mint')
+									span Мята
+								.step__smack__block__calc
+									.substract
+									input.keyup(type="number" value="0" name="mint")
+									.add
+							.step__smack__block.chocolate
+								.step__smack__block__icon
+									+icon('chocolate')
+									span Шоколад
+								.step__smack__block__calc
+									.substract
+									input.keyup(type="number" value="0" name="chocolate")
+									.add
+							.step__smack__block.cherry
+								.step__smack__block__icon
+									+icon('cherry')
+									span Вишня
+								.step__smack__block__calc
+									.substract
+									input.keyup(type="number" value="0" name="cherry")
+									.add
+							.error Чтобы сформировать заказ выберите, пожалуйста, вкусы!
+							//- .error Набор сформирован не полностью, Вы можете добавить еще
+							//- 	span 
+							//- 	| шт. AFC  любого вкуса
+			.col-md-offset-2.col-md-10.step-1--ibc
+				.step__ibc.step.no-active
+					.step__add
+						span Добавить IBC к заказу
+					.step__delete
+						.step__delete__block
+							+icon('checkout-delete')
+							span удалить 
+					.row
+						.step__afc__left
+							.step__ibc__photo.step__photo--gray
+								.step__ibc__photo__white
+								img(src="img/checkout/ibc-gray.png", alt="")
+							.step__ibc__photo.step__photo--normal
+								img(src="img/checkout/ibc.png", alt="")
+						.step__afc__right
+							h2 IBC - очищение и<br>восстановление организма
+							.step__ibc__count
+								p Выберите количество:
+								select.select.select-second.select-ibc(name="ibc")
+									option(value="1" data-price="1500") 1 шт / 1500 ₽
+									option(value="2" data-price="3000") 2 шт / 3000 ₽
+									option(value="3" data-price="4500") 3 шт / 4500 ₽
+									option(value="4" data-price="6000") 4 шт / 6000 ₽
+									option(value="5" data-price="7500") 5 шт / 7500 ₽
+									option(value="6" data-price="9000") 6 шт / 9000 ₽
+									option(value="7" data-price="10500") 7 шт / 10500 ₽
+									option(value="8" data-price="12000") 8 шт / 12000 ₽
+									option(value="9" data-price="13500") 9 шт / 13500 ₽
+									option(value="10" data-price="15000") 10 шт / 15000 ₽
+							.step__ibc__smack
+								p Выберите вкус: 
+								.step__ibc__smack__icon
+									+icon('strawberry')
+									span Клубника
+	.step__bottom.flex.center-xs.hidden-xs
+		.step__bottom__block  
+			p
+				b ШАГ 1.
+				| Состав заказа / общая сумма:   
+				span
+				.ruble ₽
+			a.btn.next.next-2(href="#step-2") Далее
+	.step__m.hidden-sm
+		.step__m__top
+			p
+				b ШAГ 1. 
+				| Состав заказа
+		.steps
+			.step__afc.step
+				.container
+					.row
+						.col-xs-12
+							.step__m__add
+								span Добавить AFC к заказу
+							.step__m__slide
+								.step__m__block
+									h2 AFC - концентрат повышающий<br>работоспособность
+										span 1
+									.step__m__delete
+										+icon('checkout-delete')
+								.step__m__block__photo
+									img(src="img/checkout/afc.png", alt="")
+								.step__m__set.step__m__set--afc
+									p Выберите набор:
+									.select.select-first(name="afc")
+										select.select-afc
+											option(value="20" data-price="6500") Набор 20 шт / 6500 ₽
+											option(value="30" data-price="9750") Набор 30 шт / 9750 ₽
+											option(value="40" data-price="13000") Набор 40 шт / 13000 ₽
+											option(value="50" data-price="16250") Набор 50 шт / 16250 ₽
+											option(value="60" data-price="19500") Набор 60 шт / 19500 ₽
+											option(value="70" data-price="22750") Набор 70 шт / 22750 ₽
+											option(value="80" data-price="26000") Набор 80 шт / 26000 ₽
+											option(value="90" data-price="29250") Набор 90 шт / 29250 ₽
+											option(value="100" data-price="32500") Набор 100 шт / 32500 ₽
+											option(value="120" data-price="39000") Набор 120 шт / 39000 ₽
+										span
+								.step__m__smack
+									p Выберите вкус:
+									.step__m__smack__block
+										.step__m__smack__block__icon
+											+icon('strawberry')
+											span Клубника
+										.step__m__smack__block__calc
+											.substract
+											input.keyup(type="number" value="0")
+											.add
+									.step__m__smack__block
+										.step__m__smack__block__icon
+											+icon('mint')
+											span Мята
+										.step__m__smack__block__calc
+											.substract
+											input.keyup(type="number" value="0")
+											.add
+									.step__m__smack__block
+										.step__m__smack__block__icon
+											+icon('chocolate')
+											span Шоколад
+										.step__m__smack__block__calc
+											.substract
+											input.keyup(type="number" value="0")
+											.add
+									.step__m__smack__block
+										.step__m__smack__block__icon
+											+icon('cherry')
+											span Вишня
+										.step__m__smack__block__calc
+											.substract
+											input.keyup(type="number" value="0")
+											.add
+									.error Чтобы сформировать заказ выберите, пожалуйста, вкусы!
+									//- .error Набор сформирован не полностью, Вы можете добавить еще
+									//- 	span 
+									//- 	| шт. AFC  любого вкуса
+			.step__ibc.step.no-active
+				.container
+					.row
+						.col-xs-12
+							.step__m__add(style="display: block")
+								span Добавить IBC к заказу
+							.step__m__slide(style="display: none")
+								.step__m__block
+									h2 IBC - очищение и<br>восстановление организма
+										span 2
+									.step__m__delete
+										+icon('checkout-delete')
+								.step__m__block__photo
+									img(src="img/checkout/ibc.png", alt="")
+								.step__m__set
+									p Выберите набор:
+									.select.select-second(name="ibc")
+										select.select-ibc
+											option(value="1" data-price="1500") 1 шт / 1500 ₽
+											option(value="2" data-price="3000") 2 шт / 3000 ₽
+											option(value="3" data-price="4500") 3 шт / 4500 ₽
+											option(value="4" data-price="6000") 4 шт / 6000 ₽
+											option(value="5" data-price="7500") 5 шт / 7500 ₽
+											option(value="6" data-price="9000") 6 шт / 9000 ₽
+											option(value="7" data-price="10500") 7 шт / 10500 ₽
+											option(value="8" data-price="12000") 8 шт / 12000 ₽
+											option(value="9" data-price="13500") 9 шт / 13500 ₽
+											option(value="10" data-price="15000") 10 шт / 15000 ₽
+										span
+								.step__m__smack
+									p Вкус:
+									.step__m__smack__ibc
+										+icon('strawberry')
+										span Клубника
+		a(href="#step-2").step__m__bottom.next-2
+			p (
+				i итого:
+				span 4990
+				i.ruble ₽
+				| ) 
+				b ДАЛЕЕ 
 
 
+				
 
-        
 
-
-        
+				

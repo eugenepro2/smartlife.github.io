@@ -7,19 +7,26 @@
 		background: url('../img/afc-landing-svg/consist-bg.svg') no-repeat
 		background-size: cover
 		width: 100%
-		height: 17%
+		height: 100%
 		position: absolute
 		left: 0
 		top: 130px
+		+r(640)
+			top: -10px
+			height: 100px
 	&:before
 		content: ''
 		background: url('../img/afc-landing-svg/consist-bottom-bg.svg') no-repeat
 		background-size: cover
-		width: 100%
-		height: 13%
+		width: 2000px
+		height: 150px
 		position: absolute
 		left: 0
-		bottom: 8px
+		bottom: -5px
+		+r(640)
+			left: -140px
+			height: 70px
+
 	&__top
 		height: 135px
 		background-size: cover
@@ -29,6 +36,8 @@
 		background-position: 51% 0
 		padding-top: 10px
 		margin-bottom: 50px
+		+r(640)
+			display: none
 		h2
 			font-size: 24px
 			font-weight: 600
@@ -38,6 +47,8 @@
 		background: #e8e8e8
 		position: relative
 		z-index: 5
+		+r(640)
+			display: none
 		&__left
 			img
 				position: absolute
@@ -62,7 +73,9 @@
 					border-radius: 160px
 					text-align: center
 					box-sizing: border-box
-					padding-top: 7px
+					display: flex
+					justify-content: center
+					align-items: center
 				p
 					display: inline-block
 					width: 77%
@@ -100,7 +113,9 @@
 					border-radius: 160px
 					text-align: center
 					box-sizing: border-box
-					padding-top: 7px
+					display: flex
+					justify-content: center
+					align-items: center
 				p
 					width: 77%
 					padding-left: 15px
@@ -135,5 +150,109 @@
 			img
 				width: 340px
 				right: 0 
+	&__mobile
+		margin-top: 70px
+		background: #e8e8e8
+		position: relative
+		z-index: 5
+		display: none
+		height: 100%
+		padding-bottom: 40px
+		+r(640)				
+			display: block
+		h3
+			font-size: 30px
+			font-weight: 600
+			letter-spacing: 2.2px
+			color: #2e6b67
+			text-transform: uppercase
+			padding-bottom: 40px
+			span
+				color: #000
+		&__top
+			padding: 35px 0
+			position: relative
+			img
+				width: 320px
+				position: absolute
+				top: 150px
+				right: -30px
+			li
+				font-size: 24px
+				color: $black-two
+				position: relative
+				min-height: 80px
+				display: flex
+				flex-wrap: wrap
+				+r(640)
+					min-height: initial
+					margin-bottom: 25px
+				&:nth-of-type(3) span
+					+r(640)
+						position: relative
+						top: -16px
+				span
+					color: #39726f
+					font-size: 18px
+					font-weight: 400
+					border: 2px solid #38726e
+					width: 40px
+					height: 40px
+					border-radius: 50%
+					text-align: center
+					box-sizing: border-box
+					display: flex
+					justify-content: center
+					align-items: center
+				p
+					display: inline-block
+					width: 77%
+					padding-left: 15px
+					+r(640)
+						width: 80%
+			.up
+				font-size: 24px
+				letter-spacing: 2.2px
+				color: #2e6b67
+				position: relative
+				bottom: -30px
+				left: 50%
+				transform: translateX(-50%)
+				display: block
+				width: 100%
+				text-align: center
+		&__bottom
+			img
+				width: 330px
+				position: absolute
+				bottom: -80px
+				left: -30px
+			ul
+				margin-top: -127px
+			li
+				font-size: 24px
+				color: $black-two
+				position: relative
+				min-height: 80px
+				display: flex
+				flex-wrap: wrap
+				span
+					display: inline-block
+					color: #39726f
+					font-size: 18px
+					font-weight: 400
+					border: 2px solid #38726e
+					width: 40px
+					height: 40px
+					border-radius: 160px
+					text-align: center
+					box-sizing: border-box
+					padding-top: 7px
+				p
+					width: 85%
+					padding-left: 15px
+					display: inline-block
+
+
 
 

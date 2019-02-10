@@ -3,36 +3,102 @@ title: SmartLife
 ---
 extends layouts/_layout
 block content
-  #fullpage
-    include ./partials/_sidebar
+	#fullpage
+		include ./partials/_sidebar
 
-    //BEGIN Главный экран
-    include sections/home
-    //END Главный экран
-    
-    //BEGIN  AFC
-    include sections/afc
-    //END AFC
+		//BEGIN Главный экран
+		include sections/home
+		//END Главный экран
+		
+		//BEGIN  AFC
+		include sections/afc
+		//END AFC
 
-    //BEGIN  IBC
-    include sections/ibc
-    //END IBC
+		//BEGIN  IBC
+		include sections/ibc
+		//END IBC
 
-    //BEGIN  Review
-    include sections/review
-    //END Review
+		//BEGIN  Review
+		include sections/review
+		//END Review
 
-    //BEGIN  Study
-    include sections/study
-    //END Study
+		//BEGIN  Study
+		include sections/study
+		//END Study
 
-    //BEGIN  Photos
-    include sections/photos
-    //END Photos
+		//BEGIN  Photos
+		include sections/photos
+		//END Photos
 
-    //BEGIN  Contact
-    include sections/contact
-    //END Contact
+		//BEGIN  Contact
+		include sections/contact
+		//END Contact
+	.contact__form
+		.btn-close
+			span
+		form
+			h3 Обратная связь
+			.form-element
+				input#name(type="text" name="name" required autocomplete="off")
+				label(for="name") Ваше имя
+			.form-element
+				input#phone(type="tel" name="phone" required autocomplete="off")
+				label(for="phone") Телефон
+			.form-element
+				input#email(type="email" name="email" required autocomplete="off")
+				label(for="email") E-mail
+			textarea(placeholder="Ваш комментарий")
+			input#checkbox-m.checkbox(type="checkbox")
+			label.label(for="checkbox-m")
+			label.label-for(for="checkbox-m") Я принимаю условия <a href="#">передачи</a> информации  
+			input(type="submit" value="отправить")
+	.conclusion__consist.study-popup
+		a(href="index.html").head__top__logo
+			img(src="img/logo/logo-white.svg", alt="Логотип")
+		.btn-close
+		.conclusion__consist__block
+			.row
+				.col-sm-7.col-sm-offset-3.col-xs-12
+					h2 Наши уникальные технологии
+					img(src="img/study/check-big.svg", alt="")
+	.pop-up.pop-up-game
+		a(href="index.html").head__top__logo
+			img(src="img/logo/logo-white.svg", alt="Логотип")
+		.pop-up__block
+			.btn-close
+			.row.center-xs.pop-up__block__cont
+				.col-xs-9
+					h2 А ты знаешь свою реакцию?
+					h2 Проверь бесплатно на online-тренажоре
+					p займет не более 1 минуты
+					a(href="#").btn__left Да, хочу
+					a(href="#").btn__right Нет, спасибо
+			#gamecontainer(style='width: 100%;max-width: 400px;margin: 75px auto;padding: 0; height: 400px;')
+				#gamefield(style='position: relative;width:100%; background-color: rgb(0, 250, 0); color: rgb(50, 50, 50); border: 5px solid rgb(0, 220, 0); border-radius: 5px;')
+					#gameoutput(style='width: 300px;margin: 0px auto; font-size: 18px;text-align:center;')
+						#currentTime(style='padding-top: 64px; font-size: 65px; color: #343434;')
+						button#startBtn.myButton НАЧАТЬ ИГРУ
+						button#playAgain.myButton НОВАЯ ИГРА
+						#instaction(style='font-size: 23px;')
+							| Чтобы измерить скорость реакции нужно как можно быстрее нажать когда цвет фона станет красным. Желтый цвет промежуточный и означает что игра запущена
+						#gameResult
+			.row.center-xs.pop-up__block__cont.pop-up__block__form(style="display: none")
+				.col-xs-10
+					p.thanks Результат теста придет на Ваш<br>e-mail в течении 5 минут
+				.col-xs-8
+					form.form-game(action="game.php" method="post")
+						input.game(type="hidden" name="game")
+						input(type="text" name="name" placeholder="Введите Ваше имя ")
+						input(type="tel" name="phone" placeholder="Телефон")
+						input(type="email" name="email" placeholder="E-mail")
+						input(type="submit" value="получить бесплатно").submit
+			.pop-up__block__result(style="display: none")
+				.row.center-xs
+					.col-xs-12
+						p.thanks.thanks--2 Спасибо, в течении 5 минут<br>результаты придут Вам на e-mail
+					.col-xs-12
+						a(href="index.html").submit__home на главную
+	+popUpCheckout
 
 
 

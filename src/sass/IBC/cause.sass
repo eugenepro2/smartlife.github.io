@@ -2,6 +2,8 @@
 	position: relative
 	z-index: 5
 	padding-bottom: 100px
+	+r(640)
+		padding-bottom: 0
 	&__top
 		height: 135px
 		background-size: cover
@@ -10,20 +12,36 @@
 		background-size: 120% 100%
 		background-position: 51% 0
 		padding-top: 10px
+		+r(640)
+			height: auto
+			padding: 60px 115px
+			background-size: 480% 95%
+			background-position: 24% 0
 		h2
 			font-size: 24px
 			font-weight: 500
 			color: #fff
+			letter-spacing: 2.2px
 			text-transform: uppercase
+			+r(640)
+				font-size: 30px
 	&__content
 		display: flex
 		justify-content: space-around
 		position: relative
+		+r(640)
+			display: none
 		img
 			position: absolute
 			left: 28%
 			top: 102px
 			width: 440px
+		.shadow
+			width: 528px
+			height: 34px
+			top: 400px
+			left: 50%
+			transform: translateX(-59%)
 		&__left, &__right
 			width: 340px
 			h3
@@ -31,7 +49,7 @@
 				font-weight: 500
 				position: relative
 				padding-top: 100px
-				padding-bottom: 75px
+				padding-bottom: 53px
 				padding-left: 55px
 				text-transform: uppercase
 				&:before
@@ -46,9 +64,24 @@
 			p
 				font-size: 16px
 				font-weight: 500
-				padding-bottom: 20px
+				margin-bottom: 20px
+				position: relative
+				padding-left: 30px
+				&:before
+					content: ''
+					background: url('../img/ibc-landing-svg/checkmark-red.svg') no-repeat
+					width: 20px
+					height: 20px
+					display: block
+					position: absolute
+					left: 0
+					top: 0
+			h3 > p 
+				padding-left: 0
+				&:before
+					content: none
 		&__left
-			margin-right: 100px
+			margin-right: 140px
 		&__right
 			h3:first-child
 				padding-left: 40px
@@ -57,6 +90,7 @@
 				color: #ff3366
 				position: relative
 				padding-top: 40px
+				padding-bottom: 75px
 				&:before
 					background-image: url("../img/ibc-landing-svg/cause-dotted.svg")
 					background-repeat: no-repeat
@@ -87,7 +121,7 @@
 				p:nth-child(2)
 					position: absolute
 					right: -115px
-					bottom: -15px
+					bottom: -35px
 					width: 265px
 					span
 						left: 5px
@@ -100,6 +134,104 @@
 					span
 						left: -45px
 						bottom: -18px
+	&__content__mobile
+		position: relative
+		display: none
+		padding-top: 40px
+		+r(640)
+			display: block
+		li
+			font-size: 24px
+			font-weight: 500
+			line-height: 1.5
+			letter-spacing: 2.4px
+			color: #ff3366
+			padding: 25px 0
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			border: solid 3px #f64869
+			margin-bottom: 25px
+			transition: all 0.3s
+			&.active
+				background: #f64869
+				color: #ffffff
+		.tabs__content
+			display: none
+			min-height: 420px
+			p
+				font-size: 24px
+				letter-spacing: 1.8px
+				padding-left: 50px
+				position: relative
+				margin-bottom: 25px
+				&:before
+					content: ''
+					background: url('../img/ibc-landing-svg/checkmark-red.svg') no-repeat
+					width: 30px
+					height: 30px
+					display: block
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+			&.active
+				display: inline-block
+		&__bottom
+			position: relative
+			padding-bottom: 100px
+			img
+				position: relative
+				left: -80px
+			h3
+				color: #ff3366
+				position: relative
+				padding-top: 40px
+				font-size: 38px
+				font-weight: 500
+				position: absolute
+				left: 37%
+				top: 215px
+				text-transform: uppercase
+			p
+				padding-bottom: 0
+				text-transform: none
+				font-size: 24px
+				letter-spacing: 2px
+				color: #ff3366
+				position: relative
+				span
+					position: absolute
+					width: 40px
+					height: 40px
+					background: #ff3366
+					border-radius: 100px
+					color: #fff
+					display: flex
+					justify-content: center
+					align-items: center
+					padding-top: 2px
+					padding-left: 2px
+			p:nth-child(3)
+				width: 220px
+				span
+					left: 90px
+					top: -70px
+					padding-left: 0
+			p:nth-child(4)
+				width: 265px
+				left: 53%
+				top: -40px
+				span
+					left: -4px
+					top: -73px
+			p:nth-child(5)
+				left: 110px
+				width: 270px
+				span
+					left: -55px
+					bottom: 7px
 
 
 

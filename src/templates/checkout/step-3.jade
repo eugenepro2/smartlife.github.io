@@ -1,42 +1,81 @@
 .step-3#step-3.checkout__step(style="display: none")
+  .step__m__top.hidden-sm
+    p
+      b ШAГ 3. 
+      | Способ доставки и оплаты
   .container
     .row
       .col-md-offset-2.col-md-10
         .step__delivery
-          h2 Способ доставки
-          input#delivery-1(type="radio" name="delivery")
-          label(for="delivery-1")
-            +icon('delivery-1')
-            p Курьером<br>по Москве и МО 
-          input#delivery-2(type="radio" name="delivery")
-          label(for="delivery-2")
-            +icon('delivery-2')
-            p Почтой России 
+          //- h3.hidden-xs ШAГ 3. 
+          //-   span Способ доставки и оплаты
+          h2.hidden-xs Способ доставки
+          h2.hidden-sm Выберите способ доставки:
+          .delivery-1
+            input#delivery-1(type="radio" name="delivery" data-delivery="Доставка курьером" data-delivery-price="300" value="Доставка курьером")
+            label(for="delivery-1")
+              .step__delivery__check
+              +icon('delivery-1')
+              div
+                h4 Курьером по Москве
+                p Стоимость доставки - 
+                  span 300 
+                  | рублей
+                p Заказы доставляются курьером. Перед доставкой с вами свяжется менеджер и подтвердит детали заказа.
+          //- .delivery-2
+          //-   input#delivery-2(type="radio" name="delivery" data-delivery="Доставка СДЭК" data-delivery-price="500" value="Доставка СДЭК")
+          //-   label(for="delivery-2")
+          //-     .step__delivery__check
+          //-     +icon('delivery-2')
+          //-     h4 СДЭК
+          //-     p.hidden-sm Стоимость доставки - 
+          //-       span 500 
+          //-       | рублей
+          //-     p.hidden-sm Краткий текст о доставке "СДЭК"
+          .delivery-3
+            input#delivery-3(type="radio" name="delivery" data-delivery="Доставка почтой по России" data-delivery-price="500" value="Доставка почтой по России")
+            label(for="delivery-3")
+              .step__delivery__check
+              +icon('delivery-2')
+              div
+                h4 Почтой России 
+                p Стоимость доставки - 
+                  span 500 
+                  | рублей
+                p Краткий текст о доставке "Почта России"
         .step__payment
-          h2 Способ оплаты
-          .step__payment__block
-            input.checkbox#payment-1(type="radio" name="payment" checked)
-            label.label(for="payment-1")
-            label.label-for(for="payment-1")
-              h3 Банковской картой курьеру при получении
-              p Оплатите покупку курьеру при получении.<br>Оплата осуществляется через мобильный терминал PayMe, без комисии. 
-          .step__payment__block
-            input.checkbox#payment-2(type="radio" name="payment")
+          h2.hidden-xs Способ оплаты
+          h2.hidden-sm Выберите способ оплаты:
+          //- .step__payment__block
+          //-   input.checkbox#payment-1(type="radio" name="payment" checked data-payment="Банковской картой курьеру при получении" value="Банковской картой курьеру при получении")
+          //-   label.label(for="payment-1")
+          //-   label.label-for(for="payment-1")
+          //-     h3 Банковской картой курьеру при получении
+          //-     p Оплатите покупку курьеру при получении.<br>Оплата осуществляется через мобильный терминал PayMe, без комисии. 
+          .step__payment__block.step__payment__block--1
+            input.checkbox#payment-2(type="radio" name="payment" data-payment="Наличными курьеру при получении" value="Наличными курьеру при получении")
             label.label(for="payment-2")
             label.label-for(for="payment-2")
               h3 Наличными курьеру при получении
-          .step__payment__block
+          .step__payment__block.step__payment__block--2
             input.checkbox#payment-3(type="radio" name="payment")
             label.label(for="payment-3")
             label.label-for(for="payment-3")
               h3 Онлайн-оплата банковской картой на сайте
               img(src="img/checkout/mastercard.svg", alt="")
               img(src="img/checkout/visa.svg", alt="")
-  .step__bottom.flex.center-xs
+  .step__bottom.flex.center-xs.hidden-xs
     .step__bottom__block  
-      p 
+      p
         b ШАГ 3.
-        | Cпособ доставки и оплаты:
+        | Cпособ доставки и оплаты
         span 5890
-        +icon('ruble')
-      a.btn.next(href="checkout-thank.html") Оформить
+        .ruble ₽
+      a.btn.next.checkout-button Оформить
+  a.step__m__bottom.hidden-sm.checkout-button
+    p (
+      i итого:
+      span 4990
+      i.ruble ₽
+      | ) 
+      b ДАЛЕЕ 

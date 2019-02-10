@@ -1,8 +1,30 @@
-section.section.photos
+section.section.photos#photos-m
   .container
-    .row.middle-xs
-      .col-md-offset-2.col-md-10
+    .row.middle-sm
+      .col-md-offset-2.col-md-10.col-xs-12
         h2 Публикации
-        a.photos__inst(href="https://www.instagram.com/smartlifebio/") перейти в instagram
+        a.hidden-xs.photos__inst(href="https://www.instagram.com/smartlifebio/") перейти в instagram
           +icon('inst-arrow')
         #instafeed.center-xs
+          a(href="https://www.instagram.com/p/Bej8ty1h27M/?taken-by=smartlifebio" target="_blank")
+            img(src="img/inst/1.jpg", alt="")
+            .black
+          a(href="https://www.instagram.com/p/BehgER6hXys/?taken-by=smartlifebio" target="_blank")
+            img(src="img/inst/2.jpg", alt="")
+            .black
+          a(href="https://www.instagram.com/p/Befa0QtBuzX/?taken-by=smartlifebio" target="_blank")
+            img(src="img/inst/3.jpg", alt="")
+            .black
+          a(href="https://www.instagram.com/p/Bec3aPUDM3Q/?taken-by=smartlifebio" target="_blank")
+            img(src="img/inst/4.jpg", alt="")
+            .black
+          a(href="https://www.instagram.com/p/BeZrWvmDN_R/?taken-by=smartlifebio" target="_blank")
+            img(src="img/inst/5.jpg", alt="")
+            .black
+          a(href="https://www.instagram.com/p/BeXF-uwDLRh/?taken-by=smartlifebio" target="_blank")
+            img(src="img/inst/6.jpg", alt="")
+            .black
+        .photos__link.hidden-sm
+          a(href="https://www.instagram.com/smartlifebio/") перейти в instagram
+          span
+            +icon('inst-arrow')

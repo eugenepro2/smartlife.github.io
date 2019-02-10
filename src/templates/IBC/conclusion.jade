@@ -1,22 +1,31 @@
 section.conclusion
 	.container
+		.conclusion__top
+			h3 Состав IBC
+			a(href="#consist").open-modal-consist.btn читать
 		.row
-			.col-md-12.center-md
+			.col-md-10.col-md-offset-2.col-xs-4
 				h2 Что выводит IBC?
+			.col-xs-8.end-xs.conclusion__mobile
+				a().open-modal.open-modal-consist-2.btn.btn-1 читать
+			.col-xs-8.conclusion__mobile
+				a(href="#consist").open-modal-consist.btn читать
+			.col-xs-4.end-xs.conclusion__mobile
+				h2.mobile Состав IBC?
 		.conclusion__content
 			.conclusion__content__left
 				p.top Различные токсины, аллергены,<br> соли тяжелых металлов;
 					span
-						+icon('check')		
+						+icon('check')
 				p Радионуклиды, билирубин;
 					span
-						+icon('check')		
+						+icon('check')
 				p Холестерин и липиды;
 					span
-						+icon('check')		
+						+icon('check')
 				p Мочевину;
 					span
-						+icon('check')		
+						+icon('check')
 				p Продукты распада алкоголя; 
 					span
 						+icon('check')
@@ -34,3 +43,17 @@ section.conclusion
 					span
 						+icon('check')
 				b #IBC_ВЫВОДИТ
+		.conclusion__parallax
+			.conclusion__block__parallax#conclusion-1(data-invert-x="false" data-invert-y="fulse")
+				div(data-depth="0.6")
+					img(src="img/ibc-landing/parallax/conclusion-1.png", alt="")
+			.conclusion__block__parallax#conclusion-2(data-invert-x="false" data-invert-y="fulse")
+				div.layer(data-depth="0.2")
+					img(src="img/ibc-landing/parallax/conclusion-2.png", alt="")
+			.conclusion__block__parallax#conclusion-3(data-invert-x="false" data-invert-y="false" relativeInput="true")
+				div.layer(data-depth="0.1")
+					img(src="img/ibc-landing/parallax/conclusion-3.png", alt="")
+			.conclusion__block__parallax#conclusion-4(data-invert-x="false" data-invert-y="fulse")
+				div.layer(data-depth="0.3")
+					img(src="img/ibc-landing/parallax/conclusion-4.png", alt="")
+

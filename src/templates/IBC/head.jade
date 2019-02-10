@@ -2,15 +2,36 @@ section.head
 	.container
 		.head__top
 			a(href="index.html").head__top__logo
-				img(data-src="img/logo/logo-white.svg", alt="Логотип")
-			a(href="#").head__top__back На главную
+				img(src="img/logo/logo-white.svg", alt="Логотип")
+			a(href="index.html").head__top__back На главную
 				+icon('review-arrow')
+		img(src="img/ibc-landing/head.png", alt="").head__bg
 		.head__block
 			.row.middle-md
-				.col-md-5.col-md-offset-7
+				.col-md-5.col-md-offset-7.col-xs-12
 					.head__block__text
-						h2 IBC - очищение и восстановление организма
-						span (Innovation boby cleansing)
-						p Концентрат IBC (сорбент нового поколения) это натуральный органический продукт, который очищает и восстанавливает наш организм, при этом не нарушая микрофлоры ЖКТ!
-						a(href="#").btn Заказать
-					img(data-src="img/ibc-landing/head.png", alt="")
+						h2.wow.fadeInDown(data-wow-delay="0.3s") IBC - очищение и восстановление организма
+						span.wow.fadeInDown(data-wow-delay="0.3s") (Innovation boby cleansing)
+						p.wow.fadeInDown(data-wow-delay="0.5s") Концентрат IBC (сорбент нового поколения) это натуральный органический продукт, который очищает и восстанавливает наш организм, при этом не нарушая микрофлоры ЖКТ!
+						p.wow.fadeInDown(data-wow-delay="0.5s")
+							b <br>Одна упаковка - это курс на 21 день, в год рекомендуем 3-4 курса.
+						a.wow.fadeInDown(data-wow-delay="0.6s" href="checkout.html" data-cookie="ibc").btn Заказать
+						a.wow.fadeInDown(data-wow-delay="0.6s" href="checkout.html" data-cookie="ibc").btn.btn--mobile 
+							| заказать за <span>1500</span>
+							.ruble ₽
+							| /шт
+						//- a.wow.fadeInDown(data-wow-delay="0.6s" data-checkout="checkout" data-cookie="ibc").btn Заказать
+						//- a.wow.fadeInDown(data-wow-delay="0.6s" data-checkout="checkout" data-cookie="ibc").btn.btn--mobile 
+						//- 	| заказать за <span>1500</span>
+						//- 	.ruble ₽
+						//- 	| /шт
+		.head__parallax
+			.head__block__parallax#head-1(data-invert-x="false" data-invert-y="fulse")
+				div.wow.fadeInDown(data-wow-delay="0.3s" data-depth="0.6")
+					img(src="img/ibc-landing/parallax/head-1.png", alt="")
+			.head__block__parallax#head-2(data-invert-x="false" data-invert-y="fulse")
+				div.layer.wow.fadeInDown(data-wow-delay="0.1s" data-depth="0.4")
+					img(src="img/ibc-landing/parallax/head-2.png", alt="")
+			.head__block__parallax#head-3(data-invert-x="false" data-invert-y="false" relativeInput="true")
+				div.layer.wow.fadeInDown(data-wow-delay="0.1s" data-depth="0.6")
+					img(src="img/ibc-landing/parallax/head-3.png", alt="")

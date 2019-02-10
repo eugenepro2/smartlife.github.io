@@ -1,6 +1,5 @@
 import Select from 'tether-select';
 
-
 $('select.select-first').each(function() {
   var selectInstance = new Select({
     el: this,

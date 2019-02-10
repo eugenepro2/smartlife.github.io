@@ -1,11 +1,11 @@
 ---
-title: SmartLife
+title: SmartLife AFC
 ---
 extends layouts/_layout
 block content
   //- #fullpage
   //-   include ./partials/_sidebar
-  .content
+  .content.content-afc
     //BEGIN Главный экран
     include AFC/head
     //END Главный экран
@@ -25,5 +25,6 @@ block content
     //BEGIN  order
     include AFC/order
     //END order
+  +popUpCheckout
 
 

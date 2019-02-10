@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css">
+    <meta name="viewport" id="viewport" content="width=640, minimum-scale=0.3, maximum-scale=3, user-scalable=0">
   </head>
 
   <body>
@@ -35,167 +36,285 @@
     </script>
     <!--BEGIN sidebar-->
     <aside class="sidebar"><a href="index.html" class="sidebar__logo green"><img src="img/logo/logo-white.svg" alt="Логотип"></a>
-      <div class="sidebar__checkout"><a href="#" class="sidebar__checkout__back"><svg class="icon icon-checkout-back "><use xlink:href="../img/sprite.svg#icon-checkout-back"></use></svg>На главную</a>
+      <div class="sidebar__checkout"><a href="index.html" class="sidebar__checkout__back"><svg class="icon icon-checkout-back "><use xlink:href="img/sprite.svg#icon-checkout-back"></use></svg>На главную</a>
         <nav>
           <ul>
-            <li class="active"><svg class="icon icon-step-1 "><use xlink:href="../img/sprite.svg#icon-step-1"></use></svg><a>Шаг 1</a></li>
-            <li data-menu="step-2"><svg class="icon icon-step-2 "><use xlink:href="../img/sprite.svg#icon-step-2"></use></svg><a>Шаг 2</a></li>
-            <li data-menu="step-3"><svg class="icon icon-step-3 "><use xlink:href="../img/sprite.svg#icon-step-3"></use></svg><a>Шаг 3</a></li>
+            <li class="active"><svg class="icon icon-step-1 "><use xlink:href="img/sprite.svg#icon-step-1"></use></svg><a>Шаг 1</a></li>
+            <li data-menu="step-2"><svg class="icon icon-step-2 "><use xlink:href="img/sprite.svg#icon-step-2"></use></svg><a>Шаг 2</a></li>
+            <li data-menu="step-3"><svg class="icon icon-step-3 "><use xlink:href="img/sprite.svg#icon-step-3"></use></svg><a>Шаг 3</a></li>
           </ul>
         </nav>
       </div>
     </aside>
     <!--END sidebar-->
-    <!--BEGIN Первый шаг-->
-    <div id="step-1" class="step-1 checkout__step">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-offset-2 col-md-10">
-            <div class="step__afc step">
-              <div class="step__add"><span>Добавить AFC к заказу</span></div>
+    <form action="send.php" method="post">
+      <!--BEGIN Первый шаг-->
+      <div id="step-1" class="step-1 checkout__step">
+        <div class="container hidden-xs">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-10 step-1--afc">
+              <div class="step__afc step">
+                <div class="step__add"><span>Добавить AFC к заказу</span></div>
+                <div class="step__delete">
+                  <div class="step__delete__block"><svg class="icon icon-checkout-delete "><use xlink:href="img/sprite.svg#icon-checkout-delete"></use></svg><span>Удалить</span></div>
+                </div>
+                <div class="step__afc__left">
+                  <div class="step__photo step__photo--normal"><img src="img/checkout/afc.png" alt="">
+                    <div class="step__short-desc">
+                      <p>Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора</p><img src="img/checkout/line.svg" alt=""></div>
+                  </div>
+                  <div class="step__photo step__photo--gray">
+                    <div class="step__photo__white"></div><img src="img/checkout/afc-gray.png" alt="">
+                    <div class="step__short-desc">
+                      <p>Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора</p><img src="img/checkout/line.svg" alt=""></div>
+                  </div>
+                </div>
+                <div class="step__afc__right">
+                  <h2>AFC - Концентрат Повышающий<br>Работоспособность</h2>
+                  <div class="step__set">
+                    <p>Выберете набор</p><select name="afc" class="select select-first select-afc"><option value="20" data-price="6500">Набор 20 шт / 6500 ₽</option><option value="30" data-price="9750">Набор 30 шт / 9750 ₽</option><option value="40" data-price="13000">Набор 40 шт / 13000 ₽</option><option value="50" data-price="16250">Набор 50 шт / 16250 ₽</option><option value="60" data-price="19500">Набор 60 шт / 19500 ₽</option><option value="70" data-price="22750">Набор 70 шт / 22750 ₽</option><option value="80" data-price="26000">Набор 80 шт / 26000 ₽</option><option value="90" data-price="29250">Набор 90 шт / 29250 ₽</option><option value="100" data-price="32500">Набор 100 шт / 32500 ₽</option><option value="120" data-price="39000">Набор 120 шт / 39000 ₽</option></select></div>
+                  <div
+                    class="step__smack">
+                    <p>Выберите вкус:</p>
+                    <div class="step__smack__block strawberry">
+                      <div class="step__smack__block__icon"><svg class="icon icon-strawberry "><use xlink:href="img/sprite.svg#icon-strawberry"></use></svg><span>Клубника</span></div>
+                      <div class="step__smack__block__calc">
+                        <div class="substract"></div><input type="number" value="0" name="strawberry" class="keyup">
+                        <div class="add"></div>
+                      </div>
+                    </div>
+                    <div class="step__smack__block mint">
+                      <div class="step__smack__block__icon"><svg class="icon icon-mint "><use xlink:href="img/sprite.svg#icon-mint"></use></svg><span>Мята</span></div>
+                      <div class="step__smack__block__calc">
+                        <div class="substract"></div><input type="number" value="0" name="mint" class="keyup">
+                        <div class="add"></div>
+                      </div>
+                    </div>
+                    <div class="step__smack__block chocolate">
+                      <div class="step__smack__block__icon"><svg class="icon icon-chocolate "><use xlink:href="img/sprite.svg#icon-chocolate"></use></svg><span>Шоколад</span></div>
+                      <div class="step__smack__block__calc">
+                        <div class="substract"></div><input type="number" value="0" name="chocolate" class="keyup">
+                        <div class="add"></div>
+                      </div>
+                    </div>
+                    <div class="step__smack__block cherry">
+                      <div class="step__smack__block__icon"><svg class="icon icon-cherry "><use xlink:href="img/sprite.svg#icon-cherry"></use></svg><span>Вишня</span></div>
+                      <div class="step__smack__block__calc">
+                        <div class="substract"></div><input type="number" value="0" name="cherry" class="keyup">
+                        <div class="add"></div>
+                      </div>
+                    </div>
+                    <div class="error">Чтобы сформировать заказ выберите, пожалуйста, вкусы!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-offset-2 col-md-10 step-1--ibc">
+            <div class="step__ibc step no-active">
+              <div class="step__add"><span>Добавить IBC к заказу</span></div>
               <div class="step__delete">
-                <div class="step__delete__block"><svg class="icon icon-checkout-delete "><use xlink:href="../img/sprite.svg#icon-checkout-delete"></use></svg><span>Удалить</span></div>
+                <div class="step__delete__block"><svg class="icon icon-checkout-delete "><use xlink:href="img/sprite.svg#icon-checkout-delete"></use></svg><span>удалить </span></div>
               </div>
-              <div class="step__afc__left">
-                <div class="step__photo step__photo--normal"><img src="img/checkout/afc.png" alt="">
-                  <div class="step__short-desc">
-                    <p>Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора</p><img src="img/checkout/line.svg" alt=""></div>
+              <div class="row">
+                <div class="step__afc__left">
+                  <div class="step__ibc__photo step__photo--gray">
+                    <div class="step__ibc__photo__white"></div><img src="img/checkout/ibc-gray.png" alt=""></div>
+                  <div class="step__ibc__photo step__photo--normal"><img src="img/checkout/ibc.png" alt=""></div>
                 </div>
-                <div class="step__photo step__photo--gray">
-                  <div class="step__photo__white"></div><img src="img/checkout/afc-gray.png" alt="">
-                  <div class="step__short-desc">
-                    <p>Вы можете<br>выбрать несколько<br>вкусов в рамках<br>одного набора</p><img src="img/checkout/line.svg" alt=""></div>
+                <div class="step__afc__right">
+                  <h2>IBC - очищение и<br>восстановление организма</h2>
+                  <div class="step__ibc__count">
+                    <p>Выберите количество:</p><select name="ibc" class="select select-second select-ibc"><option value="1" data-price="1500">1 шт / 1500 ₽</option><option value="2" data-price="3000">2 шт / 3000 ₽</option><option value="3" data-price="4500">3 шт / 4500 ₽</option><option value="4" data-price="6000">4 шт / 6000 ₽</option><option value="5" data-price="7500">5 шт / 7500 ₽</option><option value="6" data-price="9000">6 шт / 9000 ₽</option><option value="7" data-price="10500">7 шт / 10500 ₽</option><option value="8" data-price="12000">8 шт / 12000 ₽</option><option value="9" data-price="13500">9 шт / 13500 ₽</option><option value="10" data-price="15000">10 шт / 15000 ₽</option></select></div>
+                  <div
+                    class="step__ibc__smack">
+                    <p>Выберите вкус: </p>
+                    <div class="step__ibc__smack__icon"><svg class="icon icon-strawberry "><use xlink:href="img/sprite.svg#icon-strawberry"></use></svg><span>Клубника</span></div>
                 </div>
-              </div>
-              <div class="step__afc__right">
-                <h2>AFC - Концентрат Повышающий<br>Работоспособность</h2>
-                <div class="step__set">
-                  <p>Выберете набор</p><select class="select select-first"><option value="10" data-price="4990">Набор 10 шт / 4990 ₽</option><option value="20" data-price="9980">Набор 20 шт / 9980 ₽</option><option value="30" data-price="11970">Набор 30 шт / 11970 ₽</option><option value="40" data-price="14760">Набор 40 шт / 14760 ₽</option><option value="60" data-price="19740">Набор 60 шт / 19740 ₽</option></select></div>
-                <div
-                  class="step__smack">
-                  <p>Выберите вкус:</p>
-                  <div class="step__smack__block">
-                    <div class="step__smack__block__icon"><svg class="icon icon-strawberry "><use xlink:href="../img/sprite.svg#icon-strawberry"></use></svg><span>Клубника</span></div>
-                    <div class="step__smack__block__calc">
-                      <div class="substract"></div><input type="number" value="0" class="keyup">
-                      <div class="add"></div>
-                    </div>
-                  </div>
-                  <div class="step__smack__block">
-                    <div class="step__smack__block__icon"><svg class="icon icon-mint "><use xlink:href="../img/sprite.svg#icon-mint"></use></svg><span>Мята</span></div>
-                    <div class="step__smack__block__calc">
-                      <div class="substract"></div><input type="number" value="0" class="keyup">
-                      <div class="add"></div>
-                    </div>
-                  </div>
-                  <div class="step__smack__block">
-                    <div class="step__smack__block__icon"><svg class="icon icon-chocolate "><use xlink:href="../img/sprite.svg#icon-chocolate"></use></svg><span>Шоколад</span></div>
-                    <div class="step__smack__block__calc">
-                      <div class="substract"></div><input type="number" value="0" class="keyup">
-                      <div class="add"></div>
-                    </div>
-                  </div>
-                  <div class="step__smack__block">
-                    <div class="step__smack__block__icon"><svg class="icon icon-cherry "><use xlink:href="../img/sprite.svg#icon-cherry"></use></svg><span>Вишня</span></div>
-                    <div class="step__smack__block__calc">
-                      <div class="substract"></div><input type="number" value="0" class="keyup">
-                      <div class="add"></div>
-                    </div>
-                  </div>
-                  <div class="error">Набор сформирован не полностью, Вы можете добавить еще<span> </span>шт. AFC любого вкуса</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-offset-2 col-md-10">
+      </div>
+      </div>
+      <div class="step__bottom flex center-xs hidden-xs">
+        <div class="step__bottom__block">
+          <p><b>ШАГ 1.</b>Состав заказа / общая сумма: <span></span>
+            <div class="ruble">₽</div>
+          </p><a href="#step-2" class="btn next next-2">Далее</a></div>
+      </div>
+      <div class="step__m hidden-sm">
+        <div class="step__m__top">
+          <p><b>ШAГ 1. </b>Состав заказа</p>
+        </div>
+        <div class="steps">
+          <div class="step__afc step">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="step__m__add"><span>Добавить AFC к заказу</span></div>
+                  <div class="step__m__slide">
+                    <div class="step__m__block">
+                      <h2>AFC - концентрат повышающий<br>работоспособность<span>1</span></h2>
+                      <div class="step__m__delete"><svg class="icon icon-checkout-delete "><use xlink:href="img/sprite.svg#icon-checkout-delete"></use></svg></div>
+                    </div>
+                    <div class="step__m__block__photo"><img src="img/checkout/afc.png" alt=""></div>
+                    <div class="step__m__set step__m__set--afc">
+                      <p>Выберите набор:</p>
+                      <div name="afc" class="select select-first"><select class="select-afc"><option value="20" data-price="6500">Набор 20 шт / 6500 ₽</option><option value="30" data-price="9750">Набор 30 шт / 9750 ₽</option><option value="40" data-price="13000">Набор 40 шт / 13000 ₽</option><option value="50" data-price="16250">Набор 50 шт / 16250 ₽</option><option value="60" data-price="19500">Набор 60 шт / 19500 ₽</option><option value="70" data-price="22750">Набор 70 шт / 22750 ₽</option><option value="80" data-price="26000">Набор 80 шт / 26000 ₽</option><option value="90" data-price="29250">Набор 90 шт / 29250 ₽</option><option value="100" data-price="32500">Набор 100 шт / 32500 ₽</option><option value="120" data-price="39000">Набор 120 шт / 39000 ₽</option></select><span></span></div>
+                    </div>
+                    <div class="step__m__smack">
+                      <p>Выберите вкус:</p>
+                      <div class="step__m__smack__block">
+                        <div class="step__m__smack__block__icon"><svg class="icon icon-strawberry "><use xlink:href="img/sprite.svg#icon-strawberry"></use></svg><span>Клубника</span></div>
+                        <div class="step__m__smack__block__calc">
+                          <div class="substract"></div><input type="number" value="0" class="keyup">
+                          <div class="add"></div>
+                        </div>
+                      </div>
+                      <div class="step__m__smack__block">
+                        <div class="step__m__smack__block__icon"><svg class="icon icon-mint "><use xlink:href="img/sprite.svg#icon-mint"></use></svg><span>Мята</span></div>
+                        <div class="step__m__smack__block__calc">
+                          <div class="substract"></div><input type="number" value="0" class="keyup">
+                          <div class="add"></div>
+                        </div>
+                      </div>
+                      <div class="step__m__smack__block">
+                        <div class="step__m__smack__block__icon"><svg class="icon icon-chocolate "><use xlink:href="img/sprite.svg#icon-chocolate"></use></svg><span>Шоколад</span></div>
+                        <div class="step__m__smack__block__calc">
+                          <div class="substract"></div><input type="number" value="0" class="keyup">
+                          <div class="add"></div>
+                        </div>
+                      </div>
+                      <div class="step__m__smack__block">
+                        <div class="step__m__smack__block__icon"><svg class="icon icon-cherry "><use xlink:href="img/sprite.svg#icon-cherry"></use></svg><span>Вишня</span></div>
+                        <div class="step__m__smack__block__calc">
+                          <div class="substract"></div><input type="number" value="0" class="keyup">
+                          <div class="add"></div>
+                        </div>
+                      </div>
+                      <div class="error">Чтобы сформировать заказ выберите, пожалуйста, вкусы!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="step__ibc step no-active">
-            <div class="step__add"><span>Добавить IBC к заказу</span></div>
-            <div class="step__delete">
-              <div class="step__delete__block"><svg class="icon icon-checkout-delete "><use xlink:href="../img/sprite.svg#icon-checkout-delete"></use></svg><span>удалить </span></div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="step__ibc__photo step__photo--gray">
-                  <div class="step__ibc__photo__white"></div><img src="img/checkout/ibc-gray.png" alt=""></div>
-                <div class="step__ibc__photo step__photo--normal"><img src="img/checkout/ibc.png" alt=""></div>
-              </div>
-              <div class="col-md-6">
-                <h2>IBC - очищение и<br>восстановление организма</h2>
-                <div class="step__ibc__count">
-                  <p>Выберите количество:</p><select class="select select-second"><option value="1" data-price="890">1 шт / 890 ₽</option><option value="2" data-price="1890">2 шт / 1890 ₽</option></select></div>
-                <div class="step__ibc__smack">
-                  <p>Выберите вкус: </p>
-                  <div class="step__ibc__smack__icon"><svg class="icon icon-strawberry "><use xlink:href="../img/sprite.svg#icon-strawberry"></use></svg><span>Клубника</span></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div style="display: block" class="step__m__add"><span>Добавить IBC к заказу</span></div>
+                  <div style="display: none" class="step__m__slide">
+                    <div class="step__m__block">
+                      <h2>IBC - очищение и<br>восстановление организма<span>2</span></h2>
+                      <div class="step__m__delete"><svg class="icon icon-checkout-delete "><use xlink:href="img/sprite.svg#icon-checkout-delete"></use></svg></div>
+                    </div>
+                    <div class="step__m__block__photo"><img src="img/checkout/ibc.png" alt=""></div>
+                    <div class="step__m__set">
+                      <p>Выберите набор:</p>
+                      <div name="ibc" class="select select-second"><select class="select-ibc"><option value="1" data-price="1500">1 шт / 1500 ₽</option><option value="2" data-price="3000">2 шт / 3000 ₽</option><option value="3" data-price="4500">3 шт / 4500 ₽</option><option value="4" data-price="6000">4 шт / 6000 ₽</option><option value="5" data-price="7500">5 шт / 7500 ₽</option><option value="6" data-price="9000">6 шт / 9000 ₽</option><option value="7" data-price="10500">7 шт / 10500 ₽</option><option value="8" data-price="12000">8 шт / 12000 ₽</option><option value="9" data-price="13500">9 шт / 13500 ₽</option><option value="10" data-price="15000">10 шт / 15000 ₽</option></select><span></span></div>
+                    </div>
+                    <div class="step__m__smack">
+                      <p>Вкус:</p>
+                      <div class="step__m__smack__ibc"><svg class="icon icon-strawberry "><use xlink:href="img/sprite.svg#icon-strawberry"></use></svg><span>Клубника</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <a href="#step-2" class="step__m__bottom next-2">
+          <p>(<i>итого:</i><span>4990</span><i class="ruble">₽</i>) <b>ДАЛЕЕ </b></p>
+        </a>
       </div>
-    </div>
-    <div class="step__bottom flex center-xs">
-      <div class="step__bottom__block">
-        <p> <b>ШАГ 1.</b>Состав заказа / общая сумма: <span></span><svg class="icon icon-ruble "><use xlink:href="../img/sprite.svg#icon-ruble"></use></svg></p><a href="#step-2" class="btn next next-2">Далее</a></div>
-    </div>
-    </div>
-    <!--END Первый шаг-->
-    <!--BEGIN Второй шаг-->
-    <div id="step-2" style="display: none" class="step-2 checkout__step">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-offset-2 col-md-10">
-            <div class="step__contact">
-              <h2>Контактные данные</h2>
-              <div class="form-element"><input id="name" type="text" name="name" required autocomplete="off"><label for="name">Ваше имя и отчество*</label></div>
-              <div class="form-element"><input id="lastname" type="text" name="lastname" required autocomplete="off"><label for="lastname">Ваша фамилия*</label></div>
-              <div class="form-element"><input id="tel" type="tel" required autocomplete="off"><label for="tel">Телефон*</label></div>
-              <div class="form-element"><input id="email" type="email" name="email" required autocomplete="off"><label for="email">E-mail*</label></div><i>* Обязательные поля для заполнения </i></div>
-            <div class="step__address">
-              <h2>Адрес</h2>
-              <div class="form-element"><input id="city" type="text" name="city" required autocomplete="off"><label for="city">Страна и город *</label></div>
-              <div class="form-element"><input id="street" type="text" name="street" required autocomplete="off"><label for="street">Улица*</label></div>
-              <div class="form-element"><input id="house" type="text" name="house" required autocomplete="off"><label for="house">Дом / корпус*</label></div>
-              <div class="form-element"><input id="room" type="text" name="room" required autocomplete="off"><label for="room">Квартира</label></div><textarea name="comment" placeholder="Комментарий к заказу. Например: “Подьезд 9”, “Оставить к консъержа” и т.д."></textarea></div>
-            <div
-              class="step__checkbox"><input id="checkbox" type="checkbox" class="checkbox"><label for="checkbox" class="label"></label><label for="checkbox" class="label-for">Я прочитал и согласен <a href="#">с условиями оформления и оплаты заказа</a> на сайте smartlife.bio  </label></div>
+      </div>
+      <!--END Первый шаг-->
+      <!--BEGIN Второй шаг-->
+      <div id="step-2" style="display: none" class="step-2 checkout__step">
+        <div class="step__m__top hidden-sm">
+          <p><b>ШAГ 2. </b>Контактные данные</p>
         </div>
-      </div>
-    </div>
-    <div class="step__bottom flex center-xs">
-      <div class="step__bottom__block">
-        <p> <b>ШАГ 2.</b>Контактные данные и адрес:<span>5890</span><svg class="icon icon-ruble "><use xlink:href="../img/sprite.svg#icon-ruble"></use></svg></p><a href="#step-3" class="btn next next-3">Далее</a></div>
-    </div>
-    </div>
-    <!--END Второй шаг-->
-    <!--BEGIN Третий шаг-->
-    <div id="step-3" style="display: none" class="step-3 checkout__step">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-offset-2 col-md-10">
-            <div class="step__delivery">
-              <h2>Способ доставки</h2><input id="delivery-1" type="radio" name="delivery"><label for="delivery-1"><svg class="icon icon-delivery-1 "><use xlink:href="../img/sprite.svg#icon-delivery-1"></use></svg><p>Курьером<br>по Москве и МО </p></label>
-              <input
-                id="delivery-2" type="radio" name="delivery"><label for="delivery-2"><svg class="icon icon-delivery-2 "><use xlink:href="../img/sprite.svg#icon-delivery-2"></use></svg><p>Почтой России </p></label></div>
-            <div class="step__payment">
-              <h2>Способ оплаты</h2>
-              <div class="step__payment__block"><input id="payment-1" type="radio" name="payment" checked class="checkbox"><label for="payment-1" class="label"></label><label for="payment-1" class="label-for"><h3>Банковской картой курьеру при получении</h3><p>Оплатите покупку курьеру при получении.<br>Оплата осуществляется через мобильный терминал PayMe, без комисии. </p></label></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-10 col-xs-12">
+              <div class="step__contact">
+                <h2 class="hidden-xs">Контактные данные</h2>
+                <h2 class="hidden-sm">Введите личные данные:</h2>
+                <div class="form-element"><input id="lastname" type="text" name="lastname" required autocomplete="off"><label for="lastname">Ваша фамилия*</label></div>
+                <div class="form-element"><input id="name" type="text" name="name" required autocomplete="off"><label for="name">Ваше имя и отчество*</label></div>
+                <div class="form-element"><input id="tel" type="tel" name="phone" required autocomplete="off"><label for="tel">Телефон*</label></div>
+                <div class="form-element"><input id="email" type="email" name="email" required autocomplete="off"><label for="email">E-mail*</label></div><i>* Обязательные поля для заполнения </i></div>
+              <div class="step__address">
+                <h2 class="hidden-xs">Адрес</h2>
+                <h2 class="hidden-sm">Введите адрес:</h2>
+                <div class="form-element"><input id="city" type="text" name="city" required autocomplete="off"><label for="city">Страна и город*</label></div>
+                <div class="form-element"><input id="street" type="text" name="street" required autocomplete="off"><label for="street">Улица*</label></div>
+                <div class="form-element"><input id="house" type="text" name="house" required autocomplete="off"><label for="house">Дом / корпус*</label></div>
+                <div class="form-element"><input id="room" type="text" name="room" required autocomplete="off"><label for="room">Квартира*</label></div><textarea id="comment" name="comment" placeholder="Комментарий к заказу. Например: “Подьезд 9”, “Оставить к консъержа” и т.д."></textarea></div>
               <div
-                class="step__payment__block"><input id="payment-2" type="radio" name="payment" class="checkbox"><label for="payment-2" class="label"></label><label for="payment-2" class="label-for"><h3>Наличными курьеру при получении</h3></label></div>
-            <div class="step__payment__block"><input id="payment-3" type="radio" name="payment" class="checkbox"><label for="payment-3" class="label"></label><label for="payment-3" class="label-for"><h3>Онлайн-оплата банковской картой на сайте</h3><img src="img/checkout/mastercard.svg" alt=""><img src="img/checkout/visa.svg" alt=""></label></div>
+                class="step__checkbox"><input id="checkbox" type="checkbox" class="checkbox"><label for="checkbox" class="label"></label><label for="checkbox" class="label-for">Я прочитал и согласен <a href="#">с условиями оформления и оплаты заказа</a> на сайте smartlife.bio  </label></div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="step__bottom flex center-xs">
-      <div class="step__bottom__block">
-        <p> <b>ШАГ 3.</b>Cпособ доставки и оплаты:<span>5890</span><svg class="icon icon-ruble "><use xlink:href="../img/sprite.svg#icon-ruble"></use></svg></p><a href="checkout-thank.html" class="btn next">Оформить</a></div>
-    </div>
-    </div>
-    <!--END Третий шаг-->
+      <div class="step__bottom flex center-xs hidden-xs">
+        <div class="step__bottom__block">
+          <p><b>ШАГ 2.</b>Контактные данные и адрес:<span>5890</span>
+            <div class="ruble">₽</div>
+          </p><a href="#step-3" class="btn next next-3">Далее</a></div>
+      </div>
+      <a href="#step-2" class="step__m__bottom next-3 hidden-sm">
+        <p>(<i>итого:</i><span>4990</span><i class="ruble">₽</i>) <b>ДАЛЕЕ </b></p>
+      </a>
+      </div>
+      <!--END Второй шаг-->
+      <!--BEGIN Третий шаг-->
+      <div id="step-3" style="display: none" class="step-3 checkout__step">
+        <div class="step__m__top hidden-sm">
+          <p><b>ШAГ 3. </b>Способ доставки и оплаты</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+              <div class="step__delivery">
+                <h2 class="hidden-xs">Способ доставки</h2>
+                <h2 class="hidden-sm">Выберите способ доставки:</h2>
+                <div class="delivery-1"><input id="delivery-1" type="radio" name="delivery" data-delivery="Доставка курьером" data-delivery-price="300" value="Доставка курьером"><label for="delivery-1"><div class="step__delivery__check"></div><svg class="icon icon-delivery-1 "><use xlink:href="img/sprite.svg#icon-delivery-1"></use></svg><div><h4>Курьером по Москве</h4><p>Стоимость доставки - <span>300 </span>рублей</p><p>Заказы доставляются курьером. Перед доставкой с вами свяжется менеджер и подтвердит детали заказа.</p></div></label></div>
+                <div
+                  class="delivery-3"><input id="delivery-3" type="radio" name="delivery" data-delivery="Доставка почтой по России" data-delivery-price="500" value="Доставка почтой по России"><label for="delivery-3"><div class="step__delivery__check"></div><svg class="icon icon-delivery-2 "><use xlink:href="img/sprite.svg#icon-delivery-2"></use></svg><div><h4>Почтой России </h4><p>Стоимость доставки - <span>500 </span>рублей</p><p>Краткий текст о доставке "Почта России"</p></div></label></div>
+            </div>
+            <div class="step__payment">
+              <h2 class="hidden-xs">Способ оплаты</h2>
+              <h2 class="hidden-sm">Выберите способ оплаты:</h2>
+              <div class="step__payment__block step__payment__block--1"><input id="payment-2" type="radio" name="payment" data-payment="Наличными курьеру при получении" value="Наличными курьеру при получении" class="checkbox"><label for="payment-2" class="label"></label><label for="payment-2" class="label-for"><h3>Наличными курьеру при получении</h3></label></div>
+              <div
+                class="step__payment__block step__payment__block--2"><input id="payment-3" type="radio" name="payment" class="checkbox"><label for="payment-3" class="label"></label><label for="payment-3" class="label-for"><h3>Онлайн-оплата банковской картой на сайте</h3><img src="img/checkout/mastercard.svg" alt=""><img src="img/checkout/visa.svg" alt=""></label></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="step__bottom flex center-xs hidden-xs">
+        <div class="step__bottom__block">
+          <p><b>ШАГ 3.</b>Cпособ доставки и оплаты<span>5890</span>
+            <div class="ruble">₽</div>
+          </p><a class="btn next checkout-button">Оформить</a></div>
+      </div>
+      <a class="step__m__bottom hidden-sm checkout-button">
+        <p>(<i>итого:</i><span>4990</span><i class="ruble">₽</i>) <b>ДАЛЕЕ </b></p>
+      </a>
+      </div>
+      <!--END Третий шаг-->
+    </form>
     <!--LOAD SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script>
+      svg4everybody();
+
+    </script>
   </body>
 
 </html>

@@ -1,10 +1,15 @@
 .thank
 	padding-bottom: 60px
+	+r(640)
+		.container
+			padding: 0 80px
 	&__1
 		background: #e8e8e8
 		padding-top: 130px
 		padding-bottom: 30px
 		position: relative
+		+r(640)
+			padding-top: 80px
 		&:before
 			content: ''
 			background: url('/img/checkout/thank.svg') repeat
@@ -14,23 +19,39 @@
 			width: 100%
 		h2
 			margin-bottom: 20px
+			+r(640)
+				font-size: 30px
+				letter-spacing: 2.2px
 		p
 			margin-bottom: 45px
+			+r(640)
+				font-size: 24px
 	&__order
 		&__number
 			font-size: 22px
 			font-weight: 600
 			color: #2e6b67
 			margin-bottom: 30px
+			+r(640)
+				font-size: 36px
+				font-weight: 500
 		&__block
 			width: 740px
+			+r(640)
+				width: 100%
 			h3
 				font-weight: 500
 				font-size: 18px
+				+r(640)
+					font-size: 24px
 			p
 				font-size: 18px
 				font-weight: 600
 				margin-bottom: 0
+				+r(640)
+					font-size: 24px
+					font-weight: 500
+					text-align: center
 			hr
 				border: none
 				margin: 15px auto
@@ -40,6 +61,8 @@
 				span
 					font-size: 20px
 					font-weight: 600
+					+r(640)
+						font-size: 24px
 				.icon
 					width: 12px
 					height: 13px
@@ -57,13 +80,21 @@
 		h3
 			font-size: 18px
 			font-weight: 500
+			+r(640)
+				font-size: 24px
 		p
 			font-weight: 600
+			+r(640)
+				font-size: 24px
 		.thank__order
 			&__info
 				width: 740px
+				+r(640)
+					width: 100%
 				hr
 					border: none
 					margin: 15px auto
 					width: 100%
 					border-bottom: 1px solid #d0d0d0
+					+r(640)
+						border: none

@@ -5,15 +5,39 @@ extends layouts/_layout
 block content
 
   include ./partials/_sidebar-checkout
+  form(action="send.php" method="post")
+    //BEGIN Первый шаг
+    include checkout/step-1.jade
+    //END Первый шаг
 
-  //BEGIN Первый шаг
-  include checkout/step-1.jade
-  //END Первый шаг
+    //BEGIN Второй шаг
+    include checkout/step-2.jade
+    //END Второй шаг
 
-  //BEGIN Второй шаг
-  include checkout/step-2.jade
-  //END Второй шаг
+    //BEGIN Третий шаг
+    include checkout/step-3.jade
+    //END Третий шаг
 
-  //BEGIN Третий шаг
-  include checkout/step-3.jade
-  //END Третий шаг
+//- block append scripts
+//-   script.
+//-     function initAutocomplete() {
+//-     autocomplete = new google.maps.places.Autocomplete(
+//-     /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+//-     {types: ['geocode']});
+//-     }
+//-     function geolocate() {
+//-     if (navigator.geolocation) {
+//-     navigator.geolocation.getCurrentPosition(function(position) {
+//-     var geolocation = {
+//-     lat: position.coords.latitude,
+//-     lng: position.coords.longitude
+//-     };
+//-     var circle = new google.maps.Circle({
+//-     center: geolocation,
+//-     radius: position.coords.accuracy
+//-     });
+//-     autocomplete.setBounds(circle.getBounds());
+//-     });
+//-     }
+//-     }
+//-   script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbwJhudZMw6WomNGDcUrjjd7Hq-s4nK44&libraries=places&callback=initAutocomplete")

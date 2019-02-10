@@ -1,20 +1,140 @@
 .study
-  background: linear-gradient(312deg, #32d6c1 14%, #284a41)
-  h2
-    color: #fff
-    margin-bottom: 30px
-  ul
-    display: flex
-    flex-wrap: wrap
-    margin-bottom: 60px
-    a
-      font-size: 16px
-      line-height: 1.88
-      letter-spacing: 1.2px
-      color: $pinkish-grey
-      text-decoration: none
-      border-bottom: 1px dashed
-      margin-right: 20px
-      display: block
-      &:hover
-        color: #ffffff
+	background: linear-gradient(312deg, #32d6c1 14%, #284a41)
+	position: relative
+	+r(640)
+		height: 1050px
+	h2
+		color: #fff
+		margin-bottom: 30px
+		+r(640)
+			margin-top: 60px
+			text-align: center
+			letter-spacing: 2.2px
+	ul
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 60px
+		position: relative
+		&:after
+			content: ''
+			background: url('../img/study/note.svg') no-repeat
+			display: block
+			position: absolute
+			right: -40px
+			top: -60px
+			width: 300px
+			height: 175px
+		a
+			font-size: 16px
+			line-height: 1.88
+			letter-spacing: 1.2px
+			color: $pinkish-grey
+			text-decoration: none
+			border-bottom: 1px dashed
+			margin-right: 20px
+			display: block
+			cursor: pointer
+			&:hover
+				color: #ffffff
+	.select
+		position: relative
+		select
+			border: 3px solid #c4c4c4
+			color: $pinkish-grey
+			font-size: 24px
+			letter-spacing: 2.4px
+			border-radius: 0
+			background: none
+			width: 100%
+			height: 80px
+			font-family: 'Proxima Nova'
+			padding: 20px
+			display: block
+		span
+			background: url(/img/ibc/select-arrow.svg) no-repeat
+			position: absolute
+			top: 50%
+			transform: translateY(-50%) rotate(90deg)
+			right: 30px
+			width: 30px
+			height: 30px
+	svg
+		width: 800px
+		height: 490px
+		position: relative
+		left: 50px
+		+r(640)
+			left: 0
+			width: 100%
+			height: initial
+			margin-top: 100px
+	.age
+		font-size: 18px
+		&__text
+			font-size: 16px
+	.opacity
+		opacity: 1 !important
+	.grad
+		stop-color: #32D6C1
+		stop-opacity: 0.7 !important
+	&__bottom
+		position: absolute
+		bottom: 0
+		right: 150px
+		background: url('../img/study/bottom.svg') no-repeat
+		background-size: cover
+		width: 250px
+		height: 200px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+			height: 250px
+			bottom: -55px
+		h2
+			color: $dark-grey-blue-two
+			font-size: 16px
+			font-weight: 500
+			text-transform: none
+			letter-spacing: 1.6px
+			text-align: center
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+				margin-top: -25px
+				margin-left: 10px
+		a
+			border: 1px solid $dark-grey-blue-two
+			color: $dark-grey-blue-two
+			text-decoration: none
+			width: 160px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-weight: 600
+			letter-spacing: 1.6px
+			transition: all 0.3s
+			&:hover
+				background: $dark-grey-blue-two
+				color: #ffffff
+.study-popup
+	overflow: hidden !important
+	h2
+		font-weight: 600
+		margin-bottom: 100px
+.head__top__logo
+	width: 130px
+	height: 170px
+	position: absolute
+	left: 0
+	top: 0
+	z-index: 3
+	padding-top: 25px
+	background: url('/img/logo/logo-bg-green.svg') no-repeat
+	background-size: cover
+	display: flex
+	justify-content: center
+	align-items: center
+	img
+		width: 80px
+		height: 90px

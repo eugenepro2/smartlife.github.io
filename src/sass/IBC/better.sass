@@ -7,10 +7,12 @@
 		background: url('../img/ibc-landing-svg/consist-bg.svg') no-repeat
 		background-size: cover
 		width: 100%
-		height: 16%
+		height: 20%
 		position: absolute
 		left: 0
 		top: -40px
+		+r(640)
+			height: 16%
 	&:before
 		content: ''
 		background: url('../img/ibc-landing-svg/consist-bottom-bg.svg') no-repeat
@@ -20,6 +22,11 @@
 		position: absolute
 		left: 0
 		bottom: -34px
+		+r(640)
+			height: 5%
+			width: 111%
+			background-size: 125%
+			background-position: 118% 0
 	h2
 		font-size: 24px
 		font-weight: 500
@@ -28,6 +35,10 @@
 		text-transform: uppercase
 		position: relative
 		z-index: 5
+		+r(640)
+			font-size: 30px
+			width: 175px
+			top: 50px
 		&:before
 			content: ''
 			width: 180px
@@ -38,21 +49,41 @@
 			left: 26%
 			top: 0
 			transform: rotate(-30deg)
+			+r(640)
+				transform: rotate(30deg)
+				left: -50px
+				top: 115%
+				height: 75px
 	&__content
 		display: flex
 		justify-content: center
+		+r(640)
+			flex-direction: column
 		img
 			position: relative
 			top: -40px
+			z-index: 6
+			width: 500px
+			height: 100%
+			+r(640)
+				width: 350px
+				margin-top: -100px
 		&__left, &__right
 			width: 380px
+			+r(640)
+				width: 100%
+				padding-left: 70px
 			p
 				padding-bottom: 40px
 				position: relative
+				+r(640)
+					font-size: 24px
+					br
+						display: none
 				span
 					position: absolute
 					left: -50px
-					top: -10px
+					top: 0px
 					width: 40px
 					height: 40px
 					border: 1px solid #2e6b67
@@ -60,15 +91,18 @@
 					display: flex
 					justify-content: center
 					padding-top: 10px
+					+r(640)
+						font-size: 18px
+						top: 8px
+						&.mobile
+							top: -3px
 					svg
 						fill: #2e6b67
-			.top
-				span
-					top: 0px
 		&__left
 			padding-left: 70px
 		&__right
 			padding-left: 50px
+			position: relative
 			b
 				font-size: 48px
 				font-weight: 700
@@ -76,6 +110,47 @@
 				position: relative
 				left: -50px
 				top: -20px
+				+r(640)
+					display: none
 
 
-
+.better__parallax
+	position: absolute
+	top: 0
+	z-index: 9
+	width: 100%
+	height: 100%
+#better-1
+	z-index: 8
+	top: 90%
+	left: -100px
+	+r(640)
+		top: 16%
+#better-2
+	z-index: 6
+	left: 71%
+	top: -155px
+	+r(640)
+		top: 55%
+		left: 80%
+#better-3
+	z-index: 6
+	left: 76%
+	top: -218px
+	+r(640)
+		display: none
+#better-4
+	z-index: 6
+	left: 87%
+	top: -340px
+	+r(640)
+		display: none
+#better-5
+	z-index: 6
+	left: 95%
+	top: -87%
+	+r(640)
+		top: -4%
+		left: 78%
+		img
+			width: 110px

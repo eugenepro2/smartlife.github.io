@@ -1,17 +1,16 @@
-import Instafeed from 'instafeed.js';
+// import Instafeed from 'instafeed.js';
 
-let userFeed = new Instafeed({
-  get: 'user',
-  userId: '505230800', //'181508931',
-  limit: 8,
-  accessToken: '505230800.1677ed0.b49757894fe14acc99e01c4700d06c28', //'181508931.1677ed0.18f7a2a26f0e488cb63a0094866b1546',
-  template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="black"></div></a>',
-  resolution: 'standard_resolution',
-  limit: 6,
-});
+// let userFeed = new Instafeed({
+//   get: 'user',
+//   userId: 54494460,//'181508931',
+//   clientId: 'd1ca02790e074c18b15f57a54d63db4b', //'418143e4e2434ec3a0287c9ee14c1758',
+//   template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="black"></div></a>',
+//   resolution: 'standard_resolution',
+//   limit: 6,
+// });
 
 
-if($('div').is('#instafeed')) {
-  userFeed.run();  
-}
+// if($('div').is('#instafeed')) {
+//   userFeed.run();  
+// }
 

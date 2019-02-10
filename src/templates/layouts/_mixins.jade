@@ -6,4 +6,37 @@
 mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
-		use(xlink:href="../img/sprite.svg#icon-" + name)
+		use(xlink:href="img/sprite.svg#icon-" + name)
+
+
+mixin popUpCheckout
+	.pop-up.pop-up-checkout
+		a(href="index.html").head__top__logo
+			img(src="img/logo/logo-white.svg", alt="Логотип")
+		.pop-up__block
+			.btn-close
+			.row.center-xs.pop-up__block__cont
+				.col-xs-9
+					h2 Для заказа Вы можете связаться с нами любым удобным способом:
+					.contact__block__social
+						.contact__block__social__block
+							a(href="tg://resolve?domain=smartlifebio_bot")
+								+icon('telegram')
+							p Telegram
+						.contact__block__social__block
+							a(href="whatsapp://send?phone=+79165659194")
+								+icon('whatsapp')
+							p WhatsApp
+						.contact__block__social__block
+							a(href="viber://public?id=smartlifebio")
+								+icon('viber')
+							p Viber
+					.contact__block__social
+						.contact__block__social__block
+							a(href="https://vk.com/write-158355927")
+								+icon('vk')
+							p VK
+						.contact__block__social__block
+							a(href="https://www.facebook.com/smartlifebio1/?ref=bookmarks")
+								+icon('facebook')
+							p FaceBook
